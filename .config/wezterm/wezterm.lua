@@ -87,7 +87,7 @@ end
 
 wezterm.on( 'format-tab-title', function(tab, tabs, panes, config, hover, max_width)
    local title_name = tab_title(tab)
-   local idx = tab.tab_index == 0 and 1 or tab.tab_index
+   local idx = tab.tab_index + 1
 
    for i in string.gmatch(title_name, "%S+") do
       title_name = i
@@ -106,19 +106,19 @@ if wezterm.config_builder then
    config = wezterm.config_builder()
 end
 
-config.enable_wayland                              = true
-config.default_prog                                = { shell }
+config.enable_wayland                              = false
+config.default_prog                                = { "wsl" }
 config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"
 config.default_workspace                           = "default"
 config.term                                        = "xterm"
 config.font                                        = wezterm.font 'Iosevka Nerd Font'
-config.font_size                                   = 17
+config.font_size                                   = 14
 config.font_rules                                  = {
    {
       intensity = 'Bold',
       italic = false,
-      font = wezterm.font_with_fallback{
+      font = wezterm.font {
          family = 'Iosevka Nerd Font',
          weight = 'Bold',
          italic = false,
@@ -129,7 +129,7 @@ config.font_rules                                  = {
    {
       intensity = 'Bold',
       italic = true,
-      font = wezterm.font_with_fallback {
+      font = wezterm.font {
          family = 'Iosevka Nerd Font',
          weight = 'Bold',
          italic = true,
@@ -140,7 +140,7 @@ config.font_rules                                  = {
    {
       intensity = 'Normal',
       italic = true,
-      font = wezterm.font_with_fallback {
+      font = wezterm.font {
          family = 'Iosevka Nerd Font',
          italic = true,
       },
@@ -171,6 +171,7 @@ config.hide_mouse_cursor_when_typing               = true
 config.window_close_confirmation                   = 'NeverPrompt'
 config.window_decorations                          = "RESIZE"
 config.show_tab_index_in_tab_bar                   = true
+config.tab_and_split_indices_are_zero_based        = false
 config.switch_to_last_active_tab_when_closing_tab  = true
 config.hyperlink_rules                             = wezterm.default_hyperlink_rules()
 config.pane_focus_follows_mouse                    = false
@@ -204,26 +205,21 @@ config.window_padding = {
 config.launch_menu = launch_items
 -- config.ssh_backend = "Ssh2"
 config.ssh_backend = "LibSsh"
--- config.ssh_domains = wezterm.enumerate_ssh_hosts()
+config.ssh_domains = wezterm.enumerate_ssh_hosts()
 -- }}}
 
 -- KEYBINDINGS {{{
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
 
-require("keybindings").apply_to_config(config, {
-    -- Optional: Customize tab index base (0-based or 1-based)
-    -- tab_and_split_indices_are_zero_based = true
-})
+require("keybindings").apply_to_config(config, { })
 --    { action = action.CopyTo 'Clipboard',                                mods = 'CTRL|SHIFT',    key =     'C' },
 --    { action = action.DecreaseFontSize,                                  mods =       'CTRL',    key =     '-' },
 --    { action = action.IncreaseFontSize,                                  mods =       'CTRL',    key =     '=' },
---    { action = action.Nop,                                               mods =        'ALT',    key = 'Enter' },
 --    { action = action.PasteFrom 'Clipboard',                             mods = 'CTRL|SHIFT',    key =     'V' },
 --    { action = action.ResetFontSize,                                     mods =       'CTRL',    key =     '0' },
 --    { action = action.ShowLauncherArgs {flags="FUZZY|DOMAINS",           title = " Domains "},   mods =	'CTRL|SHIFT', key =		'A' },
 --    { action = action.ShowLauncherArgs {flags="FUZZY|WORKSPACES",        title = " Workspace "}, mods =	'CTRL|SHIFT', key =		'W' },
 --    -- { action = action.ShowLauncherArgs {flags="FUZZY|LAUNCH_MENU_ITEMS", title = " Launcher "},  mods =	'CTRL|SHIFT', key =		'?' },
---    { action = action.ShowLauncherArgs {flags="FUZZY|COMMANDS",          title = " Commands "},  mods =	'LEADER', key =		':' },
 --    -- move between split panes
 --    split_nav('move', 'h'),
 --    split_nav('move', 'j'),
