@@ -96,6 +96,37 @@ wezterm.on( 'format-tab-title', function(tab, tabs, panes, config, hover, max_wi
 
    return ' ' .. idx .. '.' ..  title_name .. ' '
 end)
+-- }}}
+
+wezterm.on('update-right-status', function(window, pane)
+  local mode = "NORMAL"
+  local main_palette = {
+     base = '#191724',
+     overlay = '#26233a',
+     muted = '#6e6a86',
+     text = '#e0def4',
+     love = '#eb6f92',
+     gold = '#f6c177',
+     rose = '#ebbcba',
+     pine = '#31748f',
+     foam = '#9ccfd8',
+     iris = '#c4a7e7',
+     highlight_high = '#524f67',
+  }
+  local modeBg =  main_palette.rose
+
+  if window:leader_is_active() then
+     modeBg = main_palette.love
+     mode = "LEADER"
+  end
+
+  -- Make it italic and underlined
+  window:set_right_status(wezterm.format {
+    { Background = { Color = modeBg } } ,
+    { Foreground = { Color = main_palette.base } } ,
+    { Text = ' ' .. mode .. ' ' },
+  })
+end)
 
 -- CONFIG {{{
 local config = {}
@@ -106,14 +137,14 @@ if wezterm.config_builder then
    config = wezterm.config_builder()
 end
 
-config.enable_wayland                              = false
-config.default_prog                                = { "wsl" }
+config.enable_wayland                              = true
+config.default_prog                                = { shell }
 config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"
 config.default_workspace                           = "default"
 config.term                                        = "xterm"
 config.font                                        = wezterm.font 'Iosevka Nerd Font'
-config.font_size                                   = 14
+config.font_size                                   = 17
 config.font_rules                                  = {
    {
       intensity = 'Bold',
@@ -204,8 +235,8 @@ config.window_padding = {
 }
 config.launch_menu = launch_items
 -- config.ssh_backend = "Ssh2"
-config.ssh_backend = "LibSsh"
-config.ssh_domains = wezterm.enumerate_ssh_hosts()
+-- config.ssh_backend = "LibSsh"
+-- config.ssh_domains = wezterm.enumerate_ssh_hosts()
 -- }}}
 
 -- KEYBINDINGS {{{
