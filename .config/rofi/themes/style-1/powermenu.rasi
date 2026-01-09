@@ -1,0 +1,10 @@
+@import "~/.config/rofi/themes/style-1/default.rasi"
+
+/*****----- Main Window -----*****/
+window {
+  width:    400px;
+  location: northeast;
+  anchor:   northeast;
+  x-offset: -5px;
+  y-offset: 5px;
+}

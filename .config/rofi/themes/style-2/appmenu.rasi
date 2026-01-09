@@ -1,0 +1,15 @@
+@import "~/.config/rofi/themes/style-2/default.rasi"
+
+/*****----- Main Window -----*****/
+window {
+   width:                       600px;
+   location:                    northwest;
+   anchor:                      northwest;
+   x-offset:                    5px;
+   y-offset:                    5px;
+}
+
+/*****----- Listview -----*****/
+listview {
+    lines: 10;
+}

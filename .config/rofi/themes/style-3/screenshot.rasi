@@ -1,0 +1,6 @@
+@import "~/.config/rofi/themes/style-3/default.rasi"
+
+/*****----- Main Window -----*****/
+window {
+    width:                       450px;
+}

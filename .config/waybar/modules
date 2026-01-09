@@ -1,0 +1,301 @@
+{
+   // Modules configuration
+   "hyprland/workspaces": {
+      "format": "{icon}",
+      "format-icons": {
+         "1": "1",
+         "2": "2",
+         "3": "3",
+         "4": "4",
+         "5": "5",
+         "6": "6",
+         "7": "7",
+         "8": "8",
+         "9": "9"
+      }
+   },
+   "niri/workspaces": {
+      "format": "{value}",
+   },
+   "custom/drawer1": {
+      "format": "",
+      // "format": "",
+      "tooltip": false
+   },
+   // Application Launcher
+   "custom/appmenuicon": {
+      "format": "",
+      "on-click": "rofi -show drun -theme ~/.config/rofi/themes/style-3/appmenu.rasi",
+      "tooltip": false,
+      "tooltip-format": "<span color='#abb2bf'>Open the application launcher</span>"
+   },
+   "custom/powermenuicon": {
+      "format": "",
+      "on-click": "rofi-session",
+      "tooltip": false,
+      "tooltip-format": "<span color='#abb2bf'>Open the power menu</span>"
+   },
+   "custom/notifications": {
+      "format": "{icon}",
+      "format-icons": {
+         "email-notification": "<span foreground='white'><sup></sup></span>",
+         "chat-notification": "󱋊<span foreground='white'><sup></sup></span>",
+         "warning-notification": "󱨪<span foreground='yellow'><sup></sup></span>",
+         "error-notification": "󱨪<span foreground='red'><sup></sup></span>",
+         "network-notification": "󱂇<span foreground='white'><sup></sup></span>",
+         "battery-notification": "󰁺<span foreground='white'><sup></sup></span>",
+         "update-notification": "󰚰<span foreground='white'><sup></sup></span>",
+         "music-notification": "󰝚<span foreground='white'><sup></sup></span>",
+         "volume-notification": "󰕿<span foreground='white'><sup></sup></span>",
+         "notification": "<span foreground='white'><sup></sup></span>",
+         "none": ""
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true,
+      "tooltip": false
+   },
+   "keyboard-state": {
+      "numlock": true,
+      "capslock": true,
+      "format": "{name} {icon}",
+      "format-icons": {
+         "locked": "",
+         "unlocked": ""
+      }
+   },
+   "mpd": {
+      "format": " {title} :: {volume}%",
+      "format-disconnected": " Disconnected",
+      "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon} ::   Stopped",
+      "unknown-tag": "N/A",
+      "title-len": 30,
+      "interval": 5,
+      "on-click": "mpc -q toggle",
+      "on-click-right": "rofi-mpc",
+      "consume-icons": {
+         "off": "<span color=\"#5b6078\"> </span> ",
+         "on": "<span color=\"#24273a\"> </span> "
+      },
+      "random-icons": {
+         "off": "<span color=\"#5b6078\"> </span> ",
+         "on": "<span color=\"#24273a\"> </span> "
+      },
+      "repeat-icons": {
+         "off": "<span color=\"#5b6078\"> </span> ",
+         "on": "<span color=\"#24273a\"> </span> "
+      },
+      "single-icons": {
+         "on": " 1",
+         "off": " 1"
+      },
+      "state-icons": {
+         "paused": " ",
+         "playing": " "
+      },
+      "tooltip": false,
+      "tooltip-format": "MPD (connected)",
+      "tooltip-format-disconnected": "MPD (disconnected)"
+   },
+   "idle_inhibitor": {
+      "format": "{icon}",
+      "format-icons": {
+         "activated": "",
+         "deactivated": ""
+      }
+   },
+   "tray": {
+      "icon-size": 21,
+      "tooltip": false,
+      "spacing": 10
+   },
+   "clock": {
+      // "timezone": "America/New_York",
+      "tooltip": true,
+      "tooltip-format": "{:%d %B %Y}",
+      "format" : " {:%H:%M}",
+      // "on-click": "ghostty -e calcurse &"
+   },
+   "cpu": {
+      "interval": 1,
+      "format": "{icon}",
+      "rotate": 270,
+      "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+   },
+   "memory": {
+      "interval": 1,
+      "rotate": 270,
+      "format": "{icon}",
+      "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+      "max-length": 10
+   },
+   "temperature": {
+      // "thermal-zone": 2,
+      // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+      "critical-threshold": 80,
+      // "format-critical": "{temperatureC}°C {icon}",
+      "format": "{temperatureC}°C {icon}",
+      "format-icons": ["", "", ""]
+   },
+   "backlight": {
+      // "device": "acpi_video1",
+      "format": "{icon}",
+      "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
+   },
+   "backlight/slider": {
+      "min": 1,
+      "max": 100,
+      "orientation": "horizontal",
+      "device": "intel_backlight"
+   },
+   "battery": {
+      "states": {
+         "good": 95,
+         "warning": 30,
+         "critical": 15
+      },
+      "tooltip": true,
+      "tooltip-format": "Batter charge: {capacity}%",
+      "format": "{icon}",
+      "format-full": "{icon}",
+      "format-charging": "󰂄",
+      "format-plugged": "",
+      "format-icons": [
+         "󰂎",
+         "󰁺",
+         "󰁻",
+         "󰁼",
+         "󰁽",
+         "󰁾",
+         "󰁿",
+         "󰂀",
+         "󰂁",
+         "󰂂"
+      ]
+   },
+   "battery#bat2": {
+      "bat": "BAT2"
+   },
+   "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": false,
+      "format-icons": {
+         "default": "",
+         "performance": "",
+         "balanced": "",
+         "power-saver": ""
+      }
+   },
+   "network": {
+      // "interface": "wlp2*", // (Optional) To force the use of this interface
+      "format-wifi": "󰤨",
+      "format-ethernet": "󰈀",
+      "tooltip": true,
+      "tooltip-format": "{essid} via {ifname}",
+      "format-linked": "  {ifname} (No IP)",
+      "format-disconnected": "󰤭",
+      "format-icons":[
+         "󰤯",
+         "󰤟",
+         "󰤢",
+         "󰤥",
+         "󰤨"
+      ]
+   },
+   "pulseaudio/slider": {
+      "min": 0,
+      "max": 100,
+      "orientation": "horizontal"
+   },
+   "pulseaudio": {
+      // "scroll-step": 1, // %, can be a float
+      "format": "{icon}",
+      "format-bluetooth": "{volume}% {icon} {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-muted": "",
+      "format-source": " {volume}%",
+      "format-source-muted": " ",
+      "format-icons": {
+         "headphone": "",
+         "hands-free": "",
+         "headset": "",
+         "phone": "",
+         "portable": "",
+         "car": "",
+         "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol"
+   },
+   "bluetooth": {
+      // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+      "format-on": "󰂯",
+      "format-off": "󰂲",
+      "format-disabled": "󰂲", // an empty format will hide the module
+      "format-connected": "󰂯 {num_connections} connected",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+   },
+   "wlr/taskbar": {
+      "format": "{icon}",
+      "icon-size": 20,
+      "icon-theme": "Numix-Circle",
+      "markup": true,
+      "tooltip": false,
+      "tooltip-format": "<span color='#abb2bf'>{title} ({state}</span>",
+         "on-click": "activate",
+         "on-click-middle": "close",
+         "ignore-list": [
+            "Alacritty"
+         ],
+         "app_ids-mapping": {
+            "firefoxdeveloperedition": "firefox-developer-edition"
+         },
+         "rewrite": {
+            "Firefox Web Browser": "Firefox",
+            "Foot Server": "Terminal"
+         }
+   },
+   "group/group-pulseaudio": {
+      "orientation": "horizontal",
+      "drawer": {
+         "transition-duration": 500,
+         "children-class": "pulseaudio-items",
+         "transition-left-to-right": true
+      },
+      "modules": [
+         "pulseaudio",
+         "pulseaudio/slider"
+      ]
+   },
+   "group/group-backlight": {
+      "orientation": "horizontal",
+      "drawer": {
+         "transition-duration": 500,
+         "children-class": "backlight-items",
+         "transition-left-to-right": true
+      },
+      "modules": [
+         "backlight",
+         "backlight/slider"
+      ]
+   },
+   "group/mics": {
+      "orientation": "horizontal",
+      "drawer": {
+         "transition-duration": 500,
+         "children-class": "mics-items",
+         "transition-left-to-right": true
+      },
+      "modules": [
+         "custom/drawer1",
+         "bluetooth",
+         "custom/notifications",
+         "power-profiles-daemon"
+      ]
+   }
+}

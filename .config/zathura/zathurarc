@@ -1,0 +1,36 @@
+include /home/dilip/.config/zathura/themes/rose-pine
+
+set font "Iosevka NFP 16"
+
+# settings
+set window-height         700
+set window-width          500
+set adjust-open           width
+set page-padding          15
+set show-hidden           true
+set statusbar-basename    true
+set statusbar-home-tilde  true
+set page-right-to-left    true
+set recolor               true
+set recolor-reverse-video false
+set selection-clipboard   clipboard
+set zoom-center           true
+set show-recent           10
+set show-directories      true
+set incremental-search    true
+
+# remove default key bindings
+unmap <C-n>
+
+# key bindings
+map K navigate previous
+map J navigate next
+map D toggle_page_mode
+map b toggle_statusbar
+map P print
+map r reload
+map R rotate
+map + zoom in
+map - zoom out
+map d recolor
+map <C-q> quit

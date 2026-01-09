@@ -1,0 +1,27 @@
+abbr :q 'exit'
+abbr :wq 'exit'
+abbr :x 'exit'
+
+abbr vim 'nvim'
+abbr vi 'nvim'
+abbr v 'nvim'
+abbr n "nextd"
+abbr p "prevd"
+abbr lg "lazygit"
+
+abbr mv 'mv -i'
+abbr rm 'rm -i'
+abbr cp 'cp -i'
+alias zf='z $(fd -t d | fzf --preview "ls -l {}")'
+alias ff='fastfetch --config examples/27.jsonc'
+
+if test -f $(which eza)
+   alias all='eza -al --color=always -h --icons --tree --level=1 --group-directories-first'
+   alias eza="eza --color=always --icons --group-directories-first"
+   alias la='eza -l --color=always -h --icons --tree --level=1 --group-directories-first'
+   alias ls="eza --color=always -h --icons --group-directories-first"
+   alias ll='eza -l --color=always -h --icons --group-directories-first'
+   alias ll1='eza -l --color=always -h --icons --tree --level=1 --group-directories-first'
+   alias ll2='eza -l --color=always -h --icons --tree --level=2 --group-directories-first'
+   alias ll3='eza -l --color=always -h --icons --tree --level=3 --group-directories-first'
+end

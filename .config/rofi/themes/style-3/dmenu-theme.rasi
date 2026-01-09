@@ -1,0 +1,29 @@
+@import "~/.config/rofi/themes/style-3/default.rasi"
+
+/*****----- Main Window -----*****/
+window {
+   width:                       100%;
+   height:                      38px;
+   location:                    north;
+   anchor:                      north;
+   y-offset:                    -40px;
+   border-radius:               0px;
+}
+
+mainbox {
+   orientation: horizontal;
+    padding: 3px;
+}
+
+inputbar {
+   width: 10%;
+   children: [ "entry" ];
+}
+
+/*****----- Listview -----*****/
+listview {
+    columns: 1;
+    lines: 15;
+    padding: 0px 0px 0px 6px;
+    layout: horizontal;
+}

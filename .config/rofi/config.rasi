@@ -1,0 +1,19 @@
+configuration{
+    modi: "drun,run";
+    show-icons: true;
+    icon-theme: "rose-pine-icons";
+    drun-display-format: "{icon} {name}";
+    drun-display-actions: true;
+    location: 0;
+	 terminal: "kitty";
+	 ssh-client: "ssh";
+	 ssh-command: "{terminal} -e {ssh-client} [-p {port}]";
+    disable-history: false;
+    display-drun: " Apps ";
+    display-run: " Commands ";
+    display-window: " Windows ";
+    display-ssh: " SSH ";
+    display-filebrowser: " File Browser ";
+    sidebar-mode: false;
+}
+@theme "/home/dilip/.config/rofi/themes/style-3/default.rasi"

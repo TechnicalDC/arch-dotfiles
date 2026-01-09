@@ -1,0 +1,15 @@
+@import "~/.config/rofi/themes/style-3/default.rasi"
+
+configuration {
+   show-icons:          true;
+   hide-scrollbar:      true;
+}
+
+/*****----- Main Window -----*****/
+window {
+   width: 600px;
+}
+
+element-icon {
+    size: 24px;
+}

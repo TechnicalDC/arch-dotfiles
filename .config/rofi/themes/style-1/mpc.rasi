@@ -1,0 +1,29 @@
+@import "~/.config/rofi/themes/style-1/default.rasi"
+
+/*****----- Main Window -----*****/
+window {
+   width:                       600px;
+   location:                    north;
+   anchor:                      north;
+   x-offset:                    0px;
+   y-offset:                    5px;
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    children: [ "textbox-prompt-colon", "prompt" ];
+ }
+
+textbox-prompt-colon {
+    str: "";
+}
+
+prompt {
+    vertical-align:   1.0;
+}
+
+textbox {
+    background-color: @selected-background;
+    vertical-align:   0.5;
+    horizontal-align: 0.5;
+}

@@ -1,0 +1,58 @@
+@import "~/.config/rofi/themes/style-1/default.rasi"
+
+/*****----- Configuration -----*****/
+configuration {
+   show-icons: true;
+}
+
+/*****----- Main Window -----*****/
+window {
+    width:    800px;
+    location: center;
+    anchor:   center;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     3;
+    lines:                       2;
+    cycle:                       true;
+    spacing:                     15px;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    border-color:                transparent;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     15px;
+    padding:                     10px;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+    orientation:                 vertical;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        200px;
+    border-radius:               10px;
+    cursor:                      inherit;
+}
+
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}

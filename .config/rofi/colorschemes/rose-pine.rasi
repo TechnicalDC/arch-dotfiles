@@ -1,0 +1,29 @@
+@import "default"
+
+* {
+	bg: #191724;
+	cur: #1f1d2e;
+	fgd: #e0def4;
+	cmt: #6e6a86;
+	cya: #9ccfd8;
+	grn: #31748f;
+	ora: #ebbcba;
+	pur: #c4a7e7;
+	red: #eb6f92;
+	yel: #f6c177;
+
+   hll: #21202e;
+   hlm: #403d52;
+   hlh: #524f67;
+
+	foreground: @fgd;
+	background: @bg;
+	active-foreground: @grn;
+	urgent-foreground: @red;
+
+	selected-background: @hlm;
+	selected-urgent-foreground: @urgent-foreground;
+	selected-active-foreground: @active-foreground;
+	separatorcolor: @active-background;
+	bordercolor: @ora;
+}
