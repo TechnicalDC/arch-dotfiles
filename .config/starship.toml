@@ -1,8 +1,22 @@
 format = """
+$username\
+[](bg:gold fg:love)\
 $directory\
-$git_branch$git_status\
-$line_break\
-$character"""
+[](fg:gold bg:rose)\
+$git_branch\
+[](fg:rose)\
+$line_break$character"""
+
+palette = "rose-pine"
+
+[palettes.rose-pine]
+overlay = '#26233a'
+love = '#eb6f92'
+gold = '#f6c177'
+rose = '#ebbcba'
+pine = '#31748f'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
 
 [character]
 success_symbol = "[❯](purple)"
@@ -13,8 +27,21 @@ vimcmd_symbol = "[❮](green)"
 symbol = '·'
 style = 'bold black'
 
+[username]
+style_user = 'fg:overlay bg:love bold italic'
+style_root = 'fg:overlay bg:love'
+format = '[ $user ]($style)'
+disabled = false
+show_always = true
+
+[directory]
+style = "fg:overlay bg:gold bold"
+format = "[ $path ]($style)"
+
 [git_branch]
 symbol = ' '
+style = "fg:overlay bg:rose"
+format = "[ $symbol$branch(:$remote_branch) ]($style)"
 
 [time]
 disabled = false
