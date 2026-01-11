@@ -40,27 +40,6 @@ local function is_vim(pane)
    return pane:get_user_vars().IS_NVIM == 'true'
 end
 
-local function split_nav(resize_or_move, key)
-   return {
-      key = key,
-      mods = resize_or_move == 'resize' and 'META' or 'CTRL',
-      action = wezterm.action_callback(function(win, pane)
-         if is_vim(pane) then
-            -- pass the keys through to vim/nvim
-            win:perform_action({
-               SendKey = { key = key, mods = resize_or_move == 'resize' and 'META' or 'CTRL' },
-            }, pane)
-         else
-            if resize_or_move == 'resize' then
-               win:perform_action({ AdjustPaneSize = { direction_keys[key], 3 } }, pane)
-            else
-               win:perform_action({ ActivatePaneDirection = direction_keys[key] }, pane)
-            end
-         end
-      end),
-   }
-end
-
 wezterm.on('gui-startup', function()
    local tab, pane, window = mux.spawn_window({})
    -- window:gui_window():maximize()
@@ -228,10 +207,10 @@ config.inactive_pane_hsb         = {
 }
 
 config.window_padding = {
-   left   = 0,
-   right  = 0,
-   top    = 0,
-   bottom = 0,
+   left   = 10,
+   right  = 10,
+   top    = 10,
+   bottom = 10,
 }
 config.launch_menu = launch_items
 -- config.ssh_backend = "Ssh2"
@@ -243,26 +222,12 @@ config.launch_menu = launch_items
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
 
 require("keybindings").apply_to_config(config, { })
---    { action = action.CopyTo 'Clipboard',                                mods = 'CTRL|SHIFT',    key =     'C' },
 --    { action = action.DecreaseFontSize,                                  mods =       'CTRL',    key =     '-' },
 --    { action = action.IncreaseFontSize,                                  mods =       'CTRL',    key =     '=' },
---    { action = action.PasteFrom 'Clipboard',                             mods = 'CTRL|SHIFT',    key =     'V' },
 --    { action = action.ResetFontSize,                                     mods =       'CTRL',    key =     '0' },
 --    { action = action.ShowLauncherArgs {flags="FUZZY|DOMAINS",           title = " Domains "},   mods =	'CTRL|SHIFT', key =		'A' },
 --    { action = action.ShowLauncherArgs {flags="FUZZY|WORKSPACES",        title = " Workspace "}, mods =	'CTRL|SHIFT', key =		'W' },
 --    -- { action = action.ShowLauncherArgs {flags="FUZZY|LAUNCH_MENU_ITEMS", title = " Launcher "},  mods =	'CTRL|SHIFT', key =		'?' },
---    -- move between split panes
---    split_nav('move', 'h'),
---    split_nav('move', 'j'),
---    split_nav('move', 'k'),
---    split_nav('move', 'l'),
---    -- resize panes
---    split_nav('resize', 'h'),
---    split_nav('resize', 'j'),
---    split_nav('resize', 'k'),
---    split_nav('resize', 'l'),
--- }
--- }}}
 
 -- and finally, return the configuration to wezterm
 return config

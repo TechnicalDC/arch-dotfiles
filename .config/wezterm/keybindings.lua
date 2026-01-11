@@ -206,20 +206,20 @@ function M.apply_to_config(config, _)
       { key = "l",               mods = "LEADER",                        action = act.ActivateLastTab },
 
       -- Panes
-      { key = "v", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-      { key = "h", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+      { key = "v",          mods = "LEADER",       action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+      { key = "h",          mods = "LEADER",       action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
       { key = "{",          mods = "LEADER|SHIFT", action = act.RotatePanes("CounterClockwise") },
       { key = "}",          mods = "LEADER|SHIFT", action = act.RotatePanes("Clockwise") },
-      { key = "h",  mods = "LEADER",       action = act.ActivatePaneDirection("Left") },
-      { key = "j",  mods = "LEADER",       action = act.ActivatePaneDirection("Down") },
-      { key = "k",    mods = "LEADER",       action = act.ActivatePaneDirection("Up") },
-      { key = "l", mods = "LEADER",       action = act.ActivatePaneDirection("Right") },
+      { key = "h",          mods = "LEADER",       action = act.ActivatePaneDirection("Left") },
+      { key = "j",          mods = "LEADER",       action = act.ActivatePaneDirection("Down") },
+      { key = "k",          mods = "LEADER",       action = act.ActivatePaneDirection("Up") },
+      { key = "l",          mods = "LEADER",       action = act.ActivatePaneDirection("Right") },
       { key = "q",          mods = "LEADER",       action = act.PaneSelect({ mode = "Activate" }) },
       { key = "z",          mods = "LEADER",       action = act.TogglePaneZoomState },
       { key = "!",          mods = "LEADER|SHIFT", action = M.action.MovePaneToNewTab },
-      { key = "LeftArrow",  mods = "LEADER|CTRL",  action = act.AdjustPaneSize({ "Left", 5 }) },
-      { key = "DownArrow",  mods = "LEADER|CTRL",  action = act.AdjustPaneSize({ "Down", 5 }) },
-      { key = "UpArrow",    mods = "LEADER|CTRL",  action = act.AdjustPaneSize({ "Up", 5 }) },
+      { key = "LeftArrow",  mods = "LEADER|CTRL",  action = act.AdjustPaneSize({ "Left",  5 }) },
+      { key = "DownArrow",  mods = "LEADER|CTRL",  action = act.AdjustPaneSize({ "Down",  5 }) },
+      { key = "UpArrow",    mods = "LEADER|CTRL",  action = act.AdjustPaneSize({ "Up",    5 }) },
       { key = "RightArrow", mods = "LEADER|CTRL",  action = act.AdjustPaneSize({ "Right", 5 }) },
       { key = "x",          mods = "LEADER",       action = act.CloseCurrentPane({ confirm = true }) },
 
@@ -228,11 +228,14 @@ function M.apply_to_config(config, _)
       -- Copy Mode
       { key = "[",          mods = "LEADER",      action = act.ActivateCopyMode },
       { key = ",",          mods = "LEADER",      action = M.action.RenameCurrentTab },
+
+      { key = 'C', mods = 'CTRL|SHIFT', action = act.CopyTo 'Clipboard', },
+      { key = 'V', mods = 'CTRL|SHIFT', action = act.PasteFrom 'Clipboard', },
    }
 
    local index_offset = config.tab_and_split_indices_are_zero_based and 0 or 1
    for i = index_offset, 9 do
-      table.insert(keys, { key = tostring(i), mods = "LEADER", action = act.ActivateTab(i - index_offset) })
+      table.insert(keys, { key = tostring(i), mods = "CTRL", action = act.ActivateTab(i - index_offset) })
    end
 
    local copy_mode = {
