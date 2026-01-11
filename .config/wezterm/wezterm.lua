@@ -228,10 +228,10 @@ config.inactive_pane_hsb         = {
 }
 
 config.window_padding = {
-   left   = 20,
-   right  = 20,
-   top    = 20,
-   bottom = 20,
+   left   = 0,
+   right  = 0,
+   top    = 0,
+   bottom = 0,
 }
 config.launch_menu = launch_items
 -- config.ssh_backend = "Ssh2"
