@@ -76,3 +76,5 @@
 ;; they are implemented.
 
 (setq fancy-splash-image "~/.config/doom/banner.png")
+
+(load! "abl-mode.el")

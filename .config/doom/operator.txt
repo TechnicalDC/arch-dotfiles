@@ -1,0 +1,1 @@
+"and" "begins" "eq" "ge" "gt" "le" "lt" "matches" "modulo" "ne" "not" "or" "xor"
