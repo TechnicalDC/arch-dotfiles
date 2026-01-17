@@ -34,6 +34,10 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-rose-pine)
 
+;; How tall the mode-line should be. It's only respected in GUI.
+;; If the actual char height is larger, it respects the actual height.
+(setq doom-modeline-height 40)
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
@@ -41,6 +45,9 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/orgfiles/")
+(after! org
+  (setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"))
+  (add-hook 'org-mode-hook #'org-bullets-mode))
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an

@@ -50,14 +50,22 @@
     "lookup" "add-new-index" "add-new-field" "break by" "question" "yes-no"
     "yes-no-cancel" "buttons" "quoter" "query-prepare" "query-open" "set-buffers"
     "view" "object" "this-procedure" "persistent" "through" "set" "descending"
-    "os-dir" "case-sensitive" "first-of" "last-of" "colon" "os-command" "silent"))
+    "os-dir" "case-sensitive" "first-of" "last-of" "colon" "os-command" "silent"
+    "disp" "display" "method" "public" "private" "protected" "void" "interface"
+    "override" "constructor" "destructor" "new"))
 
 (defvar abl-type-list
   '("char" "character" "int" "integer" "format" "var" "variable" "log" "logical" "handle"
-    "yes" "no" "true" "false" "date" "dec" "decimal"))
+    "yes" "no" "true" "false" "date" "dec" "decimal" "buffer"))
 
 (defvar abl-operator-list
-  '("and" "begins" "eq" "ge" "gt" "le" "lt" "matches" "modulo" "ne" "not" "or" "xor"))
+  '("and" "begins" "eq" "ge" "gt" "le" "lt" "matches" "modulo" "ne" "not" "or" "xor"
+    "between" "contains"))
+
+(defvar abl-method-list
+  '("valid-object"))
+
+(defvar abl-property-list '())
 
 (defvar abl-mode-hook nil)
 
@@ -77,6 +85,9 @@
 (defvar abl-operator-regexp
   (regexp-opt abl-operator-list 'words))
 
+(defvar abl-method-regexp
+  (regexp-opt abl-method-list 'words))
+
 (defvar abl-string-regexp
   (rx (and "\""
            (zero-or-more
@@ -91,6 +102,7 @@
   `((,abl-keyword-regexp . (1 font-lock-builtin-face))
     (,abl-type-regexp . (1 font-lock-type-face))
     (,abl-operator-regexp . (1 font-lock-operator-face))
+    (,abl-method-list . (1 font-lock-function-name-face))
     (,abl-string-regexp . (1 font-lock-string-face))))
 
 
