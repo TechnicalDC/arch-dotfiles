@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+swww-daemon &
+swaybg --output "*" --image ~/.cache/wallpaper_blurred.png --mode fill &
+waybar --config ~/.config/waybar/confs/panel/config.jsonc -s ~/.config/waybar/confs/panel/style.css &
+wally -r &
+mpd &
+nm-applet &
+swaync --config ~/.config/swaync/config.json --style ~/.config/swaync/style.css &
+hyprsunset &
