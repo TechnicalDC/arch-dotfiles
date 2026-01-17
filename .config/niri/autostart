@@ -8,3 +8,4 @@ mpd &
 nm-applet &
 swaync --config ~/.config/swaync/config.json --style ~/.config/swaync/style.css &
 hyprsunset &
+/usr/bin/emacs --daemon &
