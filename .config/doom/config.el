@@ -25,7 +25,7 @@
 (after! doom-theme
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
-;;
+
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
@@ -39,6 +39,7 @@
 ;; How tall the mode-line should be. It's only respected in GUI.
 ;; If the actual char height is larger, it respects the actual height.
 (setq doom-modeline-height 40)
+(setq doom-modeline-bar-width 6)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -47,10 +48,6 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/orgfiles/")
-(after! org
-  (setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"
-        org-hide-emphasis-markers t))
-  (add-hook 'org-mode-hook #'org-bullets-mode))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -84,8 +81,14 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq fancy-splash-image "~/.config/doom/banner.png")
+(setq fancy-splash-image (concat doom-user-dir "splash.png"))
 (setq shell-file-name (executable-find "bash"))
+(setq confirm-kill-emacs nil)        ;; Don't confirm on exit
+
+(after! org
+  (setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"
+        org-hide-emphasis-markers t))
+  (add-hook 'org-mode-hook #'org-bullets-mode))
 
 (load! "abl-mode.el")
 
@@ -108,10 +111,27 @@
    org-pretty-entities t
    org-agenda-tags-column 0
    org-ellipsis "…"))
+
+(use-package nerd-icons
+  :ensure t)
+
+(use-package nerd-icons-dired
+  :ensure t
+  :hook (dired-mode . nerd-icons-dired-mode))
+
+(use-package ivy-rich
+  :ensure t
+  :after ivy
+  :init
+  (ivy-rich-mode 1))
+
+(use-package nerd-icons-ivy-rich
+  :ensure t
+  :after ivy-rich
+  :init
+  (nerd-icons-ivy-rich-mode 1))
+
 ;; ============ MAPPINGS =============
 (map! :leader
       (:prefix ("t" . "toggle")
        :desc "Toggle neotree" "t" #'neotree-toggle))
-
-
-;; (global-org-modern-mode)
