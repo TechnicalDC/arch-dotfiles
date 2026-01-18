@@ -1,3 +1,6 @@
 * dotfiles
 
 ** screenshots
+
+[[https://raw.githubusercontent.com/TechnicalDC/dotfiles/refs/heads/main/images/grim_18012026_164721.png]]
+[[https://raw.githubusercontent.com/TechnicalDC/dotfiles/refs/heads/main/images/grim_18012026_164954.png]]
