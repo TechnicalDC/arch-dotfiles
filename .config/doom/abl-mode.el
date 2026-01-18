@@ -35,11 +35,11 @@
     "decimals" "table" "otherwise" "truncate" "ambiguous" "browse" "pause"
     "before-hide" "value" "export" "import" "from" "repeat" "like"
     "to-rowid" "substr" "unique" "primary" "overlay" "return-value"
-    "on" "error" "min" "max" "buffer-value" "stop" "transaction" "is"
+    "on" "error" "min" "max" "stop" "transaction" "is"
     "form" "stream-io" "column-label" "bind" "by-reference" "reference-only"
     "append" "using" "exclusive-lock" "chr" "terminal" "next-value"
     "current-value" "valid-handle" "valid-handle" "lastkey" "row"
-    "buffer-field" "update" "upper" "lower" "throw" "catch" "centered"
+     "update" "upper" "lower" "throw" "catch" "centered"
     "help" "side-labels" "title" "prompt" "center" "scrolling" "hide" "clear"
     "all" "choose" "no-pause" "page-up" "page-down" "home" "go-on" "color"
     "cursor-left" "cursor-right" "cursor-up" "cursor-down" "normal"
@@ -48,24 +48,26 @@
     "search" "time" "r-index" "etime" "persistent set" "table-handle" "of"
     "buffer-create" "default-buffer-handle" "finally" "prepare-temp-table"
     "lookup" "add-new-index" "add-new-field" "break by" "question" "yes-no"
-    "yes-no-cancel" "buttons" "quoter" "query-prepare" "query-open" "set-buffers"
-    "view" "object" "this-procedure" "persistent" "through" "set" "descending"
-    "os-dir" "case-sensitive" "first-of" "last-of" "colon" "os-command" "silent"
-    "disp" "display" "method" "public" "private" "protected" "void" "interface"
-    "override" "constructor" "destructor" "new"))
+    "yes-no-cancel" "buttons" "quoter" "view" "object" "this-procedure"
+    "persistent" "through" "set" "descending" "os-dir" "case-sensitive"
+    "first-of" "last-of" "colon" "os-command" "silent" "disp" "display" "method"
+    "public" "private" "protected" "void" "interface" "override" "constructor"
+    "destructor" "new" "get" "initial" "this-oject"))
 
 (defvar abl-type-list
   '("char" "character" "int" "integer" "format" "var" "variable" "log" "logical" "handle"
-    "yes" "no" "true" "false" "date" "dec" "decimal" "buffer"))
+    "yes" "no" "true" "false" "date" "dec" "decimal" "buffer" "dataset"))
 
 (defvar abl-operator-list
   '("and" "begins" "eq" "ge" "gt" "le" "lt" "matches" "modulo" "ne" "not" "or" "xor"
     "between" "contains"))
 
 (defvar abl-method-list
-  '("valid-object"))
+  '("valid-object" "empty-dataset" "get-buffer-handle" "get-first" "query-prepare" "set-buffers"
+    "query-open" "buffer-field" "copy-dataset"))
 
-(defvar abl-property-list '())
+(defvar abl-property-list
+  '("query-off-end" "buffer-value" ))
 
 (defvar abl-mode-hook nil)
 
@@ -88,6 +90,9 @@
 (defvar abl-method-regexp
   (regexp-opt abl-method-list 'words))
 
+(defvar abl-property-regexp
+  (regexp-opt abl-property-list 'words))
+
 (defvar abl-string-regexp
   (rx (and "\""
            (zero-or-more
@@ -103,6 +108,7 @@
     (,abl-type-regexp . (1 font-lock-type-face))
     (,abl-operator-regexp . (1 font-lock-operator-face))
     (,abl-method-list . (1 font-lock-function-name-face))
+    (,abl-property-list . (1 font-lock-property-name-face))
     (,abl-string-regexp . (1 font-lock-string-face))))
 
 
