@@ -1,5 +1,4 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
@@ -26,7 +25,6 @@
 (after! doom-theme
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
-
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -90,22 +88,29 @@
 
 (load! "abl-mode.el")
 
+;; ============ PACKAGES =============
+(use-package! org-modern
+  :hook
+  (org-mode . org-modern-mode)
+  (org-agenda-finalize . org-modern-agenda)
+  :config
+  (setq
+   ;; Edit settings
+   org-auto-align-tags nil
+   org-tags-column 0
+   org-catch-invisible-edits 'show-and-error
+   org-special-ctrl-a/e t
+   org-insert-heading-respect-content t
+
+   ;; Org styling, hide markup etc.
+   org-hide-emphasis-markers t
+   org-pretty-entities t
+   org-agenda-tags-column 0
+   org-ellipsis "…"))
+;; ============ MAPPINGS =============
 (map! :leader
       (:prefix ("t" . "toggle")
        :desc "Toggle neotree" "t" #'neotree-toggle))
 
-;; (setq
-;;  ;; Edit settings
-;;  org-auto-align-tags nil
-;;  org-tags-column 0
-;;  org-catch-invisible-edits 'show-and-error
-;;  org-special-ctrl-a/e t
-;;  org-insert-heading-respect-content t
-
-;;  ;; Org styling, hide markup etc.
-;;  org-hide-emphasis-markers t
-;;  org-pretty-entities t
-;;  org-agenda-tags-column 0
-;;  org-ellipsis "…")
 
 ;; (global-org-modern-mode)
