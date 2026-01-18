@@ -131,6 +131,16 @@
   :init
   (nerd-icons-ivy-rich-mode 1))
 
+(use-package neotree
+  :config
+  (setq neo-smart-open t
+        neo-show-hidden-files t))
+
+;; (use-package vterm
+;;   :config
+;;   (setq shell-file-name "/bin/sh"
+;;         vterm-max-scrollback 5000))
+
 ;; ============ MAPPINGS =============
 (map! :leader
       (:prefix ("t" . "toggle")

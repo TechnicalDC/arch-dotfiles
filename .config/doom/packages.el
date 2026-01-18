@@ -64,3 +64,4 @@
 (package! nerd-icons-dired)
 (package! ivy-rich)
 (package! nerd-icons-ivy-rich)
+;; (package! peek-dired)
