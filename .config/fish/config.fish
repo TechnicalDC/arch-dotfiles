@@ -12,6 +12,7 @@ set --export PATH  $PATH $HOME/.scripts/
 set --export PATH  $PATH $HOME/.local/bin/
 set --export PATH  $PATH $HOME/.cargo/bin/
 set --export PATH  $PATH $HOME/go/bin/
+set --export PATH  $PATH $HOME/.config/emacs/bin/
 set --export PATH  $PATH /mnt/c/Progress/OpenEdge/bin/
 set --export JAVA_HOME /usr/lib/jvm/java-21-openjdk
 set --export DLC   /mnt/c/Progress/OpenEdge
@@ -23,14 +24,17 @@ set --export FZF_DEFAULT_OPTS "
 	--color=spinner:#f6c177,info:#9ccfd8
 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 set --export FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS "--layout=reverse
---prompt='[search] '
+--border none
+--prompt=' '
 --pointer=''
 --info=hidden
 --highlight-line
 --ansi"
 
 set --export _ZO_FZF_OPTS "--layout=reverse
---prompt='[search] '
+--border sharp
+--height 40%
+--prompt=' '
 --pointer=''
 --info=hidden
 --highlight-line

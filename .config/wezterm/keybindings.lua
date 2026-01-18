@@ -223,7 +223,8 @@ function M.apply_to_config(config, _)
       { key = "RightArrow", mods = "LEADER|CTRL",  action = act.AdjustPaneSize({ "Right", 5 }) },
       { key = "x",          mods = "LEADER",       action = act.CloseCurrentPane({ confirm = true }) },
 
-      { key = " ",          mods = "LEADER",       action = act.QuickSelect },
+      { key = " ", mods = "LEADER", action = act.QuickSelect },
+      { key = ':', mods = 'LEADER|SHIFT',   action = wezterm.action.ActivateCommandPalette, },
 
       -- Copy Mode
       { key = "[",          mods = "LEADER",      action = act.ActivateCopyMode },

@@ -20,8 +20,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 22 )
-      doom-symbol-font (font-spec :family "Iosevka Nerd Font" :size 22 ))
+(setq doom-font (font-spec :family "Iosevka NF" :size 22 )
+      doom-symbol-font (font-spec :family "Iosevka NF" :size 22 ))
 (after! doom-theme
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
@@ -85,6 +85,7 @@
 ;; they are implemented.
 
 (setq fancy-splash-image "~/.config/doom/banner.png")
+(setq shell-file-name (executable-find "bash"))
 
 (load! "abl-mode.el")
 
