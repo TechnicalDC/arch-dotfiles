@@ -21,8 +21,11 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 22)
-      doom-symbol-font (font-spec :family "Iosevka Nerd Font" :size 22))
+(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 22 )
+      doom-symbol-font (font-spec :family "Iosevka Nerd Font" :size 22 ))
+(after! doom-theme
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -46,9 +49,9 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/orgfiles/")
 (after! org
-  (setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"))
+  (setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"
+        org-hide-emphasis-markers t))
   (add-hook 'org-mode-hook #'org-bullets-mode))
-
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -85,3 +88,7 @@
 (setq fancy-splash-image "~/.config/doom/banner.png")
 
 (load! "abl-mode.el")
+
+(map! :leader
+      (:prefix ("t" . "toggle")
+       :desc "Toggle neotree" "t" #'neotree-toggle))
