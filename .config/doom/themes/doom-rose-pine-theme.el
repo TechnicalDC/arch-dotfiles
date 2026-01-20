@@ -71,7 +71,7 @@
     ;; but can also be useful as a basis for subtle highlights (e.g. for hl-line
     ;; or region), especially when paired with the `doom-darken', `doom-lighten',
     ;; and `doom-blend' helper functions.
-    (bg-alt         surface)
+    (bg-alt         base)
     (fg-alt         text)
     ;; These should represent a spectrum from bg to fg, where base0 is a starker
     ;; bg and base8 is a starker fg. For example, if bg is light grey and fg is
@@ -133,9 +133,9 @@
     (modeline-fg                 text)
     (modeline-bg-alt             (if doom-rose-pine-brighter-modeline muted overlay))
     (modeline-fg-alt             text) ; should this be darker or lighter?
-    (modeline-bg-inactive        base)
+    (modeline-bg-inactive        surface)
     (modeline-fg-inactive        subtle)
-    (modeline-bg-inactive-alt    base)
+    (modeline-bg-inactive-alt    surface)
     (modeline-fg-inactive-alt    subtle)
     (modeline-pad
       (when doom-rose-pine-padded-modeline

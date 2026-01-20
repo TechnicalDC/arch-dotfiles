@@ -65,3 +65,4 @@
 (package! ivy-rich)
 (package! nerd-icons-ivy-rich)
 ;; (package! peek-dired)
+(package! spacious-padding)
