@@ -90,6 +90,18 @@
         org-hide-emphasis-markers t))
   (add-hook 'org-mode-hook #'org-bullets-mode))
 
+;; Only show one day of the agenda at a time
+(setq org-agenda-span 1
+      org-agenda-start-day "+0d"
+      org-agenda-skip-timestamp-if-done t
+      org-agenda-skip-deadline-if-done t
+      org-agenda-skip-scheduled-if-done t
+      org-agenda-skip-scheduled-if-deadline-is-shown t
+      org-agenda-skip-timestamp-if-deadline-is-shown t)
+;; Ricing org agenda
+(setq org-agenda-current-time-string "")
+(setq org-agenda-time-grid '((daily) () "" ""))
+
 (load! "abl-mode.el")
 
 ;; ============ PACKAGES =============
@@ -151,11 +163,14 @@
            :mode-line-width 0
            :custom-button-width 3
            :tab-width 4
-           :right-divider-width 30
+           :right-divider-width 0
            :scroll-bar-width 8
            :fringe-width 8))
 
   (spacious-padding-mode 1))
+
+;; (use-package org-super-agenda
+;;   (org-super-agenda-mode t))
 
 ;; ============ MAPPINGS =============
 (map! :leader
