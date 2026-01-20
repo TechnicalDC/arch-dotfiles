@@ -85,10 +85,10 @@
 (setq shell-file-name (executable-find "bash"))
 (setq confirm-kill-emacs nil)        ;; Don't confirm on exit
 
-(after! org
-  (setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"
-        org-hide-emphasis-markers t))
-  (add-hook 'org-mode-hook #'org-bullets-mode))
+;; (after! org
+;;   (setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"
+;;         org-hide-emphasis-markers t))
+;;   (add-hook 'org-mode-hook #'org-bullets-mode))
 
 ;; Only show one day of the agenda at a time
 (setq org-agenda-span 1
@@ -101,6 +101,23 @@
 ;; Ricing org agenda
 (setq org-agenda-current-time-string "")
 (setq org-agenda-time-grid '((daily) () "" ""))
+;; Remove category names and scheduling type from agenda view
+(setq org-agenda-prefix-format '((agenda . "  %?-2i %t ")
+                                 (todo . " %i %-12:c")
+                                 (tags . " %i %-12:c")
+                                 (search . " %i %-12:c")))
+;; Add icons!
+;; (setq org-agenda-category-icon-alist
+;;       `(("Teaching.p" ,(list (all-the-icons-faicon "graduation-cap" :height 0.8)) nil nil :ascent center)
+;;         ("Family.s" ,(list (all-the-icons-faicon "home" :v-adjust 0.005)) nil nil :ascent center)
+;;         ("Producer.p" ,(list (all-the-icons-faicon "youtube-play" :height 0.9)) nil nil :ascent center)
+;;         ("Bard.p" ,(list (all-the-icons-faicon "music" :height 0.9)) nil nil :ascent center)
+;;         ("Stories.s" ,(list (all-the-icons-faicon "book" :height 0.9)) nil nil :ascent center)
+;;         ("Author.p" ,(list (all-the-icons-faicon "pencil" :height 0.9)) nil nil :ascent center)
+;;         ("Gamedev.s" ,(list (all-the-icons-faicon "gamepad" :height 0.9)) nil nil :ascent center)
+;;         ("Knowledge.p" ,(list (all-the-icons-faicon "database" :height 0.8)) nil nil :ascent center)
+;;         ("Personal.p" ,(list (all-the-icons-material "person" :height 0.9)) nil nil :ascent center)
+;; ))
 
 (load! "abl-mode.el")
 
@@ -161,7 +178,7 @@
         '( :internal-border-width 15
            :header-line-width 4
            :mode-line-width 0
-           :custom-button-width 3
+           :custom-button-width 0
            :tab-width 4
            :right-divider-width 0
            :scroll-bar-width 8
@@ -169,8 +186,40 @@
 
   (spacious-padding-mode 1))
 
-;; (use-package org-super-agenda
-;;   (org-super-agenda-mode t))
+;; https://github.com/alphapapa/org-super-agenda/blob/master/examples.org
+(require 'org-super-agenda)
+(custom-set-faces!
+  '(org-agenda-date :inherit outline-1 :height 1.0)
+  '(org-agenda-date-today :inherit diary :height 1.0)
+  '(org-agenda-date-weekend :inherit outline-2 :height 1.0)
+  '(org-agenda-date-weekend-today :inherit outline-4 :height 1.0)
+  '(org-super-agenda-header :inherit custom-button :weight bold :height 1.0))
+(setq org-super-agenda-groups
+      '(;; Each group has an implicit boolean OR operator between its selectors.
+
+        ;; This is the first filter, anything found here
+        ;; will be placed in this group
+        ;; even if it matches following groups
+        (:name "Overdue " ; Name
+         :scheduled past ; Filter criteria
+         :order 2 ; Order it should appear in agenda view
+         :face 'error) ; Font face used for text
+
+        (:name "Due soon "
+         :deadline future
+         :order 3
+         :face 'error)
+
+        ;; Fourth filter..
+        (:name "Today "  ; Optionally specify section name
+         :time-grid t ; Use the time grid
+         :date today ; Filter criteria
+         :scheduled today ; Another filter criteria
+         :order 1 ; Order it should appear in the agenda view
+         :face 'warning) ; Font face used for text
+        )
+)
+(org-super-agenda-mode t)
 
 ;; ============ MAPPINGS =============
 (map! :leader
