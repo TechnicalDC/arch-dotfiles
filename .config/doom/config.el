@@ -219,6 +219,7 @@
          :face 'warning) ; Font face used for text
         )
 )
+(setq org-super-agenda-header-map nil)
 (org-super-agenda-mode t)
 
 ;; ============ MAPPINGS =============
