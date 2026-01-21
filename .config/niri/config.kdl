@@ -281,6 +281,7 @@ window-rule {
    match app-id=r#".*telegram.*"#
    match app-id="zen"
    match app-id="gimp"
+   match app-id="emacs"
    match app-id="com.obsproject.Studio"
    open-maximized true
 }
