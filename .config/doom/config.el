@@ -91,13 +91,14 @@
 ;;   (add-hook 'org-mode-hook #'org-bullets-mode))
 
 ;; Only show one day of the agenda at a time
-(setq org-agenda-span 1
-      org-agenda-start-day "+0d"
-      org-agenda-skip-timestamp-if-done t
-      org-agenda-skip-deadline-if-done t
-      org-agenda-skip-scheduled-if-done t
-      org-agenda-skip-scheduled-if-deadline-is-shown t
-      org-agenda-skip-timestamp-if-deadline-is-shown t)
+(after! org-agenda
+  (setq org-agenda-span 1
+        org-agenda-start-day "+0d"
+        org-agenda-skip-timestamp-if-done t
+        org-agenda-skip-deadline-if-done t
+        org-agenda-skip-scheduled-if-done t
+        org-agenda-skip-scheduled-if-deadline-is-shown t
+        org-agenda-skip-timestamp-if-deadline-is-shown t))
 ;; Ricing org agenda
 (setq org-agenda-current-time-string "")
 (setq org-agenda-time-grid '((daily) () "" ""))
