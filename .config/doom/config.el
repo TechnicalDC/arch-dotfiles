@@ -120,6 +120,12 @@
 ;;         ("Personal.p" ,(list (all-the-icons-material "person" :height 0.9)) nil nil :ascent center)
 ;; ))
 
+;; Filter out unwanted buffers
+(after! ivy
+  (add-to-list 'ivy-ignore-buffers "^\\*Messages\\*$")
+  (add-to-list 'ivy-ignore-buffers "^\\*scratch\\*$")
+  (add-to-list 'ivy-ignore-buffers "^\\*Help\\*$"))
+
 (load! "abl-mode.el")
 
 ;; ============ PACKAGES =============
