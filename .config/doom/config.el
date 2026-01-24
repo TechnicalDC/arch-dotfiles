@@ -175,7 +175,7 @@
 
 ;; (use-package vterm
 ;;   :config
-;;   (setq shell-file-name "/bin/sh"
+;;   (setq shell-file-name "/bin/fish"
 ;;         vterm-max-scrollback 5000))
 (use-package spacious-padding
   :ensure t

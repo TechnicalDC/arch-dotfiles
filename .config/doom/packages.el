@@ -59,7 +59,7 @@
 ;; typst: https://codeberg.org/meow_king/typst-ts-mode/wiki/Installation.md
 (package! typst-ts-mode :recipe (:host codeberg :repo "meow_king/typst-ts-mode"))
 
-;; (package! org-modern)
+(package! org-modern)
 (package! nerd-icons)
 (package! nerd-icons-dired)
 (package! nerd-icons-corfu)
