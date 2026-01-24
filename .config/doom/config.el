@@ -38,7 +38,7 @@
 
 ;; How tall the mode-line should be. It's only respected in GUI.
 ;; If the actual char height is larger, it respects the actual height.
-(setq doom-modeline-height 40)
+;; (setq doom-modeline-height 40)
 (setq doom-modeline-bar-width 6)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -185,7 +185,7 @@
   (setq spacious-padding-widths
         '( :internal-border-width 15
            :header-line-width 4
-           :mode-line-width 0
+           :mode-line-width 5
            :custom-button-width 0
            :tab-width 4
            :right-divider-width 0
