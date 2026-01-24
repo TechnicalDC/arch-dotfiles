@@ -3,7 +3,8 @@
 /* @import "./rose-pine-dawn.css"; */
 
 * {
-   font-family: Roboto, "JetBrainsMono Nerd Font Propo";
+   font-family: "BlexMono Nerd Font Propo";
+   /* font-family: Roboto, "JetBrainsMono Nerd Font Propo"; */
    font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
    font-weight: bold;
    font-size: 20px;

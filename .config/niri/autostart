@@ -2,7 +2,7 @@
 
 swww-daemon &
 swaybg --output "*" --image ~/.cache/wallpaper_blurred.png --mode fill &
-waybar --config ~/.config/waybar/confs/panel/config.jsonc -s ~/.config/waybar/confs/panel/style.css &
+waybar --config ~/.config/waybar/confs/blocks/config.jsonc -s ~/.config/waybar/confs/blocks/style.css &
 wally -r &
 mpd &
 nm-applet &

@@ -15,15 +15,14 @@
    "modules-left": [
       "custom/appmenuicon",
       "clock",
-      "hyprland/workspaces",
-      "group/mics"
+      "hyprland/workspaces"
    ],
    "modules-center": [],
    "modules-right": [
       "group/group-pulseaudio",
       "group/group-backlight",
-      "cpu",
-      "memory",
+      "custom/notifications",
+      "bluetooth",
       "network",
       "battery",
       "custom/powermenuicon"

@@ -85,11 +85,6 @@
 (setq shell-file-name (executable-find "bash"))
 (setq confirm-kill-emacs nil)        ;; Don't confirm on exit
 
-;; (after! org
-;;   (setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"
-;;         org-hide-emphasis-markers t))
-;;   (add-hook 'org-mode-hook #'org-bullets-mode))
-
 ;; Only show one day of the agenda at a time
 (after! org-agenda
   (setq org-agenda-span 1
@@ -124,6 +119,7 @@
 (after! ivy
   (add-to-list 'ivy-ignore-buffers "^\\*Messages\\*$")
   (add-to-list 'ivy-ignore-buffers "^\\*scratch\\*$")
+  (add-to-list 'ivy-ignore-buffers "^\\*doom\\*$")
   (add-to-list 'ivy-ignore-buffers "^\\*Help\\*$"))
 
 (load! "abl-mode.el")
@@ -147,6 +143,11 @@
    org-pretty-entities t
    org-agenda-tags-column 0
    org-ellipsis "…"))
+
+;; (after! org
+;;   (setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"
+;;         org-hide-emphasis-markers t))
+;;   (add-hook 'org-mode-hook #'org-bullets-mode))
 
 (use-package nerd-icons
   :ensure t)

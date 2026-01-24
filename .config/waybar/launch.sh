@@ -8,4 +8,4 @@ then
     killall waybar
 fi
 
-waybar --config ~/.config/waybar/confs/float-panel/config-vert.jsonc -s ~/.config/waybar/confs/float-panel/style-vert.css &
+waybar --config ~/.config/waybar/confs/float-panel/config.jsonc -s ~/.config/waybar/confs/float-panel/style.css &
