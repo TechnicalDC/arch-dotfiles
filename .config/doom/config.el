@@ -241,3 +241,10 @@
 (map! :leader
       (:prefix ("t" . "toggle")
        :desc "Toggle neotree" "t" #'neotree-toggle))
+
+(map! :leader
+      (:prefix ("o" . "open")
+       :desc "Open magit" "m" #'magit))
+
+(map! :leader
+      (:desc "Open dired" "-" #'dired))
