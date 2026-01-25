@@ -239,14 +239,14 @@ recent-windows {
 }
 
 overview {
-	backdrop-color "#191724"
-	workspace-shadow {
-      // off
-		softness 0
-		spread 8
-		offset x=0 y=0
-		color "#191724"
-	}
+    backdrop-color "#191724"
+    workspace-shadow {
+        off
+        softness 0
+        spread 8
+        offset x=0 y=0
+        color "#191724"
+    }
 }
 
 hotkey-overlay {

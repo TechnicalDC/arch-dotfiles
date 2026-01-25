@@ -84,6 +84,16 @@
 (setq fancy-splash-image (concat doom-user-dir "splash.png"))
 (setq shell-file-name (executable-find "bash"))
 (setq confirm-kill-emacs nil)        ;; Don't confirm on exit
+(setq custom-tab-width 3)
+
+(custom-set-faces
+ '(org-level-1 ((t (:inherit outline-1 :weight bold))))
+ '(org-level-2 ((t (:inherit outline-2 :weight bold))))
+ '(org-level-3 ((t (:inherit outline-3 :weight bold))))
+ '(org-level-4 ((t (:inherit outline-4 :weight bold))))
+ '(org-level-5 ((t (:inherit outline-5 :weight bold))))
+ '(org-level-6 ((t (:inherit outline-5 :weight bold))))
+ '(org-level-7 ((t (:inherit outline-5 :weight bold)))))
 
 ;; Only show one day of the agenda at a time
 (after! org-agenda
@@ -142,7 +152,8 @@
    org-hide-emphasis-markers t
    org-pretty-entities t
    org-agenda-tags-column 0
-   org-ellipsis "…"))
+   org-ellipsis "…"
+   org-modern-star 'replace))
 
 ;; (after! org
 ;;   (setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"
