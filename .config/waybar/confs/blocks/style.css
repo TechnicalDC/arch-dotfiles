@@ -4,7 +4,6 @@
 
 * {
    font-family: "BlexMono Nerd Font Propo";
-   /* font-family: Roboto, "JetBrainsMono Nerd Font Propo"; */
    font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
    font-weight: bold;
    font-size: 20px;
@@ -16,7 +15,6 @@ window#waybar {
    background-color: @base;
    border-radius: 0px;
    border-bottom: 1px solid @highlightHigh;
-   /* box-shadow: 10px 10px 5px 5px @base; */
 }
 
 #group-pulseaudio,
@@ -100,14 +98,8 @@ window#waybar {
 }
 
 #workspaces button:hover {
-   color: transparent;
-   background-color: @muted;
+   background-color: @foam;
 }
-
-/* #clock { */
-/*    font-family: "Roboto Black"; */
-/*    font-size: 25px; */
-/* } */
 
 #battery.charging, #battery.plugged {
    color: @pine;
