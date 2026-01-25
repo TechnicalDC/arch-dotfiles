@@ -82,7 +82,6 @@
 ;; they are implemented.
 
 (setq fancy-splash-image (concat doom-user-dir "splash.png"))
-(setq shell-file-name (executable-find "bash"))
 (setq confirm-kill-emacs nil)        ;; Don't confirm on exit
 (setq custom-tab-width 3)
 
@@ -155,11 +154,6 @@
    org-ellipsis "…"
    org-modern-star 'replace))
 
-;; (after! org
-;;   (setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"
-;;         org-hide-emphasis-markers t))
-;;   (add-hook 'org-mode-hook #'org-bullets-mode))
-
 (use-package nerd-icons
   :ensure t)
 
@@ -184,10 +178,11 @@
   (setq neo-smart-open t
         neo-show-hidden-files t))
 
-;; (use-package vterm
-;;   :config
-;;   (setq shell-file-name "/bin/fish"
-;;         vterm-max-scrollback 5000))
+(use-package vterm
+  :config
+  (setq vterm-shell (getenv "SHELL")
+        vterm-max-scrollback 5000))
+
 (use-package spacious-padding
   :ensure t
   :config
@@ -238,7 +233,8 @@
          :face 'warning) ; Font face used for text
         )
 )
-(setq org-super-agenda-header-map nil)
+(setq org-super-agenda-header-map nil
+      org-super-agenda-unmatched-name "Other Items ")
 (org-super-agenda-mode t)
 
 ;; ============ MAPPINGS =============
