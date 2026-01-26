@@ -175,11 +175,6 @@
   :init
   (nerd-icons-ivy-rich-mode 1))
 
-(use-package neotree
-  :config
-  (setq neo-smart-open t
-        neo-show-hidden-files t))
-
 (use-package vterm
   :config
   (setq vterm-shell (getenv "SHELL")
@@ -240,10 +235,6 @@
 (org-super-agenda-mode t)
 
 ;; ============ MAPPINGS =============
-(map! :leader
-      (:prefix ("t" . "toggle")
-       :desc "Toggle neotree" "t" #'neotree-toggle))
-
 (map! :leader
       (:prefix ("o" . "open")
        :desc "Open magit" "m" #'magit))
