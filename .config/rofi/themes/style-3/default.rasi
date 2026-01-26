@@ -161,10 +161,10 @@ element selected urgent {
 }
 
 element selected normal {
-    background-color: @cya;
-    text-color:       @background;
-    border:           0px;
-    border-color:     @selected-background;
+    background-color: @background;
+    text-color:       @foreground;
+    border:           2px;
+    border-color:     @cya;
     border-radius:    5px;
 }
 

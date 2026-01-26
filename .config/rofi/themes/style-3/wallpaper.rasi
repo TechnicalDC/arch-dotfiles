@@ -56,11 +56,3 @@ element-text {
     vertical-align:              0.5;
     horizontal-align:            0.5;
 }
-
-element selected normal {
-    background-color: @background;
-    text-color:       @foreground;
-    border:           2px;
-    border-color:     @cya;
-    border-radius:    5px;
-}
