@@ -94,6 +94,9 @@
  '(org-level-6 ((t (:inherit outline-5 :weight bold))))
  '(org-level-7 ((t (:inherit outline-5 :weight bold)))))
 
+(after! org
+  (setq org-ellipsis " "))
+
 ;; Only show one day of the agenda at a time
 (after! org-agenda
   (setq org-agenda-span 1
@@ -151,7 +154,6 @@
    org-hide-emphasis-markers t
    org-pretty-entities t
    org-agenda-tags-column 0
-   org-ellipsis "…"
    org-modern-star 'replace))
 
 (use-package nerd-icons
