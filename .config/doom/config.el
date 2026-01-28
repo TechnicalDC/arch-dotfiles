@@ -34,7 +34,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-rose-pine)
+(setq doom-theme 'doom-nord)
 
 ;; How tall the mode-line should be. It's only respected in GUI.
 ;; If the actual char height is larger, it respects the actual height.
@@ -186,7 +186,7 @@
   ;; These are the default values, but I keep them here for visibility.
   ;; Also check `spacious-padding-subtle-frame-lines'.
   (setq spacious-padding-widths
-        '( :internal-border-width 15
+        '( :internal-border-width 0
            :header-line-width 4
            :mode-line-width 0
            :custom-button-width 0
