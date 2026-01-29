@@ -18,10 +18,11 @@ set --export JAVA_HOME /usr/lib/jvm/java-21-openjdk
 set --export DLC   /mnt/c/Progress/OpenEdge
 set --export QT_QUICK_CONTROLS_STYLE Basic
 set --export FZF_DEFAULT_OPTS "
-    --color=fg:#e5e9f0,bg:#2E3440,hl:#81a1c1
-    --color=fg+:#e5e9f0,bg+:#2E3440,hl+:#81a1c1
-    --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
-    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b"
+	--color=fg:#908caa,bg:-1,hl:#ebbcba
+	--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
+	--color=border:#403d52,header:#31748f,gutter:-1
+	--color=spinner:#f6c177,info:#9ccfd8
+	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 set --export FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS "--layout=reverse
 --border none
 --prompt=' '
@@ -30,8 +31,7 @@ set --export FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS "--layout=reverse
 --highlight-line
 --ansi"
 
-set --export _ZO_FZF_OPTS $FZF_DEFAULT_OPTS "--layout=reverse
-   --height 40%"
+set --export _ZO_FZF_OPTS $FZF_DEFAULT_OPTS "--layout=reverse --height 40%"
 #}}}
 
 set fish_greeting
