@@ -121,7 +121,7 @@ slider {
   background-color: @base;
   border-radius: 10px;
   margin-bottom: 5px;
-  border: 1px solid @highlightHigh;
+  border: 2px solid @highlightHigh;
   color: @text;
   padding: 10px;
 }
@@ -191,7 +191,7 @@ slider {
   border-radius: 8px;
   margin: 10px;
   padding: 20px;
-  border: 1px solid @highlightHigh;
+  border: 2px solid @highlightHigh;
   background-color: @base;
   color: @text;
 }

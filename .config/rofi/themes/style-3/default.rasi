@@ -33,7 +33,7 @@ window {
     border-radius:               8px;
     cursor:                      "default";
     border-color:                @hlh;
-    border:                      1px;
+    border:                      2px;
     background-color:            @background;
     padding: 0px;
 }

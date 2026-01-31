@@ -14,7 +14,7 @@
 window#waybar {
    background-color: @base;
    border-radius: 0px;
-   border-bottom: 1px solid @highlightHigh;
+   border-bottom: 2px solid @highlightHigh;
 }
 
 #group-pulseaudio,

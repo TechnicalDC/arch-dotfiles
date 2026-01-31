@@ -123,7 +123,7 @@ layout {
 	gaps 10
 	center-focused-column "never"
 	always-center-single-column
-    background-color "transparent"
+   background-color "transparent"
 
 	preset-column-widths {
 		proportion 0.33333
@@ -146,12 +146,10 @@ layout {
 	}
 
 	border {
-		width 1
-        active-color "#524f67"
-        inactive-color "#524f67"
+		width 2
+      active-color "#524f67"
+      inactive-color "#524f67"
 		urgent-color "#eb6f92"
-		// active-gradient from="#9ccfd8" to="#c4a7e7" angle=45 relative-to="workspace-view"
-		// inactive-gradient from="#403d52" to="#524f67" angle=45 relative-to="workspace-view"
 	}
 
 	shadow {
