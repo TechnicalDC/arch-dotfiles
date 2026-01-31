@@ -7,6 +7,4 @@ wally -r &
 mpd &
 nm-applet &
 swaync --config ~/.config/swaync/config.json --style ~/.config/swaync/style.css &
-elephant &
-walker --gapplication-service &
 hyprsunset &

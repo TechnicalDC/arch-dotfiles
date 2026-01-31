@@ -34,7 +34,7 @@ window {
     cursor:                      "default";
     border-color:                @hlh;
     border:                      1px;
-    background-color:            @background-alpha;
+    background-color:            @background;
     padding: 0px;
 }
 
