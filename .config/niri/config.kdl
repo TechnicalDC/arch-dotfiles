@@ -194,7 +194,7 @@ layer-rule {
 }
 
 layer-rule {
-    match namespace="waybar"
+    // match namespace="waybar"
     match namespace="rofi"
     match namespace="swaync-control-center"
     geometry-corner-radius 8

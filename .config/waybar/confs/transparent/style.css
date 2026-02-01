@@ -1,0 +1,295 @@
+@import "../../themes/rose-pine.css";
+/* @import "./rose-pine-moon.css"; */
+/* @import "./rose-pine-dawn.css"; */
+
+* {
+    font-family: "BlexMono Nerd Font Propo";
+   /* font-family: Roboto, "VictorMono Nerd Font Propo"; */
+   font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
+   font-weight: bold;
+   font-size: 18px;
+   border-radius: 0px;
+   border: none;
+}
+
+window#waybar {
+   background: transparent;
+}
+
+#group-pulseaudio,
+#group-backlight,
+#custom-appmenuicon,
+#custom-powermenuicon,
+#custom-notifications,
+#custom-drawer1,
+#bluetooth,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#network,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#user,
+#taskbar,
+#power-profiles-daemon,
+#workspaces,
+#mpd {
+   background: transparent;
+   border-radius: 5px;
+   padding: 8px 15px;
+   color: @foreground;
+   margin: 0px;
+}
+
+#cpu,
+#memory,
+#network,
+#battery {
+   padding: 6px 12px;
+   border-radius: 0px;
+   margin-left: 0px;
+   margin-right: 0px;
+}
+
+#custom-drawer1 { background: transparent; }
+
+#custom-appmenuicon {
+   margin-left: 0px;
+   color: @foam;
+}
+
+#custom-powermenuicon {
+   margin-right: 0px;
+   color: @love;
+}
+
+/* #custom-notifications { */
+/*    padding-right: 10px; */
+/*    border-radius: 0px 5px 5px 0px; */
+/*    margin-right: 0px; */
+/* } */
+
+#workspaces{
+   padding: 5px 3px;
+}
+
+#workspaces button {
+   color: @subtle;
+   border-radius: 5px;
+   padding: 0px 10px;
+   background-color: transparent;
+   margin: 0px 3px;
+   min-width: 1px;
+   border: 2px solid transparent;
+}
+
+#workspaces button.active{
+   font-weight: bold;
+   color: @text;
+   border: 2px solid @foam;
+}
+
+#workspaces button.urgent{
+   color: @base;
+   background-color: @rose;
+}
+
+#workspaces button:hover {
+   background-color: @muted;
+}
+
+/* #clock { */
+/*    font-family: "Roboto Black"; */
+/*    font-size: 25px; */
+/* } */
+
+#battery.charging, #battery.plugged {
+   color: @pine;
+}
+
+#battery {
+   border-radius: 0px 5px 5px 0px;
+   padding-right: 20px;
+   margin-right: 3px;
+}
+
+#battery.critical:not(.charging) {
+   color: @love;
+}
+
+#cpu {
+   border-radius: 5px 0px 0px 5px;
+   padding-left: 15px;
+   margin-left: 3px;
+}
+#memory {
+   padding-left: 10px;
+}
+#disk { }
+#backlight { }
+
+#pulseaudio-slider,
+#backlight-slider {
+  min-width: 100px;
+}
+
+#pulseaudio-slider slider,
+#backlight-slider slider {
+  background: transparent;
+}
+
+#pulseaudio-slider trough,
+#backlight-slider trough {
+  min-width: 10px;
+  background: @muted;
+  margin: 0px 10px;
+  border-radius: 10px;
+}
+
+#pulseaudio-slider highlight,
+#backlight-slider highlight {
+  min-height: 10px;
+  border-radius: 10px;
+  background: @foam;
+}
+
+
+#network{
+   padding-left: 10px;
+}
+
+#bluetooth {
+   border-radius: 5px 0px 0px 5px;
+   padding-left: 10px;
+   margin-right: 0px;
+}
+#bluetooth.off,
+#bluetooth.disabled,
+#network.disabled,
+#network.disconnected{
+   color: @love;
+}
+
+#network.linked, #network.wifi{ }
+#network.ethernet{ }
+
+#pulseaudio { }
+#pulseaudio.muted {
+   color: @love;
+}
+
+#temperature { }
+#temperature.critical {
+   background-color: @red;
+   color: @text;
+}
+
+#tray { }
+#tray > .passive {
+   -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+   -gtk-icon-effect: highlight;
+   background-color: @red;
+}
+
+#idle_inhibitor {
+   background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+   background-color: #ecf0f1;
+   color: #2d3436;
+}
+
+#mpd {
+   border-radius: 5px;
+   padding: 0px 10px;
+   background-color: transparent;
+   color: @text;
+   margin: 5px 3px;
+}
+
+#mpd.disconnected {
+   background-color: @love;
+   color: @text;
+}
+
+#mpd.playing { 
+   background-color: @foam;
+   color: @base;
+}
+
+#mpd.stopped { }
+
+#mpd.paused {
+   background-color: transparent;
+   color: @text;
+}
+
+#language {
+   padding: 0 5px;
+   margin: 0 5px;
+   min-width: 16px;
+}
+
+#keyboard-state {
+   padding: 0 0px;
+   margin: 0 5px;
+   min-width: 16px;
+}
+
+#keyboard-state > label {
+   padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+   background: rgba(0, 0, 0, 0.2);
+}
+
+tooltip {
+   border-radius: 8px;
+   border: 4px solid @base;
+   background-color: alpha(@base, .8);
+}
+tooltip label {
+}
+
+#taskbar {
+   padding: 0px;
+}
+
+#taskbar button {
+   border-radius: 5px;
+   padding: 5px 10px;
+}
+
+#taskbar button:hover {
+   background-color: @muted;
+}
+#taskbar button.active {
+   background-color: @foam;
+}
+#taskbar.empty {
+   background: transparent;
+}
+
+#power-profiles-daemon.balanced {
+   background-color: @gold;
+   color: @base;
+}
+
+#power-profiles-daemon.performance {
+   background-color: @love;
+   color: @base;
+}
+
+#power-profiles-daemon.power-saver {
+   background-color: @foam;
+   color: @base;
+}
