@@ -3,6 +3,7 @@ font-size = 18
 font-feature = +liga
 
 theme = dark:rose-pine,light:rose-pine-dawn
+# theme = dark:Nord,light:Nord Light
 shell-integration = fish
 quick-terminal-position =  center
 adw-toolbar-style = flat
