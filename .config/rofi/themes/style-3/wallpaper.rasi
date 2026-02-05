@@ -8,15 +8,24 @@ configuration {
 /*****----- Main Window -----*****/
 window {
     width:    800px;
+    background-image: url("~/.cache/wallpaper_blurred.png", width);
+    fullscreen: true;
+    border: 0px;
+    border-radius: 0px;
+	 padding: 20%;
     location: center;
     anchor:   center;
+}
+
+inputbar {
+	background-color: transparent;
 }
 
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     3;
-    lines:                       2;
+    columns:                     4;
+    lines:                       1;
     cycle:                       true;
     spacing:                     15px;
     dynamic:                     true;
@@ -55,4 +64,8 @@ element-icon {
 element-text {
     vertical-align:              0.5;
     horizontal-align:            0.5;
+}
+
+element selected normal {
+    background-color: transparent;
 }
