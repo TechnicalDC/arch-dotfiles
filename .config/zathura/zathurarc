@@ -1,6 +1,6 @@
 include /home/dilip/.config/zathura/themes/rose-pine
 
-set font "Iosevka NFP 16"
+set font "BlexMono Nerd Font 16"
 
 # settings
 set window-height         700
