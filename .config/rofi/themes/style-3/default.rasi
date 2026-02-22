@@ -13,7 +13,7 @@ configuration {
 }
 
 * {
-    font: "BlexMono Nerd Font 16";
+    font: "Iosevka Nerd Font 16";
     /* font: "Roboto 15"; */
 }
 

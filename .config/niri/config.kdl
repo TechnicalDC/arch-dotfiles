@@ -122,7 +122,7 @@ output "eDP-1" {
 layout {
 	gaps 10
 	center-focused-column "never"
-	always-center-single-column
+	// always-center-single-column
    background-color "transparent"
 
 	preset-column-widths {
@@ -194,17 +194,17 @@ layer-rule {
 }
 
 layer-rule {
-    // match namespace="waybar"
-    match namespace="rofi"
-    match namespace="swaync-control-center"
-    geometry-corner-radius 8
-    shadow {
-        on
-		softness 10
-		spread 0
+	// match namespace="waybar"
+	match namespace="rofi"
+	// match namespace="swaync-control-center"
+	geometry-corner-radius 8
+	shadow {
+		on
+		softness 40
+		spread 1
 		offset x=0 y=0
 		color "#26233a"
-    }
+	}
 }
 
 recent-windows {
@@ -237,14 +237,15 @@ recent-windows {
 }
 
 overview {
-    backdrop-color "#191724"
-    workspace-shadow {
-        off
-        softness 0
-        spread 8
-        offset x=0 y=0
-        color "#191724"
-    }
+	backdrop-color "#191724"
+	zoom 0.5
+	workspace-shadow {
+		// off
+		softness 40
+		spread 1
+		offset x=0 y=0
+		color "#191724"
+	}
 }
 
 hotkey-overlay {

@@ -1,5 +1,7 @@
-font-family = "BlexMono Nerd Font"
-font-size = 18
+# font-family = "FantasqueSansM Nerd Font"
+# font-family = "JetBrainsMono Nerd Font"
+font-family = "Iosevka Nerd Font"
+font-size = 16
 font-feature = +liga
 
 theme = dark:rose-pine,light:rose-pine-dawn
@@ -8,8 +10,8 @@ shell-integration = fish
 quick-terminal-position =  center
 adw-toolbar-style = flat
 
-# adjust-cell-height = 20%
-# adjust-cursor-height = 20%
+adjust-cell-height = 20%
+adjust-cursor-height = 20%
 
 window-decoration = false
 window-theme = ghostty
