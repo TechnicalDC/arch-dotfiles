@@ -1,11 +1,12 @@
 #!/usr/bin/bash
 
-swww-daemon &
-swaybg --output "*" --image ~/.cache/wallpaper_blurred.png --mode fill &
-waybar --config ~/.config/waybar/confs/transparent/config.jsonc -s ~/.config/waybar/confs/transparent/style.css &
-wally -r &
+qs -c noctalia-shell &
+# swww-daemon &
+# swaybg --output "*" --image ~/.cache/wallpaper_blurred.png --mode fill &
+# waybar --config ~/.config/waybar/confs/panel/config.jsonc -s ~/.config/waybar/confs/panel/style.css &
+# wally -r &
 mpd &
-nm-applet &
-swaync --config ~/.config/swaync/config.json --style ~/.config/swaync/style.css &
+# nm-applet &
+# swaync --config ~/.config/swaync/config.json --style ~/.config/swaync/style.css &
 hyprsunset &
 # /usr/bin/emacs --daemon &

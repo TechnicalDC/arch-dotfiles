@@ -1,6 +1,6 @@
-include /home/dilip/.config/zathura/themes/rose-pine
+include /home/dilip/.config/zathura/noctaliarc
 
-set font "Iosevka Nerd Font 16"
+set font "JetBrainsMono Nerd Font 12"
 
 # settings
 set window-height         700

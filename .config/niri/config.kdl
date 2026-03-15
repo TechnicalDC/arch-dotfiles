@@ -8,7 +8,7 @@ environment {
 
 	// Remove a variable by using null as the value:
 	// DISPLAY null
-	QT_QPA_PLATFORMTHEME "qt5ct" // change to qt6ct if you have that
+	QT_QPA_PLATFORMTHEME "qt6ct" // change to qt6ct if you have that
 }
 
 input {
@@ -67,25 +67,25 @@ input {
 }
 
 gestures {
-    // dnd-edge-view-scroll {
-    //     trigger-width 30
-    //     delay-ms 100
-    //     max-speed 1500
-    // }
+	// dnd-edge-view-scroll {
+	//     trigger-width 30
+	//     delay-ms 100
+	//     max-speed 1500
+	// }
 
-    // dnd-edge-workspace-switch {
-    //     trigger-height 50
-    //     delay-ms 100
-    //     max-speed 1500
-    // }
+	// dnd-edge-workspace-switch {
+	//     trigger-height 50
+	//     delay-ms 100
+	//     max-speed 1500
+	// }
 
-    hot-corners {
-        off
-        // top-left
-        // top-right
-        // bottom-left
-        // bottom-right
-    }
+	hot-corners {
+		off
+		// top-left
+		// top-right
+		// bottom-left
+		// bottom-right
+	}
 }
 
 cursor {
@@ -96,12 +96,13 @@ cursor {
 
 output "DP-1" {
    focus-at-startup
+	scale 1.25
 }
 
 output "eDP-1" {
 	mode "1920x1080@120.030"
 
-	scale 1
+	scale 1.25
 
 	// Transform allows to rotate the output counter-clockwise, valid values are:
 	// normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -120,10 +121,10 @@ output "eDP-1" {
 }
 
 layout {
-	gaps 10
+	gaps 12
 	center-focused-column "never"
-	// always-center-single-column
-   background-color "transparent"
+	always-center-single-column
+	background-color "transparent"
 
 	preset-column-widths {
 		proportion 0.33333
@@ -147,8 +148,8 @@ layout {
 
 	border {
 		width 2
-      active-color "#524f67"
-      inactive-color "#524f67"
+		active-color "#524f67"
+		inactive-color "#524f67"
 		urgent-color "#eb6f92"
 	}
 
@@ -189,18 +190,18 @@ layout {
 }
 
 layer-rule {
-	match namespace="wallpaper"
+	match namespace="^noctalia-overview*"
 	place-within-backdrop true
 }
 
 layer-rule {
-	// match namespace="waybar"
+	match namespace="waybar"
 	match namespace="rofi"
 	// match namespace="swaync-control-center"
-	geometry-corner-radius 8
+	geometry-corner-radius 10
 	shadow {
 		on
-		softness 40
+		softness 10
 		spread 1
 		offset x=0 y=0
 		color "#26233a"
@@ -215,7 +216,7 @@ recent-windows {
         active-color "#9ccfd8"
         urgent-color "#eb6f92"
         padding 30
-        corner-radius 8
+        corner-radius 10
     }
 
     previews {
@@ -292,7 +293,7 @@ window-rule {
 
 // Example: enable rounded corners for all windows.
 window-rule {
-   geometry-corner-radius 8
+   geometry-corner-radius 12
    clip-to-geometry true
    opacity 1.0
 }
@@ -303,16 +304,18 @@ binds {
    // Suggested binds for running programs: terminal, app launcher, screen locker.
    Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
    Mod+Shift+Return hotkey-overlay-title="Open a web browser: zen browser" { spawn "zen-browser"; }
-   Mod+E hotkey-overlay-title="Open emacs" { spawn "emacsclient" "-c" "-a" "emacs"; }
-   Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun -theme ~/.config/rofi/themes/style-3/launcher.rasi"; }
-   Mod+W hotkey-overlay-title="Set wallpaper" { spawn "wall.sh"; }
+   // Mod+E hotkey-overlay-title="Open emacs" { spawn "emacsclient" "-c" "-a" "emacs"; }
+   Mod+D hotkey-overlay-title="Run an Application: launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+   // Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun -theme ~/.config/rofi/themes/style-3/launcher.rasi"; }
+   Mod+W hotkey-overlay-title="Set wallpaper" { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
+   // Mod+W hotkey-overlay-title="Set wallpaper" { spawn "wall.sh"; }
    // Mod+N hotkey-overlay-title="Open notification center" { spawn "swaync-client" "-t" "-sw"; }
    // Mod+M hotkey-overlay-title="Open rofi mpc" { spawn "rofi-mpc"; }
    Mod+B hotkey-overlay-title="Open bookmarks" { spawn "rofi-bookmarks"; }
    Print hotkey-overlay-title="Open screenshot utility" { spawn "rofi-screenshot"; }
    Mod+O repeat=false { toggle-overview; }
    Mod+Q { close-window; }
-   Mod+Shift+Q hotkey-overlay-title="Exit niri" { spawn "rofi-session"; }
+   Mod+Shift+Q hotkey-overlay-title="Exit niri" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
    // Example volume keys mappings for PipeWire & WirePlumber.
    // The allow-when-locked=true property makes them work even when the session is locked.
@@ -506,3 +509,6 @@ binds {
    // moving the mouse or pressing any other key.
    // Mod+Shift+P { power-off-monitors; }
 }
+
+include "./noctalia.kdl"
+

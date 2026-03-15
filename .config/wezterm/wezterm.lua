@@ -122,14 +122,14 @@ config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"
 config.default_workspace                           = "default"
 config.term                                        = "xterm"
-config.font                                        = wezterm.font 'BlexMono Nerd Font'
+config.font                                        = wezterm.font 'Iosevka Nerd Font'
 config.font_size                                   = 16
 config.font_rules                                  = {
    {
       intensity = 'Bold',
       italic = false,
       font = wezterm.font {
-         family = 'BlexMono Nerd Font',
+         family = 'Iosevka Nerd Font',
          weight = 'Bold',
          italic = false,
       },
@@ -140,7 +140,7 @@ config.font_rules                                  = {
       intensity = 'Bold',
       italic = true,
       font = wezterm.font {
-         family = 'BlexMono Nerd Font',
+         family = 'Iosevka Nerd Font',
          weight = 'Bold',
          italic = true,
       },
@@ -151,7 +151,7 @@ config.font_rules                                  = {
       intensity = 'Normal',
       italic = true,
       font = wezterm.font {
-         family = 'BlexMono Nerd Font',
+         family = 'Iosevka Nerd Font',
          italic = true,
       },
    },
@@ -230,4 +230,5 @@ require("keybindings").apply_to_config(config, { })
 --    -- { action = action.ShowLauncherArgs {flags="FUZZY|LAUNCH_MENU_ITEMS", title = " Launcher "},  mods =	'CTRL|SHIFT', key =		'?' },
 
 -- and finally, return the configuration to wezterm
+config.color_scheme = "Noctalia"
 return config

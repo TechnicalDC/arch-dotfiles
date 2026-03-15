@@ -1,14 +1,15 @@
 # font-family = "FantasqueSansM Nerd Font"
-# font-family = "JetBrainsMono Nerd Font"
-font-family = "Iosevka Nerd Font"
-font-size = 16
+font-family = "JetBrainsMono Nerd Font"
+# font-family = "Iosevka Nerd Font"
+font-size = 12
 font-feature = +liga
 
-theme = dark:rose-pine,light:rose-pine-dawn
+theme = noctalia
 # theme = dark:Nord,light:Nord Light
 shell-integration = fish
 quick-terminal-position =  center
 adw-toolbar-style = flat
+background-opacity = 2
 
 adjust-cell-height = 20%
 adjust-cursor-height = 20%
@@ -17,8 +18,8 @@ window-decoration = false
 window-theme = ghostty
 window-padding-balance = true
 window-padding-color = background
-window-padding-x = 10
-window-padding-y = 10
+window-padding-x = 15
+window-padding-y = 15
 window-padding-balance = false
 window-inherit-working-directory = true
 window-inherit-font-size = true
