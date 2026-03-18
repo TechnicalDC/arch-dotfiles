@@ -31,7 +31,7 @@
         ],
         "preferredPlayer": "",
         "spectrumFrameRate": 30,
-        "visualizerType": "linear",
+        "visualizerType": "mirrored",
         "volumeFeedback": false,
         "volumeFeedbackSoundFile": "",
         "volumeOverdrive": false,
@@ -44,7 +44,7 @@
         "barType": "framed",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
-        "contentPadding": 8,
+        "contentPadding": 0,
         "density": "default",
         "displayMode": "always_visible",
         "floating": false,
@@ -76,6 +76,21 @@
         "widgetSpacing": 6,
         "widgets": {
             "center": [
+                {
+                    "defaultSettings": {
+                        "leftButton": "next",
+                        "middleButton": "shuffle",
+                        "rightButton": "toggle",
+                        "shuffleStopsPlayback": true
+                    },
+                    "id": "plugin:mpd"
+                },
+                {
+                    "colorName": "primary",
+                    "hideWhenIdle": true,
+                    "id": "AudioVisualizer",
+                    "width": 200
+                }
             ],
             "left": [
                 {
@@ -86,6 +101,9 @@
                     "iconColor": "none",
                     "id": "Launcher",
                     "useDistroLogo": false
+                },
+                {
+                    "id": "plugin:timer"
                 },
                 {
                     "id": "plugin:weekly-calendar"
@@ -224,10 +242,6 @@
                         "workDuration": 25
                     },
                     "id": "plugin:pomodoro"
-                },
-                {
-                    "iconColor": "none",
-                    "id": "WallpaperSelector"
                 },
                 {
                     "iconColor": "error",
@@ -548,7 +562,7 @@
         ],
         "normalUrgencyDuration": 8,
         "overlayLayer": true,
-        "respectExpireTimeout": false,
+        "respectExpireTimeout": true,
         "saveToHistory": {
             "critical": true,
             "low": true,
@@ -719,7 +733,7 @@
         "enableUserTheming": true
     },
     "ui": {
-        "boxBorderEnabled": false,
+        "boxBorderEnabled": true,
         "fontDefault": "JetBrainsMono NFP",
         "fontDefaultScale": 1,
         "fontFixed": "JetBrainsMono NFP",
@@ -736,6 +750,110 @@
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
+            {
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "muted",
+                "paletteColors": [
+                    "#98acb3",
+                    "#8d99a5",
+                    "#8f94a3",
+                    "#fd4663"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/extra-9.jpg",
+                "useWallpaperColors": true
+            },
+            {
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "monochrome",
+                "paletteColors": [
+                    "#ffffff",
+                    "#c6c6c6",
+                    "#e2e2e2",
+                    "#ffb4ab"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/extra-16.jpg",
+                "useWallpaperColors": true
+            },
+            {
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "muted",
+                "paletteColors": [
+                    "#e5e9ec",
+                    "#e6e7eb",
+                    "#e6e6eb",
+                    "#fd4663"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/extra-6.jpg",
+                "useWallpaperColors": true
+            },
+            {
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "muted",
+                "paletteColors": [
+                    "#d4d9df",
+                    "#d5d7de",
+                    "#d6d6dd",
+                    "#fd4663"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/extra-15.jpg",
+                "useWallpaperColors": true
+            },
+            {
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "muted",
+                "paletteColors": [
+                    "#9baeb0",
+                    "#8d9ca5",
+                    "#8f98a3",
+                    "#fd4663"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/forest.jpg",
+                "useWallpaperColors": true
+            },
+            {
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "muted",
+                "paletteColors": [
+                    "#b3a298",
+                    "#b0a79a",
+                    "#aeab9c",
+                    "#fd4663"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/1hcpynpsvvtc1.png",
+                "useWallpaperColors": true
+            },
+            {
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "muted",
+                "paletteColors": [
+                    "#dfdbd4",
+                    "#deddd5",
+                    "#dcddd6",
+                    "#fd4663"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/p_o_c_k_e_t___t_o_w_n_by_dmitryalexander_dg6w3t3.png",
+                "useWallpaperColors": true
+            },
+            {
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "muted",
+                "paletteColors": [
+                    "#faf8f9",
+                    "#faf8f8",
+                    "#faf9f8",
+                    "#fd4663"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/slime.jpg",
+                "useWallpaperColors": true
+            }
         ],
         "fillColor": "#000000",
         "fillMode": "crop",

@@ -313,7 +313,7 @@ binds {
    // Mod+N hotkey-overlay-title="Open notification center" { spawn "swaync-client" "-t" "-sw"; }
    // Mod+M hotkey-overlay-title="Open rofi mpc" { spawn "rofi-mpc"; }
    Mod+B hotkey-overlay-title="Open bookmarks" { spawn "rofi-bookmarks"; }
-   Print hotkey-overlay-title="Open screenshot utility" { spawn "rofi-screenshot"; }
+   Print hotkey-overlay-title="Capture screenshot" { spawn "rofi-screenshot"; }
    Mod+O repeat=false { toggle-overview; }
    Mod+Q { close-window; }
    Mod+Shift+Q hotkey-overlay-title="Exit niri" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
