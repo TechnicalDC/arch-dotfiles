@@ -287,7 +287,7 @@
         "monitorForColors": "",
         "predefinedScheme": "One",
         "schedulingMode": "off",
-        "useWallpaperColors": false
+        "useWallpaperColors": true
     },
     "controlCenter": {
         "cards": [
@@ -733,13 +733,13 @@
                 "darkMode": true,
                 "generationMethod": "muted",
                 "paletteColors": [
-                    "#61afef",
-                    "#c678dd",
-                    "#98c379",
-                    "#e06c75"
+                    "#98acb3",
+                    "#8d99a5",
+                    "#8f94a3",
+                    "#fd4663"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/extra-9.jpg",
-                "useWallpaperColors": false
+                "useWallpaperColors": true
             },
             {
                 "colorScheme": "Rose Pine",
