@@ -103,6 +103,12 @@
                     "useDistroLogo": false
                 },
                 {
+                    "defaultSettings": {
+                        "compactMode": false,
+                        "defaultDuration": 0,
+                        "iconColor": "none",
+                        "textColor": "none"
+                    },
                     "id": "plugin:timer"
                 },
                 {
@@ -279,9 +285,9 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Rose Pine",
+        "predefinedScheme": "One",
         "schedulingMode": "off",
-        "useWallpaperColors": true
+        "useWallpaperColors": false
     },
     "controlCenter": {
         "cards": [
@@ -322,34 +328,6 @@
                 },
                 {
                     "id": "DarkMode"
-                },
-                {
-                    "defaultSettings": {
-                        "completedCount": 0,
-                        "count": 0,
-                        "current_page_id": 0,
-                        "exportEmptySections": false,
-                        "exportFormat": "markdown",
-                        "exportPath": "~/Documents",
-                        "isExpanded": false,
-                        "pages": [
-                            {
-                                "id": 0,
-                                "name": "General"
-                            }
-                        ],
-                        "priorityColors": {
-                            "high": "#f44336",
-                            "low": "#9e9e9e",
-                            "medium": "#2196f3"
-                        },
-                        "showBackground": true,
-                        "showCompleted": true,
-                        "todos": [
-                        ],
-                        "useCustomColors": false
-                    },
-                    "id": "plugin:todo"
                 }
             ],
             "right": [
@@ -751,17 +729,17 @@
         "enabled": true,
         "favorites": [
             {
-                "colorScheme": "Rose Pine",
+                "colorScheme": "One",
                 "darkMode": true,
                 "generationMethod": "muted",
                 "paletteColors": [
-                    "#98acb3",
-                    "#8d99a5",
-                    "#8f94a3",
-                    "#fd4663"
+                    "#61afef",
+                    "#c678dd",
+                    "#98c379",
+                    "#e06c75"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/extra-9.jpg",
-                "useWallpaperColors": true
+                "useWallpaperColors": false
             },
             {
                 "colorScheme": "Rose Pine",
