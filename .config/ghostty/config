@@ -1,7 +1,7 @@
 # font-family = "FantasqueSansM Nerd Font"
-font-family = "JetBrainsMono Nerd Font"
-# font-family = "Iosevka Nerd Font"
-font-size = 12
+# font-family = "JetBrainsMono Nerd Font"
+font-family = "Iosevka Nerd Font"
+font-size = 14
 font-feature = +liga
 
 theme = noctalia
@@ -11,8 +11,8 @@ quick-terminal-position =  center
 adw-toolbar-style = flat
 background-opacity = 2
 
-adjust-cell-height = 20%
-adjust-cursor-height = 20%
+adjust-cell-height = 0%
+adjust-cursor-height = 0%
 
 window-decoration = false
 window-theme = ghostty
