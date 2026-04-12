@@ -13,6 +13,11 @@ background-opacity = 2
 
 adjust-cell-height = 40%
 adjust-cursor-height = 40%
+adjust-underline-position = 20%
+adjust-underline-thickness = 10%
+adjust-overline-position = 20%
+adjust-overline-thickness = 10%
+adjust-box-thickness = 50%
 
 window-decoration = false
 window-theme = ghostty
