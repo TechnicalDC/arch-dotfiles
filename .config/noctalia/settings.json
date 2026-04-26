@@ -18,6 +18,7 @@
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
+            "com.mitchellh.ghostty"
         ],
         "position": "top_center",
         "screenshotAnnotationTool": "",
@@ -104,6 +105,7 @@
             "left": [
                 {
                     "colorizeSystemIcon": "error",
+                    "colorizeSystemText": "none",
                     "customIconPath": "",
                     "enableColorization": false,
                     "icon": "rocket",
@@ -715,6 +717,14 @@
             {
                 "enabled": true,
                 "id": "kitty"
+            },
+            {
+                "enabled": true,
+                "id": "starship"
+            },
+            {
+                "enabled": true,
+                "id": "cava"
             }
         ],
         "enableUserTheming": true

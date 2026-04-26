@@ -6,3 +6,7 @@ post_hook = 'pkill -SIGUSR1 nvim'
 [templates.yazi]
 input_path = "~/.config/noctalia/templates/yazi.toml"
 output_path = "~/.config/yazi/flavors/noctalia.yazi/flavor.toml"
+
+[templates.fzf]
+input_path = "~/.config/noctalia/templates/fzf.fish"
+output_path = "~/.config/fish/fzf.fish"
