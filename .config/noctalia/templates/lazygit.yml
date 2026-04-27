@@ -3,29 +3,29 @@ gui:
   showIcons: false
   theme:
     activeBorderColor:
-      - '#e06c75'
+      - '{{colors.error.default.hex}}'
       - bold
     inactiveBorderColor:
-      - '#616b7f'
+      - '{{colors.outline.default.hex}}'
     optionsTextColor:
-      - '#98c379'
+      - '{{colors.tertiary.default.hex}}'
     selectedLineBgColor:
-      - '#282c34'
+      - '{{colors.surface_container.default.hex}}'
     selectedLineFgColor:
-      - '#cdd4e1'
+      - '{{colors.on_surface.default.hex}}'
     cherryPickedCommitBgColor:
-      - '#c678dd'
+      - '{{colors.secondary.default.hex}}'
     cherryPickedCommitFgColor:
-      - '#c678dd'
+      - '{{colors.secondary.default.hex}}'
     unstagedChangesColor:
-      - '#e06c75'
+      - '{{colors.error.default.hex}}'
     defaultFgColor:
-      - '#cdd4e1'
+      - '{{colors.on_surface.default.hex}}'
     searchingActiveBorderColor:
-      - '#98c379'
+      - '{{colors.tertiary.default.hex}}'
 
   authorColors:
-    '*': '#e06c75'
+    '*': '{{colors.error.default.hex}}'
 
   spinner:
     frames:
