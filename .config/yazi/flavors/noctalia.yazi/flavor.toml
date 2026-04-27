@@ -19,7 +19,7 @@ count_cut = { fg = "#e4efdc", bg = "#3f6920" }
 count_selected = { fg = "#1e2127", bg = "#98c379" }
 
 # Border
-border_style  = { fg = "#61afef" }
+border_style  = { fg = "#616b7f" }
 
 # : ]]]
 

@@ -23,7 +23,7 @@ set --export FZF_DEFAULT_OPTS " --color=bg+:$base01,bg:$base00,spinner:$base0C,h
 " --color=marker:$base0C,fg+:$base06,prompt:$base08,hl+:$base0D,border:$base03"
 
 set --export FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS "--layout=reverse
---border none
+--border rounded
 --prompt='> '
 --pointer='>'
 --marker='|'
