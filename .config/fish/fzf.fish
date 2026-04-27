@@ -19,8 +19,8 @@ set -l base0E '#d696e9', # Keywords, Storage
 set -l base0F '#e06c75', # Deprecated, Embedded Tags
 
 set --export FZF_DEFAULT_OPTS " --color=bg+:$base01,bg:$base00,spinner:$base0C,hl:$base0D"\
-" --color=fg:$base04,header:$base0D,info:$base0A,pointer:$base0C"\
-" --color=marker:$base0C,fg+:$base06,prompt:$base08,hl+:$base0D"
+" --color=fg:$base04,header:$base0D,info:$base0A,pointer:$base0C,label:$base08"\
+" --color=marker:$base0C,fg+:$base06,prompt:$base08,hl+:$base0D,border:$base03"
 
 set --export FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS "--layout=reverse
 --border none
