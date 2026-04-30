@@ -38,6 +38,15 @@ function starship_transient_prompt_func
   starship module character
 end
 
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	command yazi $argv --cwd-file="$tmp"
+	if read -z cwd < "$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
+
 zoxide init fish | source
 starship init fish | source
 enable_transience
