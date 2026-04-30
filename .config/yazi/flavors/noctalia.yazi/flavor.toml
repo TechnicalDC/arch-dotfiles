@@ -23,11 +23,18 @@ border_style  = { fg = "#616b7f" }
 
 # : ]]]
 
+# : Indicator [[[
+[indicator]
+padding = { open = "▐", close = "▌"}
+preview = { bg = "#282c34", fg = "#cdd4e1" }
+current = { bg = "#282c34", fg = "#cdd4e1" }
+parent = { bg = "#282c34", fg = "#cdd4e1" }
+# : ]]]
 
 # : Status [[[
 
 [status]
-overall = { fg = "#61afef" }
+overall = { fg = "#616b7f", bg = "#282c34" }
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
@@ -50,14 +57,14 @@ perm_sep = { fg = "#03569b" }
 
 [mode]
 
-normal_main = { bg = "#61afef", fg = "#1e2127", bold = true }
-normal_alt  = { bg = "#282c34", fg = "#61afef" }
+normal_main = { bg = "#e06c75", fg = "#1e2127", bold = true }
+normal_alt  = { bg = "#282c34", fg = "#616b7f" }
 
-select_main = { bg = "#c678dd", fg = "#1e2127", bold = true }
-select_alt  = { bg = "#282c34", fg = "#61afef" }
+select_main = { bg = "#e06c75", fg = "#1e2127", bold = true }
+select_alt  = { bg = "#282c34", fg = "#616b7f" }
 
-unset_main = { bg = "#98c379", fg = "#1e2127", bold = true }
-unset_alt  = { bg = "#282c34", fg = "#61afef" }
+unset_main = { bg = "#e06c75", fg = "#1e2127", bold = true }
+unset_alt  = { bg = "#282c34", fg = "#616b7f" }
 
 # : ]]]
 

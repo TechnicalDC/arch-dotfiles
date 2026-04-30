@@ -9,7 +9,7 @@ sort_sensitive = false
 sort_reverse 	 = false
 sort_dir_first = true
 sort_translit  = false
-linemode       = "none"
+linemode 	   = "ls_equivalent"
 show_hidden    = false
 show_symlink   = true
 scrolloff      = 5
@@ -18,7 +18,7 @@ title_format   = "Yazi: {cwd}"
 
 [preview]
 wrap            = "no"
-tab_size        = 2
+tab_size        = 3
 max_width       = 600
 max_height      = 900
 cache_dir       = ""
@@ -166,6 +166,9 @@ previewers = [
 	{ mime = "null/*", run = "null" },
 	# Fallback
 	{ url = "*", run = "file" },
+]
+prepend_previewers = [
+	{ url = "*/", run = "eza-preview" }
 ]
 
 [input]

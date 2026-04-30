@@ -31,4 +31,4 @@ set --export FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS "--layout=reverse
 --highlight-line
 --ansi"
 
-set --export _ZO_FZF_OPTS $FZF_DEFAULT_OPTS "--layout=reverse --height 40%"
+set --export _ZO_FZF_OPTS $FZF_DEFAULT_OPTS
