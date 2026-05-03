@@ -6,7 +6,7 @@ theme = noctalia
 shell-integration = fish
 quick-terminal-position =  center
 adw-toolbar-style = flat
-background-opacity = 2
+background-opacity = 1
 
 adjust-cell-height = 20%
 adjust-cursor-height = 20%
