@@ -122,14 +122,15 @@ config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"
 config.default_workspace                           = "default"
 config.term                                        = "xterm"
-config.font                                        = wezterm.font 'JetBrainsMono Nerd Font'
-config.font_size                                   = 12
+config.font                                        = wezterm.font 'Iosevka Nerd Font'
+config.line_height                                 = 1.2
+config.font_size                                   = 14
 config.font_rules                                  = {
    {
       intensity = 'Bold',
       italic = false,
       font = wezterm.font {
-         family = 'JetBrainsMono Nerd Font',
+         family = 'Iosevka Nerd Font',
          weight = 'Bold',
          italic = false,
       },
@@ -140,7 +141,7 @@ config.font_rules                                  = {
       intensity = 'Bold',
       italic = true,
       font = wezterm.font {
-         family = 'JetBrainsMono Nerd Font',
+         family = 'Iosevka Nerd Font',
          weight = 'Bold',
          italic = true,
       },
@@ -151,13 +152,12 @@ config.font_rules                                  = {
       intensity = 'Normal',
       italic = true,
       font = wezterm.font {
-         family = 'JetBrainsMono Nerd Font',
+         family = 'Iosevka Nerd Font',
          italic = true,
       },
    },
 }
 config.default_cursor_style                        = 'SteadyBlock'
-config.line_height                                 = 1.0
 config.underline_position                          = "200%"
 config.underline_thickness                         = "200%"
 -- config.colors                                      = theme.colors()
