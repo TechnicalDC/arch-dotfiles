@@ -34,9 +34,9 @@ fish_vi_key_bindings
 source "$HOME/.config/fish/abbreviations.fish"
 source "$HOME/.config/fish/fzf.fish"
 
-function starship_transient_prompt_func
-  starship module character
-end
+# function starship_transient_prompt_func
+#   starship module character
+# end
 
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -49,4 +49,4 @@ end
 
 zoxide init fish | source
 starship init fish | source
-enable_transience
+# enable_transience

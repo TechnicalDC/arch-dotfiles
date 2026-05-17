@@ -180,6 +180,7 @@ config.force_reverse_video_cursor                  = false
 config.hide_mouse_cursor_when_typing               = true
 config.window_close_confirmation                   = 'NeverPrompt'
 config.window_decorations                          = "RESIZE"
+config.warn_about_missing_glyphs 					   = false
 config.show_tab_index_in_tab_bar                   = true
 config.tab_and_split_indices_are_zero_based        = false
 config.switch_to_last_active_tab_when_closing_tab  = true
@@ -200,7 +201,8 @@ config.skip_close_confirmation_for_processes_named = {
 }
 config.command_palette_font_size = config.font_size
 config.char_select_font_size     = config.font_size
-config.window_background_opacity = 1.0
+config.window_background_opacity = 0.8
+config.win32_system_backdrop = 'Acrylic'
 config.inactive_pane_hsb         = {
    saturation = 1.0,
    brightness = 1.0,
