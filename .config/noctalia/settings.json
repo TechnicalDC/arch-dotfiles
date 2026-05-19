@@ -288,7 +288,7 @@
         "predefinedScheme": "One",
         "schedulingMode": "off",
         "syncGsettings": true,
-        "useWallpaperColors": false
+        "useWallpaperColors": true
     },
     "controlCenter": {
         "cards": [
@@ -514,7 +514,7 @@
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
-        "networkPanelView": "ethernet",
+        "networkPanelView": "wifi",
         "wifiDetailsViewMode": "list"
     },
     "nightLight": {
@@ -732,9 +732,9 @@
     "ui": {
         "boxBorderEnabled": false,
         "fontDefault": "FantasqueSansM Nerd Font Propo",
-        "fontDefaultScale": 1.1,
+        "fontDefaultScale": 1.2,
         "fontFixed": "FantasqueSansM Nerd Font Mono",
-        "fontFixedScale": 1.1,
+        "fontFixedScale": 1.2,
         "panelBackgroundOpacity": 0.8,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
@@ -859,13 +859,13 @@
                 "darkMode": true,
                 "generationMethod": "muted",
                 "paletteColors": [
-                    "#61afef",
-                    "#c678dd",
-                    "#98c379",
-                    "#e06c75"
+                    "#b39a98",
+                    "#a5958d",
+                    "#a39a8f",
+                    "#c85f4e"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/nerd-paradise.png",
-                "useWallpaperColors": false
+                "useWallpaperColors": true
             }
         ],
         "fillColor": "#000000",
