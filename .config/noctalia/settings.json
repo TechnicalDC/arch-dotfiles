@@ -866,6 +866,20 @@
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/nerd-paradise.png",
                 "useWallpaperColors": true
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "One",
+                "darkMode": true,
+                "generationMethod": "muted",
+                "paletteColors": [
+                    "#9ea3ad",
+                    "#9192a1",
+                    "#9391a1",
+                    "#fd4663"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/5748285.jpg",
+                "useWallpaperColors": true
             }
         ],
         "fillColor": "#000000",
