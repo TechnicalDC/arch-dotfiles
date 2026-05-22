@@ -18,7 +18,12 @@
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
-            "com.mitchellh.ghostty"
+            "thunar",
+            "org.pwmt.zathura",
+            "zen",
+            "elio",
+            "nvim",
+            "kitty"
         ],
         "position": "top_center",
         "screenshotAnnotationTool": "",
@@ -725,6 +730,10 @@
             {
                 "enabled": true,
                 "id": "cava"
+            },
+            {
+                "enabled": true,
+                "id": "alacritty"
             }
         ],
         "enableUserTheming": true
