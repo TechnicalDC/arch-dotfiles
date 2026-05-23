@@ -1,13 +1,16 @@
 [general]
-import = [
-    "~/.config/alacritty/themes/noctalia.toml"
-]
+import = [ "~/.config/alacritty/themes/noctalia.toml" ]
 
 live_config_reload = true
 
 [window]
 dynamic_padding = true
 padding = { x = 10, y = 10 }
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
 
 [font]
 normal = { family = "FantasqueSansM Nerd Font", style = "Regular" }
@@ -16,3 +19,33 @@ italic = { family = "FantasqueSansM Nerd Font", style = "Italic" }
 bold_italic = { family = "FantasqueSansM Nerd Font", style = "Bold Italic" }
 size = 14
 builtin_box_drawing = true 
+offset = { x = 0, y = 10 }
+glyph_offset = { x = 0, y = 5 }
+
+[mouse]
+hide_when_typing = true 
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Plus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
