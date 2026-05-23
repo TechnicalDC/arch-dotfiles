@@ -740,7 +740,7 @@
     },
     "ui": {
         "boxBorderEnabled": false,
-        "fontDefault": "BlexMono Nerd Font Propo",
+        "fontDefault": "Roboto",
         "fontDefaultScale": 1,
         "fontFixed": "BlexMono Nerd Font Mono",
         "fontFixedScale": 1,
