@@ -77,7 +77,7 @@
         "rightClickFollowMouse": true,
         "screenOverrides": [
         ],
-        "showCapsule": true,
+        "showCapsule": false,
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
         "useSeparateOpacity": false,
@@ -739,7 +739,7 @@
         "enableUserTheming": true
     },
     "ui": {
-        "boxBorderEnabled": false,
+        "boxBorderEnabled": true,
         "fontDefault": "Roboto",
         "fontDefaultScale": 1,
         "fontFixed": "BlexMono Nerd Font Mono",
