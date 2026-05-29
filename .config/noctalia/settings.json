@@ -286,11 +286,11 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "monochrome",
+        "generationMethod": "faithful",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "One",
+        "predefinedScheme": "Rose Pine",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -814,12 +814,12 @@
                 "appearance": "dark",
                 "colorScheme": "Rose Pine",
                 "darkMode": true,
-                "generationMethod": "monochrome",
+                "generationMethod": "faithful",
                 "paletteColors": [
-                    "#ffffff",
-                    "#c6c6c6",
-                    "#e2e2e2",
-                    "#ffb4ab"
+                    "#67e4b1",
+                    "#5ccfd6",
+                    "#6690cc",
+                    "#fd4663"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/forest.jpg",
                 "useWallpaperColors": true
