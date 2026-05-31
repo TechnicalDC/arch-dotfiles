@@ -1,12 +1,12 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "ac82af3"
-hash = "eff8ff12fa4e5f035a10d8aeeb4c258d"
+rev = "c2c16c8"
+hash = "7b625412411be411153886894d9acaf"
 
 [[plugin.deps]]
 use = "ahkohd/eza-preview"
-rev = "7a2d60f"
-hash = "eed8e19469f3dca38fd977eb938dd34e"
+rev = "dc9c103"
+hash = "949fc14ee6b6f8565ac7012d338b37c0"
 
 [[plugin.deps]]
 use = "imsi32/yatline"

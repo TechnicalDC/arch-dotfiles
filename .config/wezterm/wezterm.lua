@@ -122,15 +122,15 @@ config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"
 config.default_workspace                           = "default"
 config.term                                        = "xterm"
-config.font                                        = wezterm.font 'BlexMono Nerd Font'
+config.font                                        = wezterm.font 'Maple Mono NL NF'
 config.line_height                                 = 1.2
-config.font_size                                   = 14
+config.font_size                                   = 13
 config.font_rules                                  = {
    {
       intensity = 'Bold',
       italic = false,
       font = wezterm.font {
-         family = 'BlexMono Nerd Font',
+         family = 'Maple Mono NL NF',
          weight = 'Bold',
          italic = false,
       },
@@ -141,7 +141,7 @@ config.font_rules                                  = {
       intensity = 'Bold',
       italic = true,
       font = wezterm.font {
-         family = 'BlexMono Nerd Font',
+         family = 'Maple Mono NL NF',
          weight = 'Bold',
          italic = true,
       },
@@ -152,7 +152,7 @@ config.font_rules                                  = {
       intensity = 'Normal',
       italic = true,
       font = wezterm.font {
-         family = 'BlexMono Nerd Font',
+         family = 'Maple Mono NL NF',
          italic = true,
       },
    },
@@ -169,7 +169,7 @@ config.show_update_window                          = true
 config.quote_dropped_files                         = "WindowsAlwaysQuoted"
 config.enable_tab_bar                              = true
 config.use_fancy_tab_bar                           = false
-config.hide_tab_bar_if_only_one_tab                = false
+config.hide_tab_bar_if_only_one_tab                = true
 config.prefer_to_spawn_tabs                        = true
 config.tab_bar_at_bottom                           = false
 config.tab_max_width                               = 30
