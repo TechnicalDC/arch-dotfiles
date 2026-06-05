@@ -890,6 +890,20 @@
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/5748285.jpg",
                 "useWallpaperColors": true
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "faithful",
+                "paletteColors": [
+                    "#67b8e4",
+                    "#5c6ad6",
+                    "#70cc66",
+                    "#fd4663"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/flowers.jpg",
+                "useWallpaperColors": true
             }
         ],
         "fillColor": "#000000",
