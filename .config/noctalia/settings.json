@@ -49,7 +49,7 @@
         "autoHideDelay": 500,
         "autoShowDelay": 150,
         "backgroundOpacity": 0.93,
-        "barType": "simple",
+        "barType": "framed",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
         "contentPadding": 0,
@@ -955,6 +955,20 @@
                     "#fd4663"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/looking-for.png",
+                "useWallpaperColors": true
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "faithful",
+                "paletteColors": [
+                    "#a167e4",
+                    "#d25cd6",
+                    "#cc669c",
+                    "#fd4663"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/wp9912103.jpg",
                 "useWallpaperColors": true
             }
         ],
