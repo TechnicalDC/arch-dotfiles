@@ -13,11 +13,11 @@ general = "Alacritty"
 instance = "Alacritty"
 
 [font]
-normal = { family = "Maple Mono NL NF", style = "Regular" }
-bold = { family = "Maple Mono NL NF", style = "Bold" }
-italic = { family = "Maple Mono NL NF", style = "Italic" }
-bold_italic = { family = "Maple Mono NL NF", style = "Bold Italic" }
-size = 13
+normal = { family = "VictorMono NF", style = "Regular" }
+bold = { family = "VictorMono NF", style = "Bold" }
+italic = { family = "VictorMono NF", style = "Italic" }
+bold_italic = { family = "VictorMono NF", style = "Bold Italic" }
+size = 12
 builtin_box_drawing = true 
 offset = { x = 0, y = 10 }
 glyph_offset = { x = 0, y = 5 }
