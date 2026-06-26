@@ -295,9 +295,9 @@ window-rule {
 window-rule {
 	geometry-corner-radius 12
 	clip-to-geometry true
-	opacity 0.9
+	opacity 1.0
 	background-effect {
-		blur true
+		blur false
 	}
 }
 

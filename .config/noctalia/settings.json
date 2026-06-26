@@ -6,7 +6,7 @@
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
-        "density": "comfortable",
+        "density": "default",
         "enableClipPreview": true,
         "enableClipboardChips": true,
         "enableClipboardHistory": true,
@@ -31,7 +31,7 @@
         "showIconBackground": false,
         "sortByMostUsed": true,
         "terminalCommand": "ghostty -e",
-        "viewMode": "grid"
+        "viewMode": "list"
     },
     "audio": {
         "mprisBlacklist": [
@@ -49,7 +49,7 @@
         "autoHideDelay": 500,
         "autoShowDelay": 150,
         "backgroundOpacity": 0.93,
-        "barType": "framed",
+        "barType": "simple",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
         "contentPadding": 0,
@@ -59,7 +59,7 @@
         "fontScale": 1,
         "frameRadius": 12,
         "frameThickness": 8,
-        "hideOnOverview": false,
+        "hideOnOverview": true,
         "marginHorizontal": 12,
         "marginVertical": 12,
         "middleClickAction": "none",
@@ -312,10 +312,10 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Rose Pine",
+        "predefinedScheme": "Oxocarbon",
         "schedulingMode": "off",
         "syncGsettings": true,
-        "useWallpaperColors": true
+        "useWallpaperColors": false
     },
     "controlCenter": {
         "cards": [
@@ -437,7 +437,7 @@
         "clockStyle": "digital",
         "compactLockScreen": true,
         "dimmerOpacity": 0.3,
-        "enableBlurBehind": true,
+        "enableBlurBehind": false,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
         "enableShadows": true,
@@ -612,7 +612,7 @@
         "countdownDuration": 3000,
         "enableCountdown": true,
         "largeButtonsLayout": "grid",
-        "largeButtonsStyle": false,
+        "largeButtonsStyle": true,
         "position": "top_center",
         "powerOptions": [
             {
@@ -756,6 +756,10 @@
             {
                 "enabled": true,
                 "id": "alacritty"
+            },
+            {
+                "enabled": true,
+                "id": "telegram"
             }
         ],
         "enableUserTheming": true
@@ -764,15 +768,15 @@
         "boxBorderEnabled": true,
         "fontDefault": "Roboto",
         "fontDefaultScale": 1,
-        "fontFixed": "BlexMono Nerd Font Mono",
+        "fontFixed": "Maple Mono NL NF",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.8,
+        "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
         "settingsPanelMode": "attached",
         "settingsPanelSideBarCardStyle": true,
         "tooltipsEnabled": true,
-        "translucentWidgets": true
+        "translucentWidgets": false
     },
     "wallpaper": {
         "automationEnabled": false,
@@ -889,27 +893,27 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "One",
+                "colorScheme": "Oxocarbon",
                 "darkMode": true,
-                "generationMethod": "monochrome",
+                "generationMethod": "faithful",
                 "paletteColors": [
-                    "#ffffff",
-                    "#c6c6c6",
-                    "#e2e2e2",
-                    "#ffb4ab"
+                    "#33b1ff",
+                    "#42be65",
+                    "#be95ff",
+                    "#ee5396"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/nerd-paradise.png",
-                "useWallpaperColors": true
+                "useWallpaperColors": false
             },
             {
                 "appearance": "dark",
                 "colorScheme": "One",
                 "darkMode": true,
-                "generationMethod": "monochrome",
+                "generationMethod": "content",
                 "paletteColors": [
-                    "#ffffff",
-                    "#c6c6c6",
-                    "#e2e2e2",
+                    "#bec7d9",
+                    "#c4c6ce",
+                    "#cec2d8",
                     "#ffb4ab"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/5748285.jpg",
@@ -933,11 +937,11 @@
                 "appearance": "dark",
                 "colorScheme": "Rose Pine",
                 "darkMode": true,
-                "generationMethod": "muted",
+                "generationMethod": "vibrant",
                 "paletteColors": [
-                    "#a3aeb3",
-                    "#a3aab3",
-                    "#a3a6b3",
+                    "#e49d67",
+                    "#61afd8",
+                    "#a0cc66",
                     "#fd4663"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/benjamin-voros-250200.jpg",
@@ -959,17 +963,17 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Rose Pine",
+                "colorScheme": "Oxocarbon",
                 "darkMode": true,
                 "generationMethod": "faithful",
                 "paletteColors": [
-                    "#a167e4",
-                    "#d25cd6",
-                    "#cc669c",
-                    "#fd4663"
+                    "#33b1ff",
+                    "#42be65",
+                    "#be95ff",
+                    "#ee5396"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/wp9912103.jpg",
-                "useWallpaperColors": true
+                "useWallpaperColors": false
             }
         ],
         "fillColor": "#000000",

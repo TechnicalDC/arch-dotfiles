@@ -122,7 +122,7 @@ config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"
 config.default_workspace                           = "default"
 config.term                                        = "xterm"
-config.font                                        = wezterm.font 'VictorMono NF'
+config.font                                        = wezterm.font 'Maple Mono NL NF'
 config.line_height                                 = 1.2
 config.font_size                                   = 13
 config.font_rules                                  = {
@@ -130,7 +130,7 @@ config.font_rules                                  = {
       intensity = 'Bold',
       italic = false,
       font = wezterm.font {
-         family = 'VictorMono NF',
+         family = 'Maple Mono NL NF',
          weight = 'Bold',
          italic = false,
       },
@@ -141,7 +141,7 @@ config.font_rules                                  = {
       intensity = 'Bold',
       italic = true,
       font = wezterm.font {
-         family = 'VictorMono NF',
+         family = 'Maple Mono NL NF',
          weight = 'Bold',
          italic = true,
       },
@@ -152,7 +152,7 @@ config.font_rules                                  = {
       intensity = 'Normal',
       italic = true,
       font = wezterm.font {
-         family = 'VictorMono NF',
+         family = 'Maple Mono NL NF',
          italic = true,
       },
    },
