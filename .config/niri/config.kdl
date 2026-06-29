@@ -121,7 +121,7 @@ output "eDP-1" {
 }
 
 layout {
-	gaps 12
+	gaps 8
 	center-focused-column "never"
 	always-center-single-column
 	background-color "transparent"
@@ -293,11 +293,11 @@ window-rule {
 
 // Example: enable rounded corners for all windows.
 window-rule {
-   geometry-corner-radius 12
-   clip-to-geometry true
-   opacity 0.9
+	geometry-corner-radius 12
+	clip-to-geometry true
+	opacity 1.0
 	background-effect {
-		blur true
+		blur false
 	}
 }
 
