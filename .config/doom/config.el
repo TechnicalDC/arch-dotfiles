@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Maple Mono NL NF" :size 18 :weight 'semi-light)
-     doom-variable-pitch-font (font-spec :family "Maple Mono NL NF" :size 18))
+(setq doom-font (font-spec :family "Maple Mono NF" :size 20 :weight 'semi-light)
+     doom-variable-pitch-font (font-spec :family "Maple Mono NF" :size 20))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -105,7 +105,7 @@
   (add-to-list 'ivy-ignore-buffers "^\\*doom\\*$")
   (add-to-list 'ivy-ignore-buffers "^\\*Help\\*$"))
 
-(load! "abl-mode.el")
+; (load! "abl-mode.el")
 (use-package nerd-icons
   :ensure t)
 
