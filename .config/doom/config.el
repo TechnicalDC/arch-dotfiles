@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Maple Mono NF" :size 20 :weight 'semi-light)
-     doom-variable-pitch-font (font-spec :family "Maple Mono NF" :size 20))
+(setq doom-font (font-spec :family "Maple Mono NF" :size 22 :weight 'semi-light)
+     doom-variable-pitch-font (font-spec :family "Maple Mono NF" :size 22))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -149,6 +149,3 @@
 (map! :leader
       (:prefix ("o" . "open")
        :desc "Open magit" "m" #'magit))
-
-(map! :leader
-      (:desc "Open dired" "-" #'dired))
