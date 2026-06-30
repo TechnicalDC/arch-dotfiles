@@ -1,2 +1,3 @@
 .config/nvim
 .config/go/telemetry/local
+.config/fish/fish_variables

@@ -5,8 +5,7 @@ abbr :x 'exit'
 abbr vim 'nvim'
 abbr vi 'nvim'
 abbr v 'nvim'
-abbr n "nextd"
-abbr p "prevd"
+abbr n "nvim"
 abbr lg "lazygit"
 
 abbr mv 'mv -i'

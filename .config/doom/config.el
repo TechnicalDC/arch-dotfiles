@@ -52,7 +52,6 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/orgfiles/")
 
-
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `with-eval-after-load' block, otherwise Doom's defaults may override your
 ;; settings. E.g.
@@ -96,7 +95,20 @@
  '(org-level-7 ((t (:inherit outline-5 :weight bold)))))
 
 (after! org
-  (setq org-ellipsis " "))
+  (setq org-ellipsis " "))
+
+;; Only show one day of the agenda at a time
+(after! org-agenda
+  (setq org-agenda-span 7
+        org-agenda-start-day "+0d"
+        org-agenda-skip-timestamp-if-done t
+        org-agenda-skip-deadline-if-done t
+        org-agenda-skip-scheduled-if-done t
+        org-agenda-skip-scheduled-if-deadline-is-shown t
+        org-agenda-skip-timestamp-if-deadline-is-shown t))
+;; Ricing org agenda
+(setq org-agenda-current-time-string "")
+(setq org-agenda-time-grid '((daily) () "" ""))
 
 ;; Filter out unwanted buffers
 (after! ivy
