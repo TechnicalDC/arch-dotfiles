@@ -59,7 +59,7 @@
         "fontScale": 1,
         "frameRadius": 12,
         "frameThickness": 8,
-        "hideOnOverview": true,
+        "hideOnOverview": false,
         "marginHorizontal": 12,
         "marginVertical": 12,
         "middleClickAction": "none",
@@ -481,7 +481,7 @@
         "radiusRatio": 1,
         "reverseScroll": false,
         "scaleRatio": 1,
-        "screenRadiusRatio": 0.87,
+        "screenRadiusRatio": 2,
         "shadowDirection": "center",
         "shadowOffsetX": 0,
         "shadowOffsetY": 0,
@@ -558,7 +558,7 @@
         "disableWallpaper": true
     },
     "notifications": {
-        "backgroundOpacity": 0.8,
+        "backgroundOpacity": 1,
         "clearDismissed": true,
         "criticalUrgencyDuration": 15,
         "density": "default",
@@ -567,7 +567,7 @@
         "enableMarkdown": true,
         "enableMediaToast": false,
         "enabled": true,
-        "location": "top_right",
+        "location": "top",
         "lowUrgencyDuration": 3,
         "monitors": [
         ],
@@ -760,6 +760,10 @@
             {
                 "enabled": true,
                 "id": "telegram"
+            },
+            {
+                "enabled": true,
+                "id": "emacs"
             }
         ],
         "enableUserTheming": true
