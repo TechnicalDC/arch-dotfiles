@@ -23,7 +23,8 @@
             "zen",
             "elio",
             "nvim",
-            "kitty"
+            "kitty",
+            "emacsclient"
         ],
         "position": "top_center",
         "screenshotAnnotationTool": "",

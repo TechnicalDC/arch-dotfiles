@@ -21,14 +21,13 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Maple Mono NF" :size 22 :weight 'semi-light)
-     doom-variable-pitch-font (font-spec :family "Maple Mono NF" :size 22))
+(setq doom-font (font-spec :family "Maple Mono NL NF" :size 18 :weight 'semi-light)
+     doom-variable-pitch-font (font-spec :family "Maple Mono NL NF" :size 18))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
 
-;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
@@ -41,12 +40,13 @@
 
 ;; How tall the mode-line should be. It's only respected in GUI.
 ;; If the actual char height is larger, it respects the actual height.
-(setq doom-modeline-height 30)
-(setq doom-modeline-bar-width 6)
+(setq doom-modeline-height 30
+      doom-modeline-bar-width 6)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type 'relative)
+(setq display-line-numbers-type 'relative
+      standard-indent 3)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -84,6 +84,7 @@
 ;; they are implemented.
 (setq confirm-kill-emacs nil)        ;; Don't confirm on exit
 (setq custom-tab-width 3)
+(setq fancy-splash-image (concat doom-user-dir "splash.png"))
 
 (custom-set-faces
  '(org-level-1 ((t (:inherit outline-1 :weight bold))))
