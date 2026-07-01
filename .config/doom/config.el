@@ -20,8 +20,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Maple Mono NF" :size 20 :weight 'semi-light)
-     doom-variable-pitch-font (font-spec :family "Maple Mono NF" :size 20))
+(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 20 :weight 'semi-light)
+     doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 20))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
