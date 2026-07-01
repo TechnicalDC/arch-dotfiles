@@ -3,3 +3,4 @@
 qs -c noctalia-shell &
 mpd &
 hyprsunset &
+/usr/bin/emacs --daemon &
