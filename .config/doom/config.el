@@ -3,7 +3,6 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 ;; (setq user-full-name "John Doe"
@@ -21,8 +20,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Maple Mono NL NF" :size 18 :weight 'semi-light)
-     doom-variable-pitch-font (font-spec :family "Maple Mono NL NF" :size 18))
+(setq doom-font (font-spec :family "Maple Mono NF" :size 20 :weight 'semi-light)
+     doom-variable-pitch-font (font-spec :family "Maple Mono NF" :size 20))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -96,7 +95,7 @@
  '(org-level-7 ((t (:inherit outline-5 :weight bold)))))
 
 (after! org
-  (setq org-ellipsis " "))
+  (setq org-ellipsis " ..."))
 
 ;; Only show one day of the agenda at a time
 (after! org-agenda
@@ -121,10 +120,6 @@
 ; (load! "abl-mode.el")
 (use-package nerd-icons
   :ensure t)
-
-(use-package nerd-icons-dired
-  :ensure t
-  :hook (dired-mode . nerd-icons-dired-mode))
 
 (use-package ivy-rich
   :ensure t
