@@ -3,8 +3,8 @@ spawn-at-startup "/home/dilip/.config/niri/autostart"
 prefer-no-csd
 
 environment {
-	// Set a variable like this:
-	QT_QPA_PLATFORM "wayland"
+   // Set a variable like this:
+   QT_QPA_PLATFORM "wayland"
 
 	// Remove a variable by using null as the value:
 	// DISPLAY null
@@ -307,7 +307,7 @@ binds {
    // Suggested binds for running programs: terminal, app launcher, screen locker.
    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
    Mod+Shift+Return hotkey-overlay-title="Open a web browser: zen browser" { spawn "zen-browser"; }
-   // Mod+E hotkey-overlay-title="Open emacs" { spawn "emacsclient" "-c" "-a" "emacs"; }
+   Mod+E hotkey-overlay-title="Open emacs" { spawn "emacsclient" "-c" "-a" "emacs"; }
    Mod+D hotkey-overlay-title="Run an Application: launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
    Mod+Shift+V hotkey-overlay-title="Open clipboard" { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
    // Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun -theme ~/.config/rofi/themes/style-3/launcher.rasi"; }
@@ -381,7 +381,7 @@ binds {
    //
    // To avoid scrolling through workspaces really fast, you can use
    // the cooldown-ms property. The bind will be rate-limited to this value.
-   // You can set a cooldown on any bind, but it's most useful for the wheel.
+   // You can set a cooldown on any bind, but its most useful for the wheel.
    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
@@ -402,7 +402,7 @@ binds {
    // Similarly, you can bind touchpad scroll "ticks".
    // Touchpad scrolling is continuous, so for these binds it is split into
    // discrete intervals.
-   // These binds are also affected by touchpad's natural-scroll, so these
+   // These binds are also affected by touchpads natural-scroll, so these
    // example binds are "inverted", since we have natural-scroll enabled for
    // touchpads by default.
    // Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
@@ -498,8 +498,8 @@ binds {
    // Applications such as remote-desktop clients and software KVM switches may
    // request that niri stops processing the keyboard shortcuts defined here
    // so they may, for example, forward the key presses as-is to a remote machine.
-   // It's a good idea to bind an escape hatch to toggle the inhibitor,
-   // so a buggy application can't hold your session hostage.
+   // Its a good idea to bind an escape hatch to toggle the inhibitor,
+   // so a buggy application cant hold your session hostage.
    //
    // The allow-inhibiting=false property can be applied to other binds as well,
    // which ensures niri always processes them, even when an inhibitor is active.

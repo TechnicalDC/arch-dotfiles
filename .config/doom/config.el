@@ -20,8 +20,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "FantasqueSansM Nerd Font" :size 24)
-      doom-variable-pitch-font (font-spec :family "FantasqueSansM Nerd Font" :size 24))
+(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 20)
+      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 20))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -39,7 +39,7 @@
 
 ;; How tall the mode-line should be. It's only respected in GUI.
 ;; If the actual char height is larger, it respects the actual height.
-(setq doom-modeline-height 30
+(setq doom-modeline-height 34
       doom-modeline-bar-width 6)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
