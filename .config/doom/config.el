@@ -117,7 +117,7 @@
   (add-to-list 'ivy-ignore-buffers "^\\*doom\\*$")
   (add-to-list 'ivy-ignore-buffers "^\\*Help\\*$"))
 
-; (load! "abl-mode.el")
+(load! "abl-mode.el")
 (use-package nerd-icons
   :ensure t)
 
