@@ -37,6 +37,10 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'noctalia)
 
+(setq +dashboard-functions
+  `(+dashboard-widget-banner
+    +dashboard-widget-shortmenu))
+
 ;; How tall the mode-line should be. It's only respected in GUI.
 ;; If the actual char height is larger, it respects the actual height.
 (setq doom-modeline-height 34
