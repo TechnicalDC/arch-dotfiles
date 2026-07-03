@@ -1,6 +1,6 @@
 ;;; .config/doom/abl-mode.el -*- lexical-binding: t; -*-
 
-;;;;  Commentary:
+;;;;  Commentary: asdkasd
 ;; The mode provided by this file provides syntax highlighting and auto-
 ;; capitalization for the Progress Advanced Business Language (ABL), as
 ;; well as some basic navigation functions.

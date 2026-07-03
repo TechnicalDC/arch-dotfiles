@@ -45,8 +45,8 @@
 
 ;; How tall the mode-line should be. It's only respected in GUI.
 ;; If the actual char height is larger, it respects the actual height.
-(setq doom-modeline-height 34
-      doom-modeline-bar-width 6)
+(setq doom-modeline-height 40
+      doom-modeline-bar-width 5)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
