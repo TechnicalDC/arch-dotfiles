@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: interface method
+# uuid:
+# key: imethod
+# --
+/*
+ * ${1:description}
+ *
+ * ${2:params}
+ *
+ * @external
+ *
+ * ${3:example}
+ */
+method public ${4:void} ${5:methodName}($0).

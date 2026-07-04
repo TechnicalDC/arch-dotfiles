@@ -51,9 +51,9 @@
         "autoShowDelay": 150,
         "backgroundOpacity": 0.93,
         "barType": "simple",
-        "capsuleColorKey": "none",
-        "capsuleOpacity": 1,
-        "contentPadding": 0,
+        "capsuleColorKey": "primary",
+        "capsuleOpacity": 0.34,
+        "contentPadding": 5,
         "density": "default",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
@@ -70,7 +70,7 @@
         ],
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
-        "outerCorners": true,
+        "outerCorners": false,
         "position": "top",
         "reverseScroll": false,
         "rightClickAction": "controlCenter",
@@ -145,7 +145,7 @@
                     "id": "Workspace",
                     "labelMode": "index",
                     "occupiedColor": "secondary",
-                    "pillSize": 0.7,
+                    "pillSize": 0.6,
                     "showApplications": false,
                     "showApplicationsHover": false,
                     "showBadge": true,
@@ -346,7 +346,7 @@
             }
         ],
         "diskPath": "/",
-        "position": "center",
+        "position": "top_center",
         "shortcuts": {
             "left": [
                 {
@@ -559,7 +559,7 @@
         "disableWallpaper": true
     },
     "notifications": {
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.51,
         "clearDismissed": true,
         "criticalUrgencyDuration": 15,
         "density": "default",
@@ -568,7 +568,7 @@
         "enableMarkdown": true,
         "enableMediaToast": false,
         "enabled": true,
-        "location": "top",
+        "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
         ],

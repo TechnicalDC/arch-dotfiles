@@ -233,7 +233,7 @@ definition."
   (interactive)
   (save-excursion
     (beginning-of-line)
-    (when (looking-at "    ")
+    (when (looking-at "   ")
       (replace-match ""))))
 
 

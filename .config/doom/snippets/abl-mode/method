@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: new method
+# uuid:
+# key: method
+# --
+method ${1:private} ${2:void} ${3:methodName}(${4}):
+
+$0
+
+end method.

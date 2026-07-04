@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: define property
+# uuid:
+# key: pro
+# --
+define private property ${1:propertyName}Service as ${1} no-undo
+   get:
+      if not valid-object(${1}) then
+         ${1} = ${2:Service}:${3:SericeMethod}().
+      return ${1}.
+   end get.
+   set.
+$0

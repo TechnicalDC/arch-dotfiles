@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: define buffer
+# uuid:
+# key: buf
+# --
+define buffer ${1:bufferName} for ${2:tableName} no-undo.
