@@ -147,8 +147,8 @@
    `(org-meta-line ((t (:foreground ,outline-color :slant italic))))
    
    ;; Org mode with hidden asterisks
-   `(org-level-1 ((t (:foreground ,primary :weight bold))))
-   `(org-level-2 ((t (:foreground ,secondary :weight bold))))
+   `(org-level-1 ((t (:foreground ,primary :weight bold :height 1.2))))
+   `(org-level-2 ((t (:foreground ,secondary :weight bold :height 1.1))))
    `(org-level-3 ((t (:foreground ,tertiary :weight bold))))
    `(org-level-4 ((t (:foreground ,primary :weight bold))))
    `(org-level-5 ((t (:foreground ,secondary :weight bold))))
@@ -161,7 +161,7 @@
    `(org-done ((t (:foreground ,success :weight bold))))
    `(org-headline-done ((t (:foreground ,on-surface-variant))))
    `(org-hide ((t (:foreground ,bg)))) ;; Hide leading asterisks
-   `(org-ellipsis ((t (:foreground ,outline-color :underline nil)))) ;; Style for folded content indicator
+   `(org-ellipsis ((t (:foreground ,tertiary :underline nil)))) ;; Style for folded content indicator
    `(org-table ((t (:foreground ,secondary-fixed :inherit fixed-pitch))))
    `(org-formula ((t (:foreground ,tertiary :inherit fixed-pitch))))
    `(org-checkbox ((t (:foreground ,primary :weight bold :inherit fixed-pitch))))
@@ -276,8 +276,8 @@
    
    ;; Improved markdown mode
    `(markdown-header-face ((t (:foreground ,primary :weight bold))))
-   `(markdown-header-face-1 ((t (:foreground ,primary :weight bold))))
-   `(markdown-header-face-2 ((t (:foreground ,primary-container :weight bold))))
+   `(markdown-header-face-1 ((t (:foreground ,primary :weight bold :height 1.2))))
+   `(markdown-header-face-2 ((t (:foreground ,primary-container :weight bold :height 1.1))))
    `(markdown-header-face-3 ((t (:foreground ,secondary :weight bold))))
    `(markdown-header-face-4 ((t (:foreground ,secondary-container :weight bold))))
    `(markdown-inline-code-face ((t (:foreground ,tertiary-fixed :background ,surface-container-low :inherit fixed-pitch))))

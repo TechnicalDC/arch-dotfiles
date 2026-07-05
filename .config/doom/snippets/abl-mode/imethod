@@ -12,4 +12,4 @@
  *
  * ${3:example}
  */
-method public ${4:void} ${5:methodName}($0).
+method ${4:public} ${5:$$(yas-choose-value '("void" "character" "integer" "decimal" "logical" "date"))} ${6:methodName}(${7}).$0
