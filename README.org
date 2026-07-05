@@ -2,8 +2,8 @@
 
 ** screenshots
 
-https://raw.githubusercontent.com/TechnicalDC/arch-dotfiles/refs/heads/main/images/dashboard.png
-https://raw.githubusercontent.com/TechnicalDC/arch-dotfiles/refs/heads/main/images/Screenshot%20from%202026-07-05%2022-25-43.png
+[[https://raw.githubusercontent.com/TechnicalDC/arch-dotfiles/refs/heads/main/images/dashboard.png]]
+[[https://raw.githubusercontent.com/TechnicalDC/arch-dotfiles/refs/heads/main/images/Screenshot%20from%202026-07-05%2022-25-43.png]]
 
 ** Keybindings
 
