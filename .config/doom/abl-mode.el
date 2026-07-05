@@ -27,7 +27,7 @@
     "returns" "temp-table" "for" "each" "delete" "in" "empty" "find"
     "handle" "first" "last" "length" "modulo" "not" "now" "today"
     "output" "stream" "index" "rindex" "replace" "round" "string"
-    "rowid" "sqrt" "substring" "trim" "tran" "leave" "input" "output"
+    "rowid" "sqrt" "substring" "trim" "tran" "leave" "input" "output" "property"
     "release" "return" "num-entries" "subst" "no-undo" "disp" "with"
     "down" "frame" "to" "param" "parameter" "entry" "put" "close"
     "run" "label" "no-box" "width" "where" "no-lock" "skip" "column"
@@ -261,8 +261,8 @@ definition."
     (make-local-variable 'pre-abbrev-expand-hook)
     (add-hook 'pre-abbrev-expand-hook 'abl-pre-abbrev-expand-hook)
     (abbrev-mode 1))
-  (set (make-local-variable  'abbrev-mode) t)
-  (set (make-local-variable  'save-abbrevs) nil)
+  (set (make-local-variable 'abbrev-mode) t)
+  (set (make-local-variable 'save-abbrevs) nil)
   (set (make-local-variable 'indent-tabs-mode) nil)
   (set (make-local-variable 'tab-width) 3)
   (set (make-local-variable 'case-fold-search) t)

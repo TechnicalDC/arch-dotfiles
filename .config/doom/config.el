@@ -60,6 +60,8 @@
       evil-shift-width 3
       evil-want-Y-yank-to-eol t)
 
+(setq yas-indent-line 'fixed)
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/orgfiles/")
@@ -109,7 +111,6 @@
 
 (after! org
   (setq org-ellipsis " ..."
-        org-tags-column -80
         org-capture-templates
         '(("t" "Personal todo" entry
            (file+headline +org-capture-todo-file "Todos")

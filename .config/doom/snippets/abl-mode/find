@@ -1,6 +1,5 @@
 # -*- mode: snippet -*-
 # name: find query
-# uuid:
 # key: find
 # --
 find ${1:first} ${2:tableName} no-error.
