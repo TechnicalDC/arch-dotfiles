@@ -187,6 +187,12 @@
                 },
                 {
                     "defaultSettings": {
+                        "mode": "region"
+                    },
+                    "id": "plugin:screenshot"
+                },
+                {
+                    "defaultSettings": {
                         "apiKey": "",
                         "apiUrl": "",
                         "configPath": "",
@@ -313,7 +319,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Oxocarbon",
+        "predefinedScheme": "Eldritch",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": false
@@ -559,7 +565,7 @@
         "disableWallpaper": true
     },
     "notifications": {
-        "backgroundOpacity": 0.51,
+        "backgroundOpacity": 1,
         "clearDismissed": true,
         "criticalUrgencyDuration": 15,
         "density": "default",
@@ -969,14 +975,14 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Oxocarbon",
+                "colorScheme": "Eldritch",
                 "darkMode": true,
                 "generationMethod": "faithful",
                 "paletteColors": [
-                    "#33b1ff",
-                    "#42be65",
-                    "#be95ff",
-                    "#ee5396"
+                    "#37f499",
+                    "#04d1f9",
+                    "#a48cf2",
+                    "#f16c75"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/187.jpg",
                 "useWallpaperColors": false
@@ -988,7 +994,7 @@
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
         ],
-        "overviewBlur": 0.2,
+        "overviewBlur": 0.5,
         "overviewEnabled": true,
         "overviewTint": 0.2,
         "panelPosition": "top_center",

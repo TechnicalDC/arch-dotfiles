@@ -21,10 +21,10 @@
 ;; accept. For example:
 ;;
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "Iosevka Nerd Font" :size 20)
-             doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 20))
-       (setq doom-font (font-spec :family "Iosevka Nerd Font" :size 24)
-             doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 24)))
+       (setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 20)
+             doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font Mono" :size 20))
+       (setq doom-font (font-spec :family "Iosevka Nerd Font Mono" :size 24)
+             doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font Mono" :size 24)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -47,7 +47,7 @@
 ;; How tall the mode-line should be. It's only respected in GUI.
 ;; If the actual char height is larger, it respects the actual height.
 (setq doom-modeline-height 40
-      doom-modeline-bar-width 5)
+      doom-modeline-bar-width 0)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -177,9 +177,15 @@
    org-hide-emphasis-markers t
    org-pretty-entities t
    org-agenda-tags-column 0
-   org-modern-star 'replace))
+   org-modern-star 'replace
+   org-modern-checkbox '((?X . "󰄵")
+    (?- . "󰛲")
+    (?\s . "󰄱"))))
 
 ;; ============ MAPPINGS =============
 (map! :leader
       (:prefix ("o" . "open")
        :desc "Open magit" "m" #'magit))
+
+(map! :leader
+      (:desc "Treemacs" "-" #'+treemacs/toggle))

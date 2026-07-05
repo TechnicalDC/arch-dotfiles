@@ -1,33 +1,33 @@
 # Colors (Noctalia)
 
 [colors.bright]
-black = '#393939'
-blue = '#33b1ff'
-cyan = '#3ddbd9'
-green = '#42be65'
-magenta = '#ff7eb6'
-red = '#ee5396'
+black = '#7081d0'
+blue = '#a48cf2'
+cyan = '#66e4fd'
+green = '#69f8b3'
+magenta = '#fd92ce'
+red = '#f16c75'
 white = '#ffffff'
-yellow = '#82cfff'
+yellow = '#f1fc79'
 
 [colors.cursor]
-cursor = '#f2f4f8'
-text = '#161616'
+cursor = '#f8f8f2'
+text = '#37f499'
 
 [colors.normal]
-black = '#262626'
-blue = '#33b1ff'
-cyan = '#3ddbd9'
-green = '#42be65'
-magenta = '#ff7eb6'
-red = '#ee5396'
-white = '#dde1e6'
-yellow = '#82cfff'
+black = '#21222c'
+blue = '#9071f4'
+cyan = '#04d1f9'
+green = '#37f499'
+magenta = '#f265b5'
+red = '#f9515d'
+white = '#ebfafa'
+yellow = '#e9f941'
 
 [colors.primary]
-background = '#161616'
-foreground = '#f2f4f8'
+background = '#212337'
+foreground = '#ebfafa'
 
 [colors.selection]
-background = '#f2f4f8'
-text = '#161616'
+background = '#bf4f8e'
+text = '#ebfafa'
