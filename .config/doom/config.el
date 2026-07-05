@@ -54,6 +54,12 @@
       standard-indent 3
       underline-minimum-offset 5)
 
+;; EVIL Settings
+(setq evil-vsplit-window-right t
+      evil-split-window-below t
+      evil-shift-width 3
+      evil-want-Y-yank-to-eol t)
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/orgfiles/")
