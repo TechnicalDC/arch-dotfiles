@@ -21,10 +21,10 @@
 ;; accept. For example:
 ;;
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "FantasqueSansM Nerd Font" :size 20)
-             doom-variable-pitch-font (font-spec :family "FantasqueSansM Nerd Font" :size 20))
-       (setq doom-font (font-spec :family "FantasqueSansM Nerd Font" :size 24)
-             doom-variable-pitch-font (font-spec :family "FantasqueSansM Nerd Font" :size 24)))
+       (setq doom-font (font-spec :family "BlexMono Nerd Font" :size 18)
+             doom-variable-pitch-font (font-spec :family "BlexMono Nerd Font" :size 18))
+       (setq doom-font (font-spec :family "BlexMono Nerd Font" :size 24)
+             doom-variable-pitch-font (font-spec :family "BlexMono Nerd Font" :size 24)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -67,36 +67,6 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/orgfiles/")
 
-;; Whenever you reconfigure a package, make sure to wrap your config in an
-;; `with-eval-after-load' block, otherwise Doom's defaults may override your
-;; settings. E.g.
-;;
-;;   (with-eval-after-load 'PACKAGE
-;;     (setq x y))
-;;
-;; The exceptions to this rule:
-;;
-;;   - Setting file/directory variables (like `org-directory')
-;;   - Setting variables which explicitly tell you to set them before their
-;;     package is loaded (see 'C-h v VARIABLE' to look them up).
-;;   - Setting doom variables (which start with 'doom-' or '+').
-;;
-;; Here are some additional functions/macros that will help you configure Doom.
-;;
-;; - `load!' for loading external *.el files relative to this one
-;; - `add-load-path!' for adding directories to the `load-path', relative to
-;;   this file. Emacs searches the `load-path' when you load packages with
-;;   `require' or `use-package'.
-;; - `map!' for binding new keys
-;;
-;; To get information about any of these functions/macros, move the cursor over
-;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
-;; This will open documentation for it, including demos of how they are used.
-;; Alternatively, use `C-h o' to look up a symbol (functions, variables, faces,
-;; etc).
-;;
-;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
-;; they are implemented.
 (setq confirm-kill-emacs nil)        ;; Don't confirm on exit
 (setq custom-tab-width 3)
 (setq fancy-splash-image (concat doom-user-dir "splash.png"))
@@ -177,10 +147,16 @@
    org-hide-emphasis-markers t
    org-pretty-entities t
    org-agenda-tags-column 0
+   org-modern-table-vertical 1
+   org-modern-table-horizontal 1
    org-modern-star 'replace
+   org-modern-list '((?+ . "•")
+                     (?- . "•")
+                     (?* . "•"))
    org-modern-checkbox '((?X . "󰄵")
-    (?- . "󰛲")
-    (?\s . "󰄱"))))
+                         (?- . "󰛲")
+                         (?\s . "󰄱"))))
+
 
 ;; ============ MAPPINGS =============
 (map! :leader
