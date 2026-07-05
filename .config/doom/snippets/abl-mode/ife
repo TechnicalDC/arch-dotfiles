@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: if block with else block
+# key: ife
+# --
+if ${1:condition} then do:
+
+   ${2}
+
+end.
+else do:
+
+   ${3}
+
+end.$0

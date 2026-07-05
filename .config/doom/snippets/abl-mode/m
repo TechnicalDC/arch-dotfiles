@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: method call
+# key: m
+# --
+this-object:${1:methodName}(${2}).$0

@@ -20,10 +20,11 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(if (string= system-name "archlinux") (setq doom-font (font-spec :family "Maple Mono NL NF" :size 18)
-             doom-variable-pitch-font (font-spec :family "Maple Mono NL NF" :size 18))
-       (setq doom-font (font-spec :family "Maple Mono NF" :size 24)
-             doom-variable-pitch-font (font-spec :family "Maple Mono NF" :size 24)))
+(if (string= system-name "archlinux")
+       (setq doom-font (font-spec :family "Iosevka Nerd Font" :size 20)
+             doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 20))
+       (setq doom-font (font-spec :family "Iosevka Nerd Font" :size 24)
+             doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 24)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t

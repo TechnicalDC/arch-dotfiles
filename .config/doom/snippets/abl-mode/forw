@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: for query with where condition
+# key: forw
+# --
+for each ${1:tableName} no-lock
+   where ${2:conditions}:
+
+   $0
+
+end.

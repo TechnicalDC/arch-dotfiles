@@ -773,7 +773,7 @@
         "boxBorderEnabled": true,
         "fontDefault": "Roboto",
         "fontDefaultScale": 1,
-        "fontFixed": "Maple Mono NL NF",
+        "fontFixed": "Iosevka NFM",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,

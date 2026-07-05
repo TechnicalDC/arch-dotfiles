@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: do block with error handling
+# key: doe
+# --
+do on error undo, throw:
+
+   $0
+
+end.

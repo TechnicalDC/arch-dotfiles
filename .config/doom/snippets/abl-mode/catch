@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: catch
+# key: catch
+# --
+catch ${1:e} as ${2:Progress.Lang.Error}:
+
+   $0
+
+end catch.

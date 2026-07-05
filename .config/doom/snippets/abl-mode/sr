@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: service method call with return type
+# key: sr
+# --
+${1:variableName} = this-object:${2:serviceName}:${3:methodName}(${4}).$0

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: message with fieldname
+# key: msg
+# --
+message "DUU - ${1:methodName} - ${2:fieldName}" ${2}.$0

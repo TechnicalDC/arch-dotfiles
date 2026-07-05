@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: method call with return type
+# key: mr
+# --
+${1:variableName} = this-object:${2:methodName}($0).

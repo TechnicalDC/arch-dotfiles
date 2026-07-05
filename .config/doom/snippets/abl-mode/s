@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: service method call
+# key: s
+# --
+this-object:${1:serviceName}:${2:methodName}(${3}).$0

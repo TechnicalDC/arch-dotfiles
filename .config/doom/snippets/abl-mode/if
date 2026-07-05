@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: if block
+# key: if
+# --
+if ${1:condition} then do:
+
+   $0
+
+end.
