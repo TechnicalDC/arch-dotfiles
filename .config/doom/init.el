@@ -162,7 +162,6 @@
        ;;ocaml             ; an objective camel
        ;;odin              ; C, minus its footguns
        (org
-        +journal
         +roam
         +pretty)      ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother

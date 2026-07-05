@@ -779,7 +779,7 @@
         "boxBorderEnabled": true,
         "fontDefault": "Roboto",
         "fontDefaultScale": 1,
-        "fontFixed": "Iosevka NFM",
+        "fontFixed": "BlexMono Nerd Font Mono",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
