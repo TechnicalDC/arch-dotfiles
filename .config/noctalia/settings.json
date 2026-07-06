@@ -21,7 +21,6 @@
             "thunar",
             "org.pwmt.zathura",
             "zen",
-            "elio",
             "nvim",
             "kitty",
             "emacsclient"
@@ -443,7 +442,7 @@
         "clockFormat": "hh\\nmm",
         "clockStyle": "digital",
         "compactLockScreen": true,
-        "dimmerOpacity": 0.3,
+        "dimmerOpacity": 0,
         "enableBlurBehind": false,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": false,
@@ -767,17 +766,13 @@
             {
                 "enabled": true,
                 "id": "telegram"
-            },
-            {
-                "enabled": true,
-                "id": "emacs"
             }
         ],
         "enableUserTheming": true
     },
     "ui": {
         "boxBorderEnabled": true,
-        "fontDefault": "Roboto",
+        "fontDefault": "BlexMono Nerd Font Propo",
         "fontDefaultScale": 1,
         "fontFixed": "BlexMono Nerd Font Mono",
         "fontFixedScale": 1,
