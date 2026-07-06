@@ -1,6 +1,6 @@
 ;;; .config/doom/abl-mode.el -*- lexical-binding: t; -*-
 
-;;;;  Commentary: asdkasd
+;;; Commentary: asdkasd
 ;; The mode provided by this file provides syntax highlighting and auto-
 ;; capitalization for the Progress Advanced Business Language (ABL), as
 ;; well as some basic navigation functions.
@@ -27,7 +27,7 @@
     "returns" "temp-table" "for" "each" "delete" "in" "empty" "find"
     "handle" "first" "last" "length" "modulo" "not" "now" "today"
     "output" "stream" "index" "rindex" "replace" "round" "string"
-    "rowid" "sqrt" "substring" "trim" "tran" "leave" "input" "output" "property"
+    "rowid" "sqrt" "substring" "trim" "tran" "leave" "input" "output"
     "release" "return" "num-entries" "subst" "no-undo" "disp" "with"
     "down" "frame" "to" "param" "parameter" "entry" "put" "close"
     "run" "label" "no-box" "width" "where" "no-lock" "skip" "column"
@@ -53,12 +53,12 @@
     "yes-no-cancel" "buttons" "quoter" "view" "object" "this-procedure"
     "persistent" "through" "set" "descending" "os-dir" "case-sensitive"
     "first-of" "last-of" "colon" "os-command" "silent" "disp" "display" "method"
-    "public" "private" "protected" "void" "interface" "override" "constructor"
+    "public" "private" "protected" "interface" "override" "constructor"
     "destructor" "new" "get" "initial" "this-oject"))
 
 (defvar abl-type-list
-  '("char" "character" "int" "integer" "format" "var" "variable" "log" "logical" "handle"
-    "yes" "no" "true" "false" "date" "dec" "decimal" "buffer" "dataset"))
+  '("char" "character" "int" "integer" "format" "var" "variable" "log" "logical" "handle"  "property"
+    "yes" "no" "true" "false" "date" "dec" "decimal" "buffer" "dataset" "void" "dataset-handle"))
 
 (defvar abl-operator-list
   '("and" "begins" "eq" "ge" "gt" "le" "lt" "matches" "modulo" "ne" "not" "or" "xor"
@@ -69,7 +69,7 @@
     "query-open" "buffer-field" "copy-dataset"))
 
 (defvar abl-property-list
-  '("query-off-end" "buffer-value" ))
+  '("query-off-end" "buffer-value"))
 
 (defvar abl-mode-hook nil)
 
@@ -106,7 +106,7 @@
   (regexp-opt abl-type-list 'words))
 
 (defvar abl-font-lock-defaults
-  `((,abl-keyword-regexp . (1 font-lock-builtin-face))
+  `((,abl-keyword-regexp . (1 font-lock-keyword-face))
     (,abl-type-regexp . (1 font-lock-type-face))
     (,abl-operator-regexp . (1 font-lock-operator-face))
     (,abl-method-list . (1 font-lock-function-name-face))
