@@ -81,7 +81,7 @@
  '(org-level-7 ((t (:inherit outline-5 :weight bold)))))
 
 (after! org
-  (setq org-ellipsis " ..."
+  (setq org-ellipsis " ▼"
         org-capture-templates
         '(("t" "Personal todo" entry
            (file+headline +org-capture-todo-file "Todos")
@@ -89,9 +89,13 @@
            ("j" "Journal" entry
            (file+olp+datetree +org-capture-journal-file)
            "* %U %?\n%i\n%a" :prepend t :empty-lines 1)
-           ("m" "Meeting" entry
-            (file+headline "meeting.org" "Meetings")
-            "* TODO %?\nSCHEDULED:%^t" :prepend t :empty-lines 1))))
+           ("m" "Meeting")
+           ("mo" "One-time Meeting" entry
+            (file+headline "meetings.org" "One-time Meetings")
+            "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)
+           ("mr" "Recurring Meeting" entry
+            (file+headline "meetings.org" "Recurring Meetings")
+            "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1))))
 
 ;; Only show one day of the agenda at a time
 (after! org-agenda
