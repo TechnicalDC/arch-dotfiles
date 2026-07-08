@@ -18,12 +18,6 @@
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
-            "thunar",
-            "org.pwmt.zathura",
-            "zen",
-            "nvim",
-            "kitty",
-            "emacsclient"
         ],
         "position": "top_center",
         "screenshotAnnotationTool": "",
@@ -772,9 +766,9 @@
     },
     "ui": {
         "boxBorderEnabled": true,
-        "fontDefault": "BlexMono Nerd Font Propo",
+        "fontDefault": "Roboto",
         "fontDefaultScale": 1,
-        "fontFixed": "BlexMono Nerd Font Mono",
+        "fontFixed": "Maple Mono NL NF",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
