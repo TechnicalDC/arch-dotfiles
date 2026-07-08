@@ -97,6 +97,18 @@
             (file+headline "meetings.org" "Recurring Meetings")
             "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1))))
 
+(setq org-roam-dailies-directory "daily/")
+
+(setq org-roam-dailies-capture-templates
+      '(("d" "default" entry
+         "* %?"
+         :target (file+head "%<%Y-%m-%d>.org"
+                            "#+title: %<%d %B,%Y>\n\n"))))
+
+(setq org-roam-capture-templates
+      '(("d" "default" plain "%?" :target
+        (file+head "${slug}.org" "#+title: ${title}\n\n") :unnarrowed t)))
+
 ;; Only show one day of the agenda at a time
 (after! org-agenda
   (setq org-agenda-span 7
