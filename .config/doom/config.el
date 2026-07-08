@@ -166,14 +166,13 @@
    org-modern-table-vertical 1
    org-modern-table-horizontal 1
    org-modern-star 'replace
+   org-modern-label-border 1
    org-modern-list '((?+ . "•")
                      (?- . "•")
                      (?* . "•"))
    org-modern-checkbox '((?X . "󰄵")
                          (?- . "󰛲")
                          (?\s . "󰄱"))))
-(custom-set-faces
-   '(org-modern-label ((t :height 1.0 :width condensed :weight regular :underline nil))))
 
 ;; ============ MAPPINGS =============
 (map! :leader
