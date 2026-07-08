@@ -160,7 +160,8 @@
    org-modern-checkbox '((?X . "󰄵")
                          (?- . "󰛲")
                          (?\s . "󰄱"))))
-
+(custom-set-faces
+   '(org-modern-label ((t :height 1.0 :width condensed :weight regular :underline nil))))
 
 ;; ============ MAPPINGS =============
 (map! :leader
