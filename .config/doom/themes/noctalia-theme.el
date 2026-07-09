@@ -133,6 +133,7 @@
    
    ;; Mode line - improved status bar styling
    `(mode-line ((t (:background ,surface-container-high :foreground ,on-surface :box nil))))
+   `(mode-line-active ((t (:background ,surface-container-high :foreground ,on-surface :box nil))))
    `(mode-line-inactive ((t (:background ,surface :foreground ,on-surface-variant :box nil))))
    `(mode-line-buffer-id ((t (:foreground ,primary :weight bold))))
    `(mode-line-emphasis ((t (:foreground ,primary :weight bold))))
@@ -161,7 +162,7 @@
    `(org-done ((t (:foreground ,success :weight bold))))
    `(org-headline-done ((t (:foreground ,on-surface-variant))))
    `(org-hide ((t (:foreground ,bg)))) ;; Hide leading asterisks
-   `(org-ellipsis ((t (:foreground ,tertiary :underline nil)))) ;; Style for folded content indicator
+   `(org-ellipsis ((t (:foreground ,outline-color :underline nil)))) ;; Style for folded content indicator
    `(org-table ((t (:foreground ,secondary-fixed :inherit fixed-pitch))))
    `(org-formula ((t (:foreground ,tertiary :inherit fixed-pitch))))
    `(org-checkbox ((t (:foreground ,primary :weight bold :inherit fixed-pitch))))

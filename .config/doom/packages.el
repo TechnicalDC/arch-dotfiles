@@ -62,3 +62,4 @@
 (package! nerd-icons-completion)
 (package! nerd-icons-ivy-rich)
 (package! ivy-rich)
+(package! spacious-padding)
