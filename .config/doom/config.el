@@ -80,7 +80,7 @@
  '(org-level-7 ((t (:inherit outline-5 :weight bold)))))
 
 (after! org
-  (setq org-ellipsis " ▼"
+  (setq org-ellipsis " "
         org-capture-templates
         '(("t" "Personal todo" entry
            (file+headline +org-capture-todo-file "Todos")
