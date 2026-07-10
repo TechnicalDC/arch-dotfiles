@@ -122,15 +122,15 @@ config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"
 config.default_workspace                           = "default"
 config.term                                        = "xterm"
-config.font                                        = wezterm.font 'FantasqueSansM Nerd Font'
-config.line_height                                 = 1.2
-config.font_size                                   = 16
+config.font                                        = wezterm.font 'SpaceMono Nerd Font'
+config.line_height                                 = 1.0
+config.font_size                                   = 14
 config.font_rules                                  = {
    {
       intensity = 'Bold',
       italic = false,
       font = wezterm.font {
-         family = 'FantasqueSansM Nerd Font',
+         family = 'SpaceMono Nerd Font',
          weight = 'Bold',
          italic = false,
       },
@@ -141,7 +141,7 @@ config.font_rules                                  = {
       intensity = 'Bold',
       italic = true,
       font = wezterm.font {
-         family = 'FantasqueSansM Nerd Font',
+         family = 'SpaceMono Nerd Font',
          weight = 'Bold',
          italic = true,
       },
@@ -152,7 +152,7 @@ config.font_rules                                  = {
       intensity = 'Normal',
       italic = true,
       font = wezterm.font {
-         family = 'FantasqueSansM Nerd Font',
+         family = 'SpaceMono Nerd Font',
          italic = true,
       },
    },

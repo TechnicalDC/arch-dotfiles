@@ -1,6 +1,6 @@
 include /home/dilip/.config/zathura/noctaliarc
 
-set font "FantasqueSansM Nerd Font 14"
+set font "SpaceMono Nerd Font Mono 14"
 
 # settings
 set window-height         700
