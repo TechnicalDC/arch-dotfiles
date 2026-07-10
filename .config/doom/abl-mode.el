@@ -48,7 +48,7 @@
     "next-prompt" "prev" "frame-line" "while" "except" "keyfunc" "random"
     "handle-type" "no-label" "page-number" "if-first" "if-last" "delimiter"
     "search" "time" "r-index" "etime" "persistent set" "table-handle" "of"
-    "buffer-create" "default-buffer-handle" "finally" "prepare-temp-table"
+    "default-buffer-handle" "finally" "prepare-temp-table"
     "lookup" "add-new-index" "add-new-field" "break by" "question" "yes-no"
     "yes-no-cancel" "buttons" "quoter" "view" "object" "this-procedure"
     "persistent" "through" "set" "descending" "os-dir" "case-sensitive"
@@ -65,8 +65,8 @@
     "between" "contains"))
 
 (defvar abl-method-list
-  '("valid-object" "empty-dataset" "get-buffer-handle" "get-first" "query-prepare" "set-buffers"
-    "query-open" "buffer-field" "copy-dataset"))
+  '("valid-object" "empty-dataset" "get-buffer-handle" "get-first" "query-prepare" "query-close" "set-buffers"
+    "query-open" "buffer-field" "copy-dataset" "buffer-create" "buffer-field" "buffer-release"))
 
 (defvar abl-property-list
   '("query-off-end" "buffer-value"))

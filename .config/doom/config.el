@@ -21,10 +21,10 @@
 ;; accept. For example:
 ;;
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "Maple Mono NL NF" :size 18)
-             doom-variable-pitch-font (font-spec :family "Maple Mono NL NF" :size 18))
-       (setq doom-font (font-spec :family "Maple Mono NF" :size 24)
-             doom-variable-pitch-font (font-spec :family "Maple Mono NF" :size 24)))
+       (setq doom-font (font-spec :family "BlexMono Nerd Font Mono" :size 18)
+             doom-variable-pitch-font (font-spec :family "BlexMono Nerd Font Mono" :size 18))
+       (setq doom-font (font-spec :family "BlexMono Nerd Font Mono" :size 24)
+             doom-variable-pitch-font (font-spec :family "BlexMono Nerd Font Mono" :size 24)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -110,7 +110,7 @@
 
 ;; Only show one day of the agenda at a time
 (after! org-agenda
-  (setq org-agenda-span 7
+  (setq org-agenda-span 1
         org-agenda-start-day "+0d"
         org-agenda-skip-timestamp-if-done t
         org-agenda-skip-deadline-if-done t
@@ -120,6 +120,11 @@
 ;; Ricing org agenda
 (setq org-agenda-current-time-string "")
 (setq org-agenda-time-grid '((daily) () "" ""))
+;; Remove category names and scheduling type from agenda view
+;; (setq org-agenda-prefix-format '((agenda . "  %?-2i %t ")
+;;                                  (todo . " %i %-12:c")
+;;                                  (tags . " %i %-12:c")
+;;                                  (search . " %i %-12:c")))
 
 ;; Filter out unwanted buffers
 (after! ivy
@@ -172,6 +177,41 @@
    org-modern-checkbox '((?X . "󰄵")
                          (?- . "󰛲")
                          (?\s . "󰄱"))))
+
+;; https://github.com/alphapapa/org-super-agenda/blob/master/examples.org
+(require 'org-super-agenda)
+(custom-set-faces!
+;;   '(org-agenda-date :inherit outline-1 :height 1.0)
+;;   '(org-agenda-date-today :inherit diary :height 1.0)
+;;   '(org-agenda-date-weekend :inherit outline-2 :height 1.0)
+;;   '(org-agenda-date-weekend-today :inherit outline-4 :height 1.0)
+  '(org-super-agenda-header :inherit org-modern-progress-complete :weight bold :height 1.0))
+(setq org-super-agenda-groups
+      '(;; Each group has an implicit boolean OR operator between its selectors.
+
+        ;; This is the first filter, anything found here
+        ;; will be placed in this group
+        ;; even if it matches following groups
+        (:name "Overdue " ; Name
+         :scheduled past ; Filter criteria
+         :order 2 ; Order it should appear in agenda view
+         :face 'error) ; Font face used for text
+
+        (:name "Due soon "
+         :deadline future
+         :order 3
+         :face 'error)
+
+        ;; Fourth filter..
+        (:name "Today "  ; Optionally specify section name
+         :time-grid t ; Use the time grid
+         :date today ; Filter criteria
+         :scheduled today ; Another filter criteria
+         :order 1 ; Order it should appear in the agenda view
+         :face 'warning) ; Font face used for text
+        )
+)
+(org-super-agenda-mode t)
 
 (use-package spacious-padding
   :ensure t
