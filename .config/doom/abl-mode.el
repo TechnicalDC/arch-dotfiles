@@ -66,7 +66,7 @@
 
 (defvar abl-method-list
   '("valid-object" "empty-dataset" "get-buffer-handle" "get-first" "query-prepare" "query-close" "set-buffers"
-    "query-open" "buffer-field" "copy-dataset" "buffer-create" "buffer-field" "buffer-release"))
+    "query-open" "copy-dataset" "buffer-create" "buffer-field" "buffer-release" "get-next"))
 
 (defvar abl-property-list
   '("query-off-end" "buffer-value"))
@@ -109,8 +109,8 @@
   `((,abl-keyword-regexp . (1 font-lock-keyword-face))
     (,abl-type-regexp . (1 font-lock-type-face))
     (,abl-operator-regexp . (1 font-lock-operator-face))
-    (,abl-method-list . (1 font-lock-function-name-face))
-    (,abl-property-list . (1 font-lock-property-name-face))
+    (,abl-method-regexp . (1 font-lock-function-name-face))
+    (,abl-property-regexp . (1 font-lock-property-name-face))
     (,abl-string-regexp . (1 font-lock-string-face))))
 
 

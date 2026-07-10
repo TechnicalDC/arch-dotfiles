@@ -3,4 +3,4 @@
 # uuid:
 # key: buf
 # --
-define buffer ${1:bufferName} for ${2:tableName} no-undo.
+define buffer ${1:bufferName} for ${2:tableName} no-undo.$0

@@ -4,6 +4,6 @@
 # --
 method ${1:private} ${2:$$(yas-choose-value '("void" "character" "integer" "decimal" "logical" "date"))} ${3:methodName}(${4}):
 
-$0
+   $0
 
 end method.

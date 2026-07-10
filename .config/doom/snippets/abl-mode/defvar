@@ -2,4 +2,4 @@
 # name: define variable
 # key: var
 # --
-define variable ${1:variable_name} as ${2:$$(yas-choose-value '("character" "integer" "decimal" "logical" "date"))} no-undo.
+define variable ${1:variable_name} as ${2:$$(yas-choose-value '("character" "integer" "decimal" "logical" "date" "handle"))} no-undo.$0

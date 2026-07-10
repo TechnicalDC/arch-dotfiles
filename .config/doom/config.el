@@ -21,10 +21,10 @@
 ;; accept. For example:
 ;;
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "BlexMono Nerd Font Mono" :size 18)
-             doom-variable-pitch-font (font-spec :family "BlexMono Nerd Font Mono" :size 18))
-       (setq doom-font (font-spec :family "BlexMono Nerd Font Mono" :size 24)
-             doom-variable-pitch-font (font-spec :family "BlexMono Nerd Font Mono" :size 24)))
+       (setq doom-font (font-spec :family "SpaceMono Nerd Font Mono" :size 18)
+             doom-variable-pitch-font (font-spec :family "SpaceMono Nerd Font Mono" :size 18))
+       (setq doom-font (font-spec :family "SpaceMono Nerd Font Mono" :size 24)
+             doom-variable-pitch-font (font-spec :family "SpaceMono Nerd Font Mono" :size 24)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -46,7 +46,8 @@
 
 ;; How tall the mode-line should be. It's only respected in GUI.
 ;; If the actual char height is larger, it respects the actual height.
-(setq doom-modeline-bar-width 5)
+(setq doom-modeline-bar-width 5
+      doom-modeline-buffer-file-name-style 'auto)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -182,11 +183,12 @@
 (require 'org-super-agenda)
 (custom-set-faces!
 ;;   '(org-agenda-date :inherit outline-1 :height 1.0)
-;;   '(org-agenda-date-today :inherit diary :height 1.0)
+  '(org-agenda-date-today :inherit org-level-1 :height 1.5)
 ;;   '(org-agenda-date-weekend :inherit outline-2 :height 1.0)
 ;;   '(org-agenda-date-weekend-today :inherit outline-4 :height 1.0)
-  '(org-super-agenda-header :inherit org-modern-progress-complete :weight bold :height 1.0))
-(setq org-super-agenda-groups
+  '(org-super-agenda-header :inherit magit-branch-current :weight bold :height 1.0 :box 2))
+(setq org-super-agenda-header-map nil
+      org-super-agenda-groups
       '(;; Each group has an implicit boolean OR operator between its selectors.
 
         ;; This is the first filter, anything found here

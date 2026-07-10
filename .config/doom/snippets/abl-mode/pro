@@ -2,11 +2,10 @@
 # name: define property
 # key: pro
 # --
-define private property ${1:propertyName}Service as ${1} no-undo
+define private property ${1:propertyName}Service as I${1} no-undo
    get:
-      if not valid-object(${1}) then
-         ${1} = ${2:Service}:${3:SericeMethod}().
-      return ${1}.
+      if not valid-object(${1}Service) then
+         ${1}Service = ${2:Service}:Get${1}().
+      return ${1}Service.
    end get.
-   set.
-$0
+   set.$0

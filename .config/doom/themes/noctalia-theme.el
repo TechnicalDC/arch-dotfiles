@@ -134,8 +134,7 @@
    ;; Mode line - improved status bar styling
    `(mode-line ((t (:background ,surface-container-high :foreground ,on-surface :box nil))))
    `(mode-line-active ((t (:background ,surface-container-high :foreground ,on-surface :box nil))))
-   ;; `(mode-line-inactive ((t (:background ,surface :foreground ,on-surface-variant :box nil))))
-   `(mode-line-inactive ((t (:background ,surface-container-high :foreground ,on-surface :box nil))))
+   `(mode-line-inactive ((t (:background ,surface-container-high :foreground ,on-surface-variant :box nil))))
    `(mode-line-buffer-id ((t (:foreground ,primary :weight bold))))
    `(mode-line-emphasis ((t (:foreground ,primary :weight bold))))
    `(mode-line-highlight ((t (:foreground ,primary :box nil))))
