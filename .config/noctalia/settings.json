@@ -798,6 +798,7 @@
                 "useWallpaperColors": true
             },
             {
+                "appearance": "dark",
                 "colorScheme": "Rose Pine",
                 "darkMode": true,
                 "generationMethod": "monochrome",
@@ -811,6 +812,7 @@
                 "useWallpaperColors": true
             },
             {
+                "appearance": "dark",
                 "colorScheme": "Rose Pine",
                 "darkMode": true,
                 "generationMethod": "muted",
@@ -825,17 +827,17 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Rose Pine",
+                "colorScheme": "Nord",
                 "darkMode": true,
                 "generationMethod": "muted",
                 "paletteColors": [
-                    "#d4d9df",
-                    "#d5d7de",
-                    "#d6d6dd",
-                    "#fd4663"
+                    "#8fbcbb",
+                    "#88c0d0",
+                    "#5e81ac",
+                    "#bf616a"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/extra-15.jpg",
-                "useWallpaperColors": true
+                "useWallpaperColors": false
             },
             {
                 "appearance": "dark",
@@ -950,14 +952,14 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Oxocarbon",
+                "colorScheme": "Gruvbox",
                 "darkMode": true,
                 "generationMethod": "faithful",
                 "paletteColors": [
-                    "#33b1ff",
-                    "#42be65",
-                    "#be95ff",
-                    "#ee5396"
+                    "#b8bb26",
+                    "#fabd2f",
+                    "#83a598",
+                    "#fb4934"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/wp9912103.jpg",
                 "useWallpaperColors": false

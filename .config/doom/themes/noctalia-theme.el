@@ -138,6 +138,11 @@
    `(mode-line-buffer-id ((t (:foreground ,primary :weight bold))))
    `(mode-line-emphasis ((t (:foreground ,primary :weight bold))))
    `(mode-line-highlight ((t (:foreground ,primary :box nil))))
+
+   '(heder-line ((t (inherit mode-line))))
+   '(heder-line-active ((t (inherit mode-line-active))))
+   '(heder-line-inactive ((t (inherit mode-line-inactive))))
+   '(heder-line-highlight ((t (inherit mode-line-highlight))))
    
    ;; Improved Source blocks - make them integrated with the theme
    `(org-block ((t (:background ,surface-container-low :extend t :inherit fixed-pitch))))
@@ -249,7 +254,15 @@
    `(dired-flagged ((t (:foreground ,err))))
    `(dired-marked ((t (:foreground ,tertiary :weight bold))))
    `(dired-symlink ((t (:foreground ,secondary :slant italic))))
-   `(dired-header ((t (:foreground ,primary :weight bold :height 1.1))))
+   `(dired-header ((t (:inherit mode-line :foreground ,primary :weight bold :height 1.1))))
+   '(diredfl-no-priv ((t (:forground ,on-background))))
+   `(diredfl-dir-name ((t (:foreground ,primary :weight bold))))
+   `(diredfl-dir-priv ((t (:foreground ,primary))))
+   `(diredfl-read-priv ((t (:foreground ,secondary))))
+   `(diredfl-write-priv ((t (:foreground ,err))))
+   `(diredfl-exec-priv ((t (:foreground ,tertiary))))
+   '(diredfl-file-name ((t (:foreground ,on-background))))
+   '(diredfl-file-suffix ((t (:foreground ,on-background))))
    
    ;; Terminal colors
    `(term-color-black ((t (:foreground ,term0 :background ,term0))))

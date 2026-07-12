@@ -244,4 +244,8 @@
        :desc "Open magit" "m" #'magit))
 
 (map! :leader
+      (:prefix ("o" . "open")
+       :desc "Open vtern" "t" #'+vterm/toggle))
+
+(map! :leader
       (:desc "Treemacs" "-" #'+treemacs/toggle))
