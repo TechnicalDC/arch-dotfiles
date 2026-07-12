@@ -5,8 +5,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-;; (setq user-full-name "John Doe"
-;;       user-mail-address "john@doe.com")
+(setq user-full-name "Dilip Chauhan"
+      user-mail-address "chauhandilip305@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -97,7 +97,8 @@
             (file+headline "meetings.org" "Recurring Meetings")
             "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1))))
 
-(setq org-roam-dailies-directory "daily/")
+(setq org-roam-dailies-directory "daily/"
+      org-roam-directory "roam/")
 
 (setq org-roam-dailies-capture-templates
       '(("d" "default" entry
@@ -119,8 +120,8 @@
         org-agenda-skip-scheduled-if-deadline-is-shown t
         org-agenda-skip-timestamp-if-deadline-is-shown t))
 ;; Ricing org agenda
-(setq org-agenda-current-time-string "")
-(setq org-agenda-time-grid '((daily) () "" ""))
+;; (setq org-agenda-current-time-string "")
+;; (setq org-agenda-time-grid '((daily) () "" ""))
 ;; Remove category names and scheduling type from agenda view
 ;; (setq org-agenda-prefix-format '((agenda . "  %?-2i %t ")
 ;;                                  (todo . " %i %-12:c")
@@ -134,7 +135,13 @@
   (add-to-list 'ivy-ignore-buffers "^\\*doom\\*$")
   (add-to-list 'ivy-ignore-buffers "^\\*Help\\*$"))
 
+(after! dired
+  (add-hook! 'dired-mode-hook #'dired-hide-details-mode ))
+
 (load! "abl-mode.el")
+
+
+;; ============ PACKAGES =============
 (use-package nerd-icons
   :ensure t)
 
@@ -150,7 +157,6 @@
   :init
   (nerd-icons-ivy-rich-mode 1))
 
-;; ============ PACKAGES =============
 (use-package! org-modern
   :hook
   (org-mode . org-modern-mode)
@@ -182,12 +188,11 @@
 ;; https://github.com/alphapapa/org-super-agenda/blob/master/examples.org
 (require 'org-super-agenda)
 (custom-set-faces!
-;;   '(org-agenda-date :inherit outline-1 :height 1.0)
   '(org-agenda-date-today :inherit org-level-1 :height 1.5)
-;;   '(org-agenda-date-weekend :inherit outline-2 :height 1.0)
-;;   '(org-agenda-date-weekend-today :inherit outline-4 :height 1.0)
   '(org-super-agenda-header :inherit magit-branch-current :weight bold :height 1.0 :box 2))
+
 (setq org-super-agenda-header-map nil
+      org-super-agenda-unmatched-name "Other Items "
       org-super-agenda-groups
       '(;; Each group has an implicit boolean OR operator between its selectors.
 
@@ -196,6 +201,7 @@
         ;; even if it matches following groups
         (:name "Overdue " ; Name
          :scheduled past ; Filter criteria
+         :deadline past
          :order 2 ; Order it should appear in agenda view
          :face 'error) ; Font face used for text
 
