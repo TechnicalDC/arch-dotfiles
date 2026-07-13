@@ -118,7 +118,11 @@
         org-agenda-skip-deadline-if-done t
         org-agenda-skip-scheduled-if-done t
         org-agenda-skip-scheduled-if-deadline-is-shown t
-        org-agenda-skip-timestamp-if-deadline-is-shown t))
+        org-agenda-skip-timestamp-if-deadline-is-shown t
+        org-agenda-files
+        '("/home/dilip/orgfiles/meetings.org" "/home/dilip/orgfiles/notes.org"
+          "/home/dilip/orgfiles/tasks.org" "/home/dilip/orgfiles/todo.org"
+          "~/orgfiles/roam/")))
 ;; Ricing org agenda
 ;; (setq org-agenda-current-time-string "")
 ;; (setq org-agenda-time-grid '((daily) () "" ""))
@@ -209,6 +213,11 @@
          :deadline future
          :order 3
          :face 'error)
+
+        (:name "Projects "
+         :tag "project"
+         :order 4
+         :face 'info)
 
         ;; Fourth filter..
         (:name "Today "  ; Optionally specify section name
