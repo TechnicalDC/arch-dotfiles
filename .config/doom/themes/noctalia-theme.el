@@ -262,7 +262,7 @@
    `(diredfl-write-priv ((t (:foreground ,err))))
    `(diredfl-exec-priv ((t (:foreground ,tertiary))))
    ;; '(diredfl-file-name ((t (:foreground ,on-background))))
-   ;; '(diredfl-file-suffix ((t (:inherit diredfl-file-name))))
+   ;; '(diredfl-file-suffix ((t (:foreground ,on-background))))
    
    ;; Terminal colors
    `(term-color-black ((t (:foreground ,term0 :background ,term0))))
