@@ -261,8 +261,8 @@
    `(diredfl-read-priv ((t (:foreground ,secondary))))
    `(diredfl-write-priv ((t (:foreground ,err))))
    `(diredfl-exec-priv ((t (:foreground ,tertiary))))
-   ;; '(diredfl-file-name ((t (:foreground ,on-background))))
-   ;; '(diredfl-file-suffix ((t (:foreground ,on-background))))
+   `(diredfl-file-name ((t (:foreground ,on-background))))
+   `(diredfl-file-suffix ((t (:foreground ,on-background))))
    
    ;; Terminal colors
    `(term-color-black ((t (:foreground ,term0 :background ,term0))))
@@ -330,7 +330,7 @@
    `(info-title-3 ((t (:foreground ,secondary :weight bold :height 1.1))))
    `(info-title-4 ((t (:foreground ,secondary-container :weight bold))))
    `(Info-quoted ((t (:foreground ,tertiary))))
-   `(info-menu-header ((t (:foreground ,primary :weight bold))))
+   `(info-menu-header ((t (:foreground ,primary :weight bold :height 1.0 ))))
    `(info-menu-star ((t (:foreground ,primary))))
    `(info-node ((t (:foreground ,tertiary :weight bold))))
 
@@ -354,6 +354,10 @@
 
    ;; Doom Modeline
    `(doom-modeline-bar ((t (:background ,primary))))
+
+   ;; Icons
+   `(treemacs-nerd-icons-file-face ((t (:foreground ,primary))))
+   `(treemacs-nerd-icons-root-face ((t (:foreground ,tertiary))))
    
    ;; Fixed-pitch faces
    `(fixed-pitch ((t (:family "monospace"))))
