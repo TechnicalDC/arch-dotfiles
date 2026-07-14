@@ -119,10 +119,7 @@
         org-agenda-skip-scheduled-if-done t
         org-agenda-skip-scheduled-if-deadline-is-shown t
         org-agenda-skip-timestamp-if-deadline-is-shown t
-        org-agenda-files
-        '("/home/dilip/orgfiles/meetings.org" "/home/dilip/orgfiles/notes.org"
-          "/home/dilip/orgfiles/tasks.org" "/home/dilip/orgfiles/todo.org"
-          "~/orgfiles/roam/")))
+        org-agenda-files (list org-directory)))
 ;; Ricing org agenda
 ;; (setq org-agenda-current-time-string "")
 ;; (setq org-agenda-time-grid '((daily) () "" ""))
