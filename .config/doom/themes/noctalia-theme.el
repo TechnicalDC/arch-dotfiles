@@ -254,7 +254,7 @@
    `(dired-flagged ((t (:foreground ,err))))
    `(dired-marked ((t (:foreground ,tertiary :weight bold))))
    `(dired-symlink ((t (:foreground ,secondary :slant italic))))
-   ;; `(dired-header ((t (:inherit mode-line :foreground ,primary :weight bold :height 1.1))))
+   `(dired-header ((t (:inherit mode-line :foreground ,primary :weight bold :height 1.0))))
    '(diredfl-no-priv ((t (:forground ,on-background))))
    `(diredfl-dir-name ((t (:foreground ,primary :weight bold))))
    `(diredfl-dir-priv ((t (:foreground ,primary))))
@@ -263,7 +263,7 @@
    `(diredfl-exec-priv ((t (:foreground ,tertiary))))
    `(diredfl-file-name ((t (:foreground ,on-background))))
    `(diredfl-file-suffix ((t (:foreground ,on-background))))
-   
+
    ;; Terminal colors
    `(term-color-black ((t (:foreground ,term0 :background ,term0))))
    `(term-color-red ((t (:foreground ,term1 :background ,term1))))
@@ -330,7 +330,7 @@
    `(info-title-3 ((t (:foreground ,secondary :weight bold :height 1.1))))
    `(info-title-4 ((t (:foreground ,secondary-container :weight bold))))
    `(Info-quoted ((t (:foreground ,tertiary))))
-   `(info-menu-header ((t (:foreground ,primary :weight bold :height 1.0 ))))
+   `(info-menu-header ((t (:foreground ,primary :weight bold))))
    `(info-menu-star ((t (:foreground ,primary))))
    `(info-node ((t (:foreground ,tertiary :weight bold))))
 
