@@ -21,19 +21,14 @@
 ;; accept. For example:
 ;;
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "SpaceMono Nerd Font Mono" :size 18)
-             doom-variable-pitch-font (font-spec :family "SpaceMono Nerd Font Mono" :size 18))
-       (setq doom-font (font-spec :family "SpaceMono Nerd Font Mono" :size 24)
-             doom-variable-pitch-font (font-spec :family "SpaceMono Nerd Font Mono" :size 24)))
+       (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 18)
+             doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 18))
+       (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 24)
+             doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 24)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
-
-;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
-;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
-;; refresh your font settings. If Emacs still can't find your font, it likely
-;; wasn't installed correctly. Font issues are rarely Doom issues!
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -72,13 +67,13 @@
 (setq fancy-splash-image (concat doom-user-dir "splash.png"))
 
 (custom-set-faces
- '(org-level-1 ((t (:inherit outline-1 :weight bold))))
- '(org-level-2 ((t (:inherit outline-2 :weight bold))))
- '(org-level-3 ((t (:inherit outline-3 :weight bold))))
- '(org-level-4 ((t (:inherit outline-4 :weight bold))))
- '(org-level-5 ((t (:inherit outline-5 :weight bold))))
- '(org-level-6 ((t (:inherit outline-5 :weight bold))))
- '(org-level-7 ((t (:inherit outline-5 :weight bold)))))
+ '(org-level-1 ((t (:inherit outline-1 :weight bold :height 1.6))))
+ '(org-level-2 ((t (:inherit outline-2 :weight bold :height 1.5))))
+ '(org-level-3 ((t (:inherit outline-3 :weight bold :height 1.4))))
+ '(org-level-4 ((t (:inherit outline-4 :weight bold :height 1.3))))
+ '(org-level-5 ((t (:inherit outline-5 :weight bold :height 1.2))))
+ '(org-level-6 ((t (:inherit outline-5 :weight bold :height 1.1))))
+ '(org-level-7 ((t (:inherit outline-5 :weight bold :height 1.0)))))
 
 (after! org
   (setq org-ellipsis " "
