@@ -3,29 +3,29 @@ gui:
   showIcons: false
   theme:
     activeBorderColor:
-      - '#f16c75'
+      - '#bf616a'
       - bold
     inactiveBorderColor:
-      - '#606b9d'
+      - '#707d99'
     optionsTextColor:
-      - '#a48cf2'
+      - '#5e81ac'
     selectedLineBgColor:
-      - '#292e42'
+      - '#3b4252'
     selectedLineFgColor:
-      - '#ebfafa'
+      - '#eceff4'
     cherryPickedCommitBgColor:
-      - '#04d1f9'
+      - '#88c0d0'
     cherryPickedCommitFgColor:
-      - '#04d1f9'
+      - '#88c0d0'
     unstagedChangesColor:
-      - '#f16c75'
+      - '#bf616a'
     defaultFgColor:
-      - '#ebfafa'
+      - '#eceff4'
     searchingActiveBorderColor:
-      - '#a48cf2'
+      - '#5e81ac'
 
   authorColors:
-    '*': '#f16c75'
+    '*': '#bf616a'
 
   spinner:
     frames:

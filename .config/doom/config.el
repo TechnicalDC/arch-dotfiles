@@ -64,7 +64,7 @@
 
 (setq confirm-kill-emacs nil)        ;; Don't confirm on exit
 (setq custom-tab-width 3)
-(setq fancy-splash-image (concat doom-user-dir "splash.png"))
+(setq fancy-splash-image (concat doom-user-dir "splashes/nord.png"))
 
 (custom-set-faces
  '(org-level-1 ((t (:inherit outline-1 :weight bold :height 1.6))))
@@ -246,7 +246,7 @@
 
 (map! :leader
       (:prefix ("o" . "open")
-       :desc "Open vtern" "t" #'+vterm/toggle))
+       :desc "Open vterm" "t" #'+vterm/toggle))
 
 (map! :leader
       (:desc "Treemacs" "-" #'+treemacs/toggle))

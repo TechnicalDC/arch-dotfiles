@@ -1,22 +1,22 @@
 # Background tones
-set -l base00 '#212337', # Default Background
-set -l base01 '#292e42', # Lighter Background (status bars)
-set -l base02 '#31374f', # Selection Background
-set -l base03 '#606b9d', # Comments, Invisibles
+set -l base00 '#2e3440', # Default Background
+set -l base01 '#3b4252', # Lighter Background (status bars)
+set -l base02 '#444c5e', # Selection Background
+set -l base03 '#707d99', # Comments, Invisibles
 # Foreground tones
-set -l base04 '#abb4da', # Dark Foreground (status bars)
-set -l base05 '#ebfafa', # Default Foreground
-set -l base06 '#ebfafa', # Light Foreground
-set -l base07 '#ebfafa', # Lightest Foreground
+set -l base04 '#d8dee9', # Dark Foreground (status bars)
+set -l base05 '#eceff4', # Default Foreground
+set -l base06 '#eceff4', # Light Foreground
+set -l base07 '#eceff4', # Lightest Foreground
 # Accent colors
-set -l base08 '#f16c75', # Variables, XML Tags, Errors
-set -l base09 '#a48cf2', # Integers, Constants
-set -l base0A '#04d1f9', # Classes, Search Background
-set -l base0B '#37f499', # Strings, Diff Inserted
-set -l base0C '#a48cf2', # Regex, Escape Chars
-set -l base0D '#86f8c1', # Functions, Methods
-set -l base0E '#82e9fd', # Keywords, Storage
-set -l base0F '#f16c75', # Deprecated, Embedded Tags
+set -l base08 '#bf616a', # Variables, XML Tags, Errors
+set -l base09 '#5e81ac', # Integers, Constants
+set -l base0A '#88c0d0', # Classes, Search Background
+set -l base0B '#8fbcbb', # Strings, Diff Inserted
+set -l base0C '#96bbe9', # Regex, Escape Chars
+set -l base0D '#96e9e7', # Functions, Methods
+set -l base0E '#96d6e9', # Keywords, Storage
+set -l base0F '#bf616a', # Deprecated, Embedded Tags
 
 set --export FZF_DEFAULT_OPTS " --color=bg+:$base00,spinner:$base0C,hl:$base0D"\
 " --color=fg:$base05,header:$base0D,info:$base0A,pointer:$base0C,label:$base08"\
