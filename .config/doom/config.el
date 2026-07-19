@@ -21,8 +21,8 @@
 ;; accept. For example:
 ;;
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "Maple Mono NL NF" :size 17)
-             doom-variable-pitch-font (font-spec :family "Maple Mono NL NF" :size 17))
+       (setq doom-font (font-spec :family "Recursive Mono Linear Static" :size 17)
+             doom-variable-pitch-font (font-spec :family "Recursive Sans Linear Static" :size 17))
        (setq doom-font (font-spec :family "Maple Mono NF" :size 24)
              doom-variable-pitch-font (font-spec :family "Maple Mono NF" :size 24)))
 
@@ -131,16 +131,13 @@
   (add-to-list 'ivy-ignore-buffers "^\\*doom\\*$")
   (add-to-list 'ivy-ignore-buffers "^\\*Help\\*$"))
 
-(with-eval-after-load 'dired
-  (message "DIRED LOADED!!!"))
-  ;; (add-hook! 'dired-mode-hook #'dired-hide-details-mode ))
 ;; (with-eval-after-load 'dired
-;;   (setq dired-listing-switches "-a"))
+(after! dired
+  (add-hook! 'dired-mode-hook #'dired-hide-details-mode ))
 
 ;;;###autoload
 (load! "abl-mode.el")
 (add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
-
 
 ;; ============ PACKAGES =============
 (use-package nerd-icons

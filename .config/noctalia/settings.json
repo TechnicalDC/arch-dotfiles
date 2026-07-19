@@ -741,9 +741,9 @@
     },
     "ui": {
         "boxBorderEnabled": true,
-        "fontDefault": "Roboto",
+        "fontDefault": "Recursive Sn Lnr St",
         "fontDefaultScale": 1,
-        "fontFixed": "Maple Mono NL NF",
+        "fontFixed": "Recursive Mn Lnr St",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
