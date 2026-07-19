@@ -254,7 +254,7 @@
    `(dired-flagged ((t (:foreground ,err))))
    `(dired-marked ((t (:foreground ,tertiary :weight bold))))
    `(dired-symlink ((t (:foreground ,secondary :slant italic))))
-   `(dired-header ((t (:inherit mode-line :foreground ,primary :weight bold :height 1.0))))
+   ;; `(dired-header ((t (:inherit mode-line :foreground ,primary :weight bold :height 1.0))))
    '(diredfl-no-priv ((t (:forground ,on-background))))
    `(diredfl-dir-name ((t (:foreground ,primary :weight bold))))
    `(diredfl-dir-priv ((t (:foreground ,primary))))

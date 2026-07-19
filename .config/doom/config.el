@@ -21,10 +21,10 @@
 ;; accept. For example:
 ;;
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 18)
-             doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 18))
-       (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 24)
-             doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 24)))
+       (setq doom-font (font-spec :family "Maple Mono NL NF" :size 17)
+             doom-variable-pitch-font (font-spec :family "Maple Mono NL NF" :size 17))
+       (setq doom-font (font-spec :family "Maple Mono NF" :size 24)
+             doom-variable-pitch-font (font-spec :family "Maple Mono NF" :size 24)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -131,8 +131,11 @@
   (add-to-list 'ivy-ignore-buffers "^\\*doom\\*$")
   (add-to-list 'ivy-ignore-buffers "^\\*Help\\*$"))
 
-(after! dired
-  (add-hook! 'dired-mode-hook #'dired-hide-details-mode ))
+(with-eval-after-load 'dired
+  (message "DIRED LOADED!!!"))
+  ;; (add-hook! 'dired-mode-hook #'dired-hide-details-mode ))
+;; (with-eval-after-load 'dired
+;;   (setq dired-listing-switches "-a"))
 
 ;;;###autoload
 (load! "abl-mode.el")

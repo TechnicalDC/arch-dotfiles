@@ -283,7 +283,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "faithful",
+        "generationMethod": "muted",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
@@ -743,7 +743,7 @@
         "boxBorderEnabled": true,
         "fontDefault": "Roboto",
         "fontDefaultScale": 1,
-        "fontFixed": "SpaceMono Nerd Font Mono",
+        "fontFixed": "Maple Mono NL NF",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
@@ -951,6 +951,20 @@
                     "#f16c75"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/187.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Nord",
+                "darkMode": true,
+                "generationMethod": "muted",
+                "paletteColors": [
+                    "#8fbcbb",
+                    "#88c0d0",
+                    "#5e81ac",
+                    "#bf616a"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/nord.jpg",
                 "useWallpaperColors": false
             }
         ],
