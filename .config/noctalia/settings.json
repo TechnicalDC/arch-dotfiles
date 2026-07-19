@@ -79,26 +79,13 @@
         "widgets": {
             "center": [
                 {
-                    "compactMode": true,
-                    "hideMode": "hidden",
-                    "hideWhenIdle": false,
-                    "id": "MediaMini",
-                    "maxWidth": 145,
-                    "panelShowAlbumArt": true,
-                    "scrollingMode": "hover",
-                    "showAlbumArt": true,
-                    "showArtistFirst": true,
-                    "showProgressRing": true,
-                    "showVisualizer": false,
-                    "textColor": "none",
-                    "useFixedWidth": false,
-                    "visualizerType": "linear"
-                },
-                {
-                    "colorName": "primary",
-                    "hideWhenIdle": true,
-                    "id": "AudioVisualizer",
-                    "width": 200
+                    "clockColor": "none",
+                    "customFont": "Doto",
+                    "formatHorizontal": "HH:mm, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "tooltipFormat": "HH:mm, MMM dd",
+                    "useCustomFont": false
                 }
             ],
             "left": [
@@ -111,18 +98,6 @@
                     "iconColor": "none",
                     "id": "Launcher",
                     "useDistroLogo": false
-                },
-                {
-                    "id": "plugin:weekly-calendar"
-                },
-                {
-                    "clockColor": "none",
-                    "customFont": "Doto",
-                    "formatHorizontal": "HH:mm, MMM dd",
-                    "formatVertical": "HH mm - dd MM",
-                    "id": "Clock",
-                    "tooltipFormat": "HH:mm, MMM dd",
-                    "useCustomFont": false
                 },
                 {
                     "characterCount": 2,

@@ -134,7 +134,9 @@
 (after! dired
   (add-hook! 'dired-mode-hook #'dired-hide-details-mode ))
 
+;;;###autoload
 (load! "abl-mode.el")
+(add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
 
 
 ;; ============ PACKAGES =============
@@ -184,7 +186,7 @@
 ;; https://github.com/alphapapa/org-super-agenda/blob/master/examples.org
 (require 'org-super-agenda)
 (custom-set-faces!
-  '(org-agenda-date-today :inherit org-level-1 :height 1.5)
+  '(org-agenda-date-today :inherit org-level-1)
   '(org-super-agenda-header :inherit magit-branch-current :weight bold :height 1.0 :box 2))
 
 (setq org-super-agenda-header-map nil
