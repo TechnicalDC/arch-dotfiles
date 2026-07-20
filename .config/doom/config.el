@@ -23,8 +23,8 @@
 (if (string= system-name "archlinux")
        (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 18)
              doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 18))
-       (setq doom-font (font-spec :family "Maple Mono NF" :size 24)
-             doom-variable-pitch-font (font-spec :family "Maple Mono NF" :size 24)))
+       (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 23)
+             doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 23)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
