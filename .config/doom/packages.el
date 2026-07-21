@@ -63,4 +63,3 @@
 (package! nerd-icons-ivy-rich)
 (package! ivy-rich)
 (package! spacious-padding)
-(package! org-super-agenda)

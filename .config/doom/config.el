@@ -90,7 +90,8 @@
             "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)
            ("mr" "Recurring Meeting" entry
             (file+headline "meetings.org" "Recurring Meetings")
-            "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1))))
+            "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)))
+  (add-hook 'org-mode-hook #'variable-pitch-mode))
 
 (setq org-roam-dailies-directory "daily/"
       org-roam-directory "roam/")
@@ -106,6 +107,11 @@
         (file+head "${slug}.org" "#+title: ${title}\n\n") :unnarrowed t)))
 
 ;; Only show one day of the agenda at a time
+
+(custom-set-faces!
+  '(org-agenda-date :inherit org-level-1)
+  '(org-agenda-date-today :inherit org-level-1))
+
 (after! org-agenda
   (setq org-agenda-span 1
         org-agenda-start-day "+0d"
@@ -182,47 +188,6 @@
    org-modern-checkbox '((?X . "󰄵")
                          (?- . "󰛲")
                          (?\s . "󰄱"))))
-
-;; https://github.com/alphapapa/org-super-agenda/blob/master/examples.org
-(require 'org-super-agenda)
-(custom-set-faces!
-  '(org-agenda-date-today :inherit org-level-1)
-  '(org-super-agenda-header :inherit magit-branch-current :weight bold :height 1.0 :box 2))
-
-(setq org-super-agenda-header-map nil
-      org-super-agenda-unmatched-name "Other Items "
-      org-super-agenda-groups
-      '(;; Each group has an implicit boolean OR operator between its selectors.
-
-        ;; This is the first filter, anything found here
-        ;; will be placed in this group
-        ;; even if it matches following groups
-        (:name "Overdue " ; Name
-         :scheduled past ; Filter criteria
-         :deadline past
-         :order 2 ; Order it should appear in agenda view
-         :face 'error) ; Font face used for text
-
-        (:name "Due soon "
-         :deadline future
-         :order 3
-         :face 'error)
-
-        (:name "Projects "
-         :tag "project"
-         :order 4
-         :face 'info)
-
-        ;; Fourth filter..
-        (:name "Today "  ; Optionally specify section name
-         :time-grid t ; Use the time grid
-         :date today ; Filter criteria
-         :scheduled today ; Another filter criteria
-         :order 1 ; Order it should appear in the agenda view
-         :face 'warning) ; Font face used for text
-        )
-)
-(org-super-agenda-mode t)
 
 (use-package spacious-padding
   :ensure t
