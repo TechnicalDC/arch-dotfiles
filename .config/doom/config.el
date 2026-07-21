@@ -122,8 +122,8 @@
         org-agenda-skip-timestamp-if-deadline-is-shown t
         org-agenda-files (list org-directory)))
 ;; Ricing org agenda
-;; (setq org-agenda-current-time-string "")
-;; (setq org-agenda-time-grid '((daily) () "" ""))
+(setq org-agenda-current-time-string "")
+(setq org-agenda-time-grid '((daily) () "" ""))
 ;; Remove category names and scheduling type from agenda view
 ;; (setq org-agenda-prefix-format '((agenda . "  %?-2i %t ")
 ;;                                  (todo . " %i %-12:c")

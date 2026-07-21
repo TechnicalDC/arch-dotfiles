@@ -174,6 +174,9 @@
    `(org-date ((t (:foreground ,secondary-fixed :underline t))))
    `(org-special-keyword ((t (:foreground ,on-surface-variant :slant italic))))
    `(org-tag ((t (:foreground ,outline-color :weight normal))))
+
+   `(org-agenda-current-time ((t (:foreground ,on-background))))
+   `(org-time-grid ((t (:foreground ,on-background))))
    
    ;; Magit
    `(magit-section-highlight ((t (:background ,surface-container-low))))

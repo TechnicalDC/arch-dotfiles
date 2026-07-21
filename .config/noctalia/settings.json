@@ -843,6 +843,7 @@
                 "useWallpaperColors": true
             },
             {
+                "appearance": "dark",
                 "colorScheme": "Rose Pine",
                 "darkMode": true,
                 "generationMethod": "muted",
