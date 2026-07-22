@@ -134,7 +134,7 @@
    ;; Mode line - improved status bar styling
    `(mode-line ((t (:background ,surface-container-high :foreground ,on-surface :box nil))))
    `(mode-line-active ((t (:background ,bg :foreground ,on-surface :box nil :overline ,primary))))
-   `(mode-line-inactive ((t (:background ,surface-container-high :foreground ,on-surface-variant :box nil))))
+   `(mode-line-inactive ((t (:background ,bg :foreground ,outline-variant :box nil :overline ,outline-color))))
    `(mode-line-buffer-id ((t (:foreground ,primary :weight bold))))
    `(mode-line-emphasis ((t (:foreground ,primary :weight bold))))
    `(mode-line-highlight ((t (:foreground ,primary :box nil))))
@@ -357,6 +357,7 @@
 
    ;; Doom Modeline
    `(doom-modeline-bar ((t (:background ,bg))))
+   `(doom-modeline-bar-inactive ((t (:background ,bg))))
    ;; `(doom-modeline-bar ((t (:background ,primary))))
 
    ;; Icons
