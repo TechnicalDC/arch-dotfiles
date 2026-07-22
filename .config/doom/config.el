@@ -120,10 +120,10 @@
         org-agenda-skip-scheduled-if-done t
         org-agenda-skip-scheduled-if-deadline-is-shown t
         org-agenda-skip-timestamp-if-deadline-is-shown t
-        org-agenda-files (list org-directory)))
+        org-agenda-files (list org-directory (concat org-directory "roam/"))))
 ;; Ricing org agenda
-(setq org-agenda-current-time-string "")
-(setq org-agenda-time-grid '((daily) () "" ""))
+(setq org-agenda-current-time-string "<--now----------")
+(setq org-agenda-time-grid '((daily) (800 1000 1200 1400 1600 1800 2000) "......" "----------------"))
 ;; Remove category names and scheduling type from agenda view
 ;; (setq org-agenda-prefix-format '((agenda . "  %?-2i %t ")
 ;;                                  (todo . " %i %-12:c")
