@@ -23,8 +23,8 @@
 (if (string= system-name "archlinux")
        (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 18)
              doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 18))
-       (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 23)
-             doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 23)))
+       (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 21)
+             doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 21)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -76,7 +76,7 @@
  '(org-level-7 ((t (:inherit outline-5 :weight bold :height 1.0)))))
 
 (after! org
-  (setq org-ellipsis " "
+  (setq org-ellipsis ""
         org-capture-templates
         '(("t" "Personal todo" entry
            (file+headline +org-capture-todo-file "Todos")
@@ -180,7 +180,7 @@
    org-agenda-tags-column 0
    org-modern-table-vertical 1
    org-modern-table-horizontal 1
-   org-modern-star 'replace
+   org-modern-star 'fold
    org-modern-label-border 1
    org-modern-list '((?+ . "•")
                      (?- . "•")
