@@ -1,3 +1,23 @@
+#+title: Config
+
+* Table of Contents :toc:
+- [[#basic-settings][Basic Settings]]
+- [[#doom-settings][Doom Settings]]
+- [[#evil-mode][Evil-Mode]]
+- [[#snippets][Snippets]]
+- [[#org-mode][Org-Mode]]
+- [[#org-agenda][Org-Agenda]]
+- [[#org-roam][Org-Roam]]
+- [[#org-modern][Org-Modern]]
+- [[#icons][Icons]]
+- [[#autoloads][Autoloads]]
+- [[#spacious-padding][Spacious Padding]]
+- [[#elfeed][Elfeed]]
+- [[#key-bindings][Key Bindings]]
+
+* Basic Settings
+
+#+begin_src emacs-lisp
 (setq user-full-name "Dilip Chauhan"
       user-mail-address "chauhandilip305@gmail.com"
       display-line-numbers-type 'relative
@@ -5,7 +25,19 @@
       underline-minimum-offset 5
       confirm-kill-emacs nil
       custom-tab-width 3)
+#+end_src
 
+* Doom Settings
+
+Doom exposes five (optional) variables for controlling fonts in Doom:
+
+- =doom-font=: the primary font to use
+- =doom-variable-pitch-font=:  a non-monospace font (where applicable)
+- =doom-big-font=: used for =doom-big-font-mode=. Use this for presentations or streaming.
+- =doom-symbol-font=: for symbols
+- =doom-serif-font=: for the =fixed-pitch-serif= face
+
+#+begin_src emacs-lisp
 (if (string= system-name "archlinux")
        (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 18)
              doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 18))
@@ -25,14 +57,26 @@
       doom-modeline-buffer-file-name-style 'auto)
 
 (setq fancy-splash-image (concat doom-user-dir "splashes/nord.png"))
+#+end_src
 
+* Evil-Mode
+
+#+begin_src emacs-lisp
 (setq evil-vsplit-window-right t
       evil-split-window-below t
       evil-shift-width 3
       evil-want-Y-yank-to-eol t)
+#+end_src
 
+* Snippets
+
+#+begin_src emacs-lisp
 (setq yas-indent-line 'fixed)
+#+end_src
 
+* Org-Mode
+
+#+begin_src emacs-lisp
 (setq org-directory "~/orgfiles/")
 
 (custom-set-faces
@@ -61,7 +105,11 @@
             (file+headline "meetings.org" "Recurring Meetings")
             "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)))
   (add-hook 'org-mode-hook #'variable-pitch-mode))
+#+end_src
 
+* Org-Agenda
+
+#+begin_src emacs-lisp
 (custom-set-faces!
   '(org-agenda-date :inherit org-level-1)
   '(org-agenda-date-today :inherit org-level-1))
@@ -83,7 +131,11 @@
 ;;                                  (todo . " %i %-12:c")
 ;;                                  (tags . " %i %-12:c")
 ;;                                  (search . " %i %-12:c")))
+#+end_src
 
+* Org-Roam
+
+#+begin_src emacs-lisp
 (setq org-roam-dailies-directory "daily/"
       org-roam-directory "roam/")
 
@@ -96,7 +148,11 @@
 (setq org-roam-capture-templates
       '(("d" "default" plain "%?" :target
         (file+head "${slug}.org" "#+title: ${title}\n\n") :unnarrowed t)))
+#+end_src
 
+* Org-Modern
+
+#+begin_src emacs-lisp
 (use-package! org-modern
   :hook
   (org-mode . org-modern-mode)
@@ -124,7 +180,11 @@
    org-modern-checkbox '((?X . "󰄵")
                          (?- . "󰛲")
                          (?\s . "󰄱"))))
+#+end_src
 
+* Icons
+
+#+begin_src emacs-lisp
 (use-package nerd-icons
   :ensure t)
 
@@ -139,10 +199,18 @@
   :after ivy-rich
   :init
   (nerd-icons-ivy-rich-mode 1))
+#+end_src
 
+* Autoloads
+
+#+begin_src emacs-lisp
 (load! "abl-mode.el")
 (add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
+#+end_src
 
+* Spacious Padding
+
+#+begin_src emacs-lisp
 (use-package spacious-padding
   :ensure t
   :config
@@ -159,7 +227,11 @@
            :fringe-width 8))
 
   (spacious-padding-mode 1))
+#+end_src
 
+* Elfeed
+
+#+begin_src emacs-lisp
 (use-package elfeed
   :config
   (setq elfeed-search-feed-face ":foreground #ffffff :weight bold"
@@ -188,10 +260,15 @@
   (elfeed-goodies/setup)
   :config
   (setq elfeed-goodies/entry-pane-size 0.5))
+#+end_src
 
+* Key Bindings
+
+#+begin_src emacs-lisp
 (map! :leader
       (:prefix ("t" . "toggle")
        :desc "Vterm" "t" #'+vterm/toggle))
 
 (map! :leader
       (:desc "Treemacs" "-" #'+treemacs/toggle))
+#+end_src
