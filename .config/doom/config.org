@@ -80,6 +80,7 @@ Doom exposes five (optional) variables for controlling fonts in Doom:
 (setq org-directory "~/orgfiles/")
 
 (custom-set-faces
+ '(org-document-title ((t (:inherit outline-1 :weight bold :height 1.7))))
  '(org-level-1 ((t (:inherit outline-1 :weight bold :height 1.6))))
  '(org-level-2 ((t (:inherit outline-2 :weight bold :height 1.5))))
  '(org-level-3 ((t (:inherit outline-3 :weight bold :height 1.4))))
@@ -89,21 +90,26 @@ Doom exposes five (optional) variables for controlling fonts in Doom:
  '(org-level-7 ((t (:inherit outline-5 :weight bold :height 1.0)))))
 
 (after! org
-  (setq org-ellipsis ""
+  (setq org-ellipsis " "
         org-capture-templates
         '(("t" "Personal todo" entry
            (file+headline +org-capture-todo-file "Todos")
            "* TODO %?\n%i\n%a" :prepend t :empty-lines 1)
+
            ("j" "Journal" entry
            (file+olp+datetree +org-capture-journal-file)
            "* %U %?\n%i\n%a" :prepend t :empty-lines 1)
+
            ("m" "Meeting")
+
            ("mo" "One-time Meeting" entry
             (file+headline "meetings.org" "One-time Meetings")
             "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)
+
            ("mr" "Recurring Meeting" entry
             (file+headline "meetings.org" "Recurring Meetings")
             "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)))
+
   (add-hook 'org-mode-hook #'variable-pitch-mode))
 #+end_src
 
