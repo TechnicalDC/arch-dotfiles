@@ -18,6 +18,11 @@
 
 (setq doom-theme 'noctalia)
 
+(custom-set-faces
+      '(mode-line ((t (:family "Recursive Sans Casual Static" ))))
+      '(mode-line-active ((t (:family "Recursive Sans Casual Static" ))))
+      '(mode-line-inactive ((t (:family "Recursive Sans Casual Static" )))))
+
 (setq +dashboard-functions
       `(+dashboard-widget-banner
         +dashboard-widget-shortmenu)
@@ -154,7 +159,10 @@
   :config
   ;; These are the default values, but I keep them here for visibility.
   ;; Also check `spacious-padding-subtle-frame-lines'.
-  (setq spacious-padding-widths
+  (setq spacious-padding-subtle-frame-lines
+        '(:mode-line-active success :mode-line-inactive shadow
+          :header-line-active success :header-line-inactive shadow)
+        spacious-padding-widths
         '( :internal-border-width 20
            :header-line-width 4
            :mode-line-width 8
@@ -193,7 +201,9 @@
   :init
   (elfeed-goodies/setup)
   :config
-  (setq elfeed-goodies/entry-pane-size 0.5))
+  (setq elfeed-goodies/entry-pane-size 0.5
+        elfeed-goodies/switch-to-entry nil
+        elfeed-goodies/powerline-default-separator nil))
 
 (map! :leader
       (:prefix ("t" . "toggle")

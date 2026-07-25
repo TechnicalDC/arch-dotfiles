@@ -139,11 +139,11 @@
    `(mode-line-emphasis ((t (:foreground ,primary :weight bold))))
    `(mode-line-highlight ((t (:foreground ,primary :box nil))))
 
-   '(heder-line ((t (inherit mode-line))))
-   '(heder-line-active ((t (inherit mode-line-active))))
-   '(heder-line-inactive ((t (inherit mode-line-inactive))))
-   '(heder-line-highlight ((t (inherit mode-line-highlight))))
-   
+   '(header-line ((t (:inherit mode-line))))
+   '(header-line-active ((t (:inherit mode-line-active))))
+   '(header-line-inactive ((t (:inherit mode-line-inactive))))
+   '(header-line-highlight ((t (:inherit mode-line-highlight))))
+
    ;; Improved Source blocks - make them integrated with the theme
    `(org-block ((t (:background ,surface-container-low :extend t :inherit fixed-pitch))))
    `(org-block-begin-line ((t (:background ,surface-container-low :foreground ,primary-fixed-dim :extend t :slant italic :inherit fixed-pitch))))
