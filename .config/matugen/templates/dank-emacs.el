@@ -272,6 +272,14 @@
    `(dired-marked ((t (:foreground ,dank-yellow :weight bold))))
    `(dired-symlink ((t (:foreground ,dank-magenta :slant italic))))
    `(dired-header ((t (:foreground ,dank-cyan :weight bold :height 1.1))))
+   '(diredfl-no-priv ((t (:forground ,on-background))))
+   `(diredfl-dir-name ((t (:foreground ,primary :weight bold))))
+   `(diredfl-dir-priv ((t (:foreground ,primary))))
+   `(diredfl-read-priv ((t (:foreground ,secondary))))
+   `(diredfl-write-priv ((t (:foreground ,err))))
+   `(diredfl-exec-priv ((t (:foreground ,tertiary))))
+   `(diredfl-file-name ((t (:foreground ,on-background))))
+   `(diredfl-file-suffix ((t (:foreground ,on-background))))
 
    ;; Terminal colors
    `(term-color-black ((t (:foreground ,term0 :background ,term0))))

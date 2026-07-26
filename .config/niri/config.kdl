@@ -207,11 +207,7 @@ animations {
         spring damping-ratio=0.85 stiffness=800 epsilon=0.0001
     }
 }
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
+
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
@@ -228,6 +224,13 @@ window-rule {
 window-rule {
    match app-id="com.obsproject.Studio"
    open-on-output "eDP-1"
+}
+
+window-rule {
+   opacity 0.9
+   background-effect {
+      blur true
+   }
 }
 debug {
     honor-xdg-activation-with-invalid-serial
