@@ -1,0 +1,22 @@
+[config]
+
+# [templates.nvim-base16]
+# input_path = "~/.config/nvim/lua/dc/colorscheme/matugen-template.lua"
+# output_path = "~/.config/nvim/lua/matugen.lua"
+# post_hook = 'pkill -SIGUSR1 nvim'
+
+# [templates.yazi]
+# input_path = "~/.config/noctalia/templates/yazi.toml"
+# output_path = "~/.config/yazi/flavors/noctalia.yazi/flavor.toml"
+
+# [templates.fzf]
+# input_path = "~/.config/noctalia/templates/fzf.fish"
+# output_path = "~/.config/fish/fzf.fish"
+
+# [templates.lazygit]
+# input_path = "~/.config/noctalia/templates/lazygit.yml"
+# output_path = "~/.config/lazygit/config.yml"
+
+[templates.myemacs]
+input_path = '~/.config/matugen/templates/dank-emacs.el'
+output_path = '~/.config/doom/themes/dank-emacs-theme.el'

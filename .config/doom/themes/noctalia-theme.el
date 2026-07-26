@@ -143,7 +143,7 @@
    '(header-line-active ((t (:inherit mode-line-active))))
    '(header-line-inactive ((t (:inherit mode-line-inactive))))
    '(header-line-highlight ((t (:inherit mode-line-highlight))))
-   
+
    ;; Improved Source blocks - make them integrated with the theme
    `(org-block ((t (:background ,surface-container-low :extend t :inherit fixed-pitch))))
    `(org-block-begin-line ((t (:background ,surface-container-low :foreground ,primary-fixed-dim :extend t :slant italic :inherit fixed-pitch))))

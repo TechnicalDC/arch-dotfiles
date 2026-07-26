@@ -397,7 +397,7 @@
         "position": "bottom",
         "showDockIndicator": true,
         "showLauncherIcon": false,
-        "sitOnFrame": true,
+        "sitOnFrame": false,
         "size": 1
     },
     "general": {
@@ -742,9 +742,9 @@
     "ui": {
         "boxBorderEnabled": true,
         "fontDefault": "Recursive Sn Lnr St",
-        "fontDefaultScale": 1,
+        "fontDefaultScale": 1.1,
         "fontFixed": "Recursive Mn Lnr St",
-        "fontFixedScale": 1,
+        "fontFixedScale": 1.1,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
@@ -760,19 +760,6 @@
         "enabled": true,
         "favorites": [
             {
-                "colorScheme": "One",
-                "darkMode": true,
-                "generationMethod": "muted",
-                "paletteColors": [
-                    "#98acb3",
-                    "#8d99a5",
-                    "#8f94a3",
-                    "#fd4663"
-                ],
-                "path": "/home/dilip/Pictures/wallpapers/extra-9.jpg",
-                "useWallpaperColors": true
-            },
-            {
                 "appearance": "dark",
                 "colorScheme": "Rose Pine",
                 "darkMode": true,
@@ -784,20 +771,6 @@
                     "#ffb4ab"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/extra-16.jpg",
-                "useWallpaperColors": true
-            },
-            {
-                "appearance": "dark",
-                "colorScheme": "Rose Pine",
-                "darkMode": true,
-                "generationMethod": "muted",
-                "paletteColors": [
-                    "#e5e9ec",
-                    "#e6e7eb",
-                    "#e6e6eb",
-                    "#fd4663"
-                ],
-                "path": "/home/dilip/Pictures/wallpapers/extra-6.jpg",
                 "useWallpaperColors": true
             },
             {
@@ -844,20 +817,6 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Rose Pine",
-                "darkMode": true,
-                "generationMethod": "muted",
-                "paletteColors": [
-                    "#dfdbd4",
-                    "#deddd5",
-                    "#dcddd6",
-                    "#fd4663"
-                ],
-                "path": "/home/dilip/Pictures/wallpapers/p_o_c_k_e_t___t_o_w_n_by_dmitryalexander_dg6w3t3.png",
-                "useWallpaperColors": true
-            },
-            {
-                "appearance": "dark",
                 "colorScheme": "Oxocarbon",
                 "darkMode": true,
                 "generationMethod": "faithful",
@@ -882,20 +841,6 @@
                     "#ffb4ab"
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/5748285.jpg",
-                "useWallpaperColors": true
-            },
-            {
-                "appearance": "dark",
-                "colorScheme": "Rose Pine",
-                "darkMode": true,
-                "generationMethod": "faithful",
-                "paletteColors": [
-                    "#67b8e4",
-                    "#5c6ad6",
-                    "#70cc66",
-                    "#fd4663"
-                ],
-                "path": "/home/dilip/Pictures/wallpapers/flowers.jpg",
                 "useWallpaperColors": true
             },
             {
@@ -967,6 +912,20 @@
                 ],
                 "path": "/home/dilip/Pictures/wallpapers/nord.jpg",
                 "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Gruvbox",
+                "darkMode": true,
+                "generationMethod": "muted",
+                "paletteColors": [
+                    "#b8bb26",
+                    "#fabd2f",
+                    "#83a598",
+                    "#fb4934"
+                ],
+                "path": "/home/dilip/Pictures/wallpapers/gruvbox.jpg",
+                "useWallpaperColors": false
             }
         ],
         "fillColor": "#000000",
@@ -998,7 +957,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "",
+        "wallhavenQuery": "sanskrit",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",

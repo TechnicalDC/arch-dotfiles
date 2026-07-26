@@ -16,7 +16,7 @@
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
 
-(setq doom-theme 'noctalia)
+(setq doom-theme 'dank-emacs)
 
 (custom-set-faces
       '(mode-line ((t (:family "Recursive Sans Casual Static" ))))
@@ -26,7 +26,7 @@
 (setq +dashboard-functions
       `(+dashboard-widget-banner
         +dashboard-widget-shortmenu)
-      doom-modeline-bar-width 1
+      doom-modeline-bar-width 0
       doom-modeline-buffer-file-name-style 'auto)
 
 (setq fancy-splash-image (concat doom-user-dir "splashes/nord.png"))
