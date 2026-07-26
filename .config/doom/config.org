@@ -11,6 +11,7 @@
 - [[#org-modern][Org-Modern]]
 - [[#icons][Icons]]
 - [[#autoloads][Autoloads]]
+- [[#rainbow-mode][Rainbow Mode]]
 - [[#spacious-padding][Spacious Padding]]
 - [[#elfeed][Elfeed]]
 - [[#key-bindings][Key Bindings]]
@@ -217,6 +218,16 @@ Doom exposes five (optional) variables for controlling fonts in Doom:
 #+begin_src emacs-lisp
 (load! "abl-mode.el")
 (add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
+#+end_src
+
+* Rainbow Mode
+
+For now, keeping this as toggle using =M-x=
+
+#+begin_src emacs-lisp
+;; (use-package rainbow-mode
+;;   :hook
+;;   ((prog-mode rain)))
 #+end_src
 
 * Spacious Padding

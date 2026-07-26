@@ -154,6 +154,10 @@
 (load! "abl-mode.el")
 (add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
 
+;; (use-package rainbow-mode
+;;   :hook
+;;   ((prog-mode rain)))
+
 (use-package spacious-padding
   :ensure t
   :config
