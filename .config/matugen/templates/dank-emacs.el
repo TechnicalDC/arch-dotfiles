@@ -243,7 +243,7 @@
    `(which-key-special-key-face ((t (:foreground ,dank-yellow :weight bold))))
 
    ;; Line numbers
-   `(line-number ((t (:foreground ,outline-variant :inherit fixed-pitch))))
+   `(line-number ((t (:foreground ,outline-color :inherit fixed-pitch))))
    `(line-number-current-line ((t (:foreground ,primary :weight bold :inherit fixed-pitch))))
 
    `(hl-line ((t (:background ,outline-variant))))
