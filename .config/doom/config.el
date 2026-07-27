@@ -26,8 +26,9 @@
 (setq +dashboard-functions
       `(+dashboard-widget-banner
         +dashboard-widget-shortmenu)
-      doom-modeline-bar-width 0
       doom-modeline-buffer-file-name-style 'auto)
+
+;; (doom-modeline-remove-segment 'bar)
 
 (setq fancy-splash-image (concat doom-user-dir "splashes/nord.png"))
 
