@@ -369,6 +369,8 @@
    `(centaur-tabs-unselected-modified ((t (:background ,surface :foreground ,dank-yellow))))
    `(centaur-tabs-active-bar-face ((t (:background ,dank-cyan))))
 
+   ;; Dashboard
+
    ;; Fixed-pitch faces
    `(fixed-pitch ((t (:family "monospace"))))
    `(fixed-pitch-serif ((t (:family "monospace serif"))))
