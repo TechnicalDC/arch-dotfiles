@@ -165,8 +165,8 @@
   ;; These are the default values, but I keep them here for visibility.
   ;; Also check `spacious-padding-subtle-frame-lines'.
   (setq spacious-padding-subtle-frame-lines
-        '(:mode-line-active success :mode-line-inactive shadow
-          :header-line-active success :header-line-inactive shadow)
+        '(:mode-line-active link :mode-line-inactive shadow
+          :header-line-active link :header-line-inactive shadow)
         spacious-padding-widths
         '( :internal-border-width 20
            :header-line-width 4
