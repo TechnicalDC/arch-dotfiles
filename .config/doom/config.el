@@ -30,7 +30,7 @@
 
 ;; (doom-modeline-remove-segment 'bar)
 
-(setq fancy-splash-image (concat doom-user-dir "splashes/nord.png"))
+(setq fancy-splash-image (concat doom-user-dir "splashes/everforest.jpg"))
 
 (setq evil-vsplit-window-right t
       evil-split-window-below t

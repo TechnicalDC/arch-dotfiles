@@ -63,7 +63,7 @@ Doom exposes five (optional) variables for controlling fonts in Doom:
 
 ;; (doom-modeline-remove-segment 'bar)
 
-(setq fancy-splash-image (concat doom-user-dir "splashes/nord.png"))
+(setq fancy-splash-image (concat doom-user-dir "splashes/everforest.jpg"))
 #+end_src
 
 * Evil-Mode

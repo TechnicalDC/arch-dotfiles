@@ -190,6 +190,9 @@
    `(org-special-keyword ((t (:foreground ,dank-gray :slant italic))))
    `(org-tag ((t (:foreground ,dank-gray :weight normal))))
 
+   `(org-agenda-current-time ((t (:foreground ,on-background))))
+   `(org-time-grid ((t (:foreground ,on-background))))
+
    ;; Magit with enhanced diff colors
    `(magit-section-highlight ((t (:background ,surface-container-low))))
    `(magit-diff-hunk-heading ((t (:background ,surface-container :foreground ,dank-gray))))
@@ -370,6 +373,8 @@
    `(centaur-tabs-active-bar-face ((t (:background ,dank-cyan))))
 
    ;; Dashboard
+   `(+dashboard-menu-title ((t (:foreground ,primary :weight regular))))
+   `(+dashboard-menu-desc ((t (:foreground ,secondary :weight regular))))
 
    ;; Fixed-pitch faces
    `(fixed-pitch ((t (:family "monospace"))))
