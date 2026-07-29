@@ -373,6 +373,8 @@
    `(centaur-tabs-active-bar-face ((t (:background ,dank-cyan))))
 
    ;; Dashboard
+   `(+dashboard-menu-title ((t (:foreground ,primary :weight regular))))
+   `(+dashboard-menu-desc ((t (:foreground ,secondary :weight regular))))
 
    ;; Fixed-pitch faces
    `(fixed-pitch ((t (:family "monospace"))))
