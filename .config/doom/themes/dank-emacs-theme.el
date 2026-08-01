@@ -21,36 +21,36 @@
 (deftheme dank-emacs "Enhanced theme using Matugen variables with dank16 color integration.")
 
 ;; Define all the color variables (replaced by template processor)
-(let* ((bg "#2d353b")
+(let* ((bg "#333c43")
       (err "#dc7763")  ; Red from dank16
       (err-container "#8c1d18")
       (on-background "#d3c6aa")
       (on-err "#601410")
       (on-err-container "#f9dedc")
-      (on-primary "#232a2e")
+      (on-primary "#293136")
       (on-primary-container "#d3c6aa")
-      (on-secondary "#232a2e")
+      (on-secondary "#293136")
       (on-secondary-container "#d3c6aa")
       (on-surface "#d3c6aa")
       (on-surface-variant "#d3c6aa")
-      (on-tertiary "#232a2e")
+      (on-tertiary "#293136")
       (on-tertiary-container "#d3c6aa")
-      (outline-color "#56635f")
-      (outline-variant "#2d353b")
+      (outline-color "#b9c0ab")
+      (outline-variant "#333c43")
       (primary "#a7c080")
       (primary-container "#6c8446")
       (secondary "#7fbbb3")
-      (secondary-container "#3d484d")
+      (secondary-container "#434f55")
       (shadow "#000000")
-      (surface "#232a2e")
-      (surface-container "#3d484d")
-      (surface-container-high "#475258")
-      (surface-container-highest "#3d484d")
-      (surface-container-low "#232a2e")
-      (surface-container-lowest "#2d353b")
-      (surface-variant "#2d353b")
+      (surface "#293136")
+      (surface-container "#434f55")
+      (surface-container-high "#4d5960")
+      (surface-container-highest "#434f55")
+      (surface-container-low "#293136")
+      (surface-container-lowest "#333c43")
+      (surface-variant "#333c43")
       (tertiary "#7fbbb3")
-      (tertiary-container "#3d484d")
+      (tertiary-container "#434f55")
 
       ;; Enhanced dank16 colors for better syntax highlighting
       (dank-red "#dc7763")          ; Bright red
@@ -66,13 +66,13 @@
       (dank-cyan-dark "#e2f9bf")   ; Dark cyan
       (dank-teal "#f0ffd8")        ; Dark teal
       (dank-fg "#c4c9bd")           ; Light foreground
-      (dank-gray "#81847b")         ; Gray
+      (dank-gray "#868980")         ; Gray
       (dank-white "#fcfff8")       ; White
 
       ;; Map success colors to green
       (success "#67c060")
-      (on-success "#232a2e")
-      (success-container "#3d484d")
+      (on-success "#293136")
+      (success-container "#434f55")
       (on-success-container "#d3c6aa")
 
       ;; Map fixed colors
@@ -82,20 +82,20 @@
       (secondary-fixed-dim "#7fbbb3")
       (tertiary-fixed "#7fbbb3")
       (tertiary-fixed-dim "#7fbbb3")
-      (on-primary-fixed "#232a2e")
-      (on-primary-fixed-variant "#232a2e")
-      (on-secondary-fixed "#232a2e")
-      (on-secondary-fixed-variant "#232a2e")
-      (on-tertiary-fixed "#232a2e")
-      (on-tertiary-fixed-variant "#232a2e")
+      (on-primary-fixed "#293136")
+      (on-primary-fixed-variant "#293136")
+      (on-secondary-fixed "#293136")
+      (on-secondary-fixed-variant "#293136")
+      (on-tertiary-fixed "#293136")
+      (on-tertiary-fixed-variant "#293136")
 
       ;; Map inverse colors
       (inverse-on-surface "#5c6a72")
       (inverse-primary "#8ca101")
-      (inverse-surface "#efebd4")
+      (inverse-surface "#e5dfc5")
 
       ;; Terminal colors from dank16
-      (term0 "#232a2e")
+      (term0 "#293136")
       (term1 "#dc7763")
       (term2 "#67c060")
       (term3 "#f0dd6b")
@@ -103,7 +103,7 @@
       (term5 "#435822")
       (term6 "#a7c080")
       (term7 "#c4c9bd")
-      (term8 "#81847b")
+      (term8 "#868980")
       (term9 "#ffaf9f")
       (term10 "#9ce695")
       (term11 "#fff2a5")
