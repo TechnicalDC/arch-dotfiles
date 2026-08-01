@@ -136,7 +136,7 @@
    ;; Font-lock - enhanced with dank16 colors for vibrant syntax highlighting
    `(font-lock-builtin-face ((t (:foreground ,dank-cyan-bright))))
    `(font-lock-comment-face ((t (:foreground ,dank-gray :slant italic))))
-   `(font-lock-comment-delimiter-face ((t (:foreground ,outline-variant))))
+   `(font-lock-comment-delimiter-face ((t (:foreground ,dank-gray))))
    `(font-lock-constant-face ((t (:foreground ,dank-yellow-bright :weight bold))))
    `(font-lock-doc-face ((t (:foreground ,dank-fg :slant italic))))
    `(font-lock-function-name-face ((t (:foreground ,dank-cyan :weight bold))))
@@ -161,8 +161,8 @@
 
    ;; Improved Source blocks - seamless integration
    `(org-block ((t (:background ,surface-container-low :extend t :inherit fixed-pitch))))
-   `(org-block-begin-line ((t (:background ,surface-container-low :foreground ,dank-teal :extend t :slant italic :inherit fixed-pitch))))
-   `(org-block-end-line ((t (:background ,surface-container-low :foreground ,dank-teal :extend t :slant italic :inherit fixed-pitch))))
+   `(org-block-begin-line ((t (:background ,surface-container :foreground ,dank-teal :extend t :slant italic :inherit fixed-pitch))))
+   `(org-block-end-line ((t (:background ,surface-container :foreground ,dank-teal :extend t :slant italic :inherit fixed-pitch))))
    `(org-code ((t (:background ,surface-container-low :foreground ,dank-yellow-bright :inherit fixed-pitch))))
    `(org-verbatim ((t (:background ,surface-container-low :foreground ,dank-cyan :inherit fixed-pitch))))
    `(org-meta-line ((t (:foreground ,dank-gray :slant italic))))
@@ -235,8 +235,8 @@
    `(helm-ff-executable ((t (:foreground ,dank-green))))
 
    ;; corfu
-   `(corfu-default ((t (:background ,surface-container :foreground ,on-surface))))
-   `(corfu-current ((t (:background ,outline-variant :foreground ,dank-cyan-bright))))
+   `(corfu-default ((t (:background ,surface-container :foreground ,on-surface :inherit fixed-pitch))))
+   `(corfu-current ((t (:background ,outline-variant :foreground ,dank-cyan-bright :inherit fixed-pitch))))
 
    ;; Which-key
    `(which-key-key-face ((t (:foreground ,dank-cyan :weight bold))))
@@ -375,6 +375,12 @@
    ;; Dashboard
    `(+dashboard-menu-title ((t (:foreground ,primary :weight regular))))
    `(+dashboard-menu-desc ((t (:foreground ,secondary :weight regular))))
+
+   `(doom-modeline-bar ((t (:background ,bg))))
+   `(doom-modeline-bar-inactive ((t (:background ,bg))))
+
+   ;; Ivy
+   `(ivy-current-match ((t (:background ,primary-container :foreground ,dank-cyan-bright :extend t))))
 
    ;; Fixed-pitch faces
    `(fixed-pitch ((t (:family "monospace"))))

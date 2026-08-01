@@ -70,9 +70,7 @@
 
            ("mr" "Recurring Meeting" entry
             (file+headline "meetings.org" "Recurring Meetings")
-            "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)))
-
-  (add-hook 'org-mode-hook #'variable-pitch-mode))
+            "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1))))
 
 (custom-set-faces!
   '(org-agenda-date :inherit org-level-1)
