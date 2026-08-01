@@ -11,6 +11,7 @@
 - [[#org-modern][Org-Modern]]
 - [[#icons][Icons]]
 - [[#autoloads][Autoloads]]
+- [[#in-buffer-completion][In-Buffer Completion]]
 - [[#rainbow-mode][Rainbow Mode]]
 - [[#spacious-padding][Spacious Padding]]
 - [[#elfeed][Elfeed]]
@@ -217,6 +218,25 @@ Doom exposes five (optional) variables for controlling fonts in Doom:
 #+begin_src emacs-lisp
 (load! "abl-mode.el")
 (add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
+#+end_src
+
+
+* In-Buffer Completion
+
+#+begin_src emacs-lisp
+(setq tab-always-indent 'complete)
+
+(use-package! corfu
+  :config
+  (setq corfu-border-width 2
+        corfu-auto-prefix 1
+        corfu-bar-width 1))
+
+(use-package! cape
+  :defer 1
+  :config
+  (add-hook 'completion-at-point-functions #'cape-dabbrev 20) ; words from buffer
+  (add-hook 'completion-at-point-functions #'cape-file 20))
 #+end_src
 
 * Rainbow Mode

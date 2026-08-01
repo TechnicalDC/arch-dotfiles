@@ -153,6 +153,20 @@
 (load! "abl-mode.el")
 (add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
 
+(setq tab-always-indent 'complete)
+
+(use-package! corfu
+  :config
+  (setq corfu-border-width 2
+        corfu-auto-prefix 1
+        corfu-bar-width 1))
+
+(use-package! cape
+  :defer 1
+  :config
+  (add-hook 'completion-at-point-functions #'cape-dabbrev 20) ; words from buffer
+  (add-hook 'completion-at-point-functions #'cape-file 20))
+
 ;; (use-package rainbow-mode
 ;;   :hook
 ;;   ((prog-mode rain)))
