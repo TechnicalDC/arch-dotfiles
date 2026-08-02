@@ -54,7 +54,11 @@
 (after! org
   (setq org-ellipsis " "
         org-capture-templates
-        '(("t" "Personal todo" entry
+        '(("t" "Todo" entry
+           (file+headline +org-capture-todo-file "Todos")
+           "* TODO %?" :prepend t :empty-lines 1)
+
+          ("T" "Development Todo" entry
            (file+headline +org-capture-todo-file "Todos")
            "* TODO %?\n%i\n%a" :prepend t :empty-lines 1)
 

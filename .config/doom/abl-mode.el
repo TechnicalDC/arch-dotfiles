@@ -196,14 +196,14 @@ the beginning of each of the variables being assigned."
 
 ;;;; Reading & Navigation Code
 (defun abl-narrow-to-proc ()
-  "When inside a function or internal procedure definition, narrow the buffer
+  "When inside a method, function or internal procedure definition, narrow the buffer
 to that definition."
   (interactive)
   (let (b e)
     (save-excursion
-      (search-backward-regexp (rx line-start (or "function" "procedure")))
+      (search-backward-regexp (rx line-start (zero-or-more (any "\t ")) (or "method" "function" "procedure")))
       (setq b (point))
-      (search-forward-regexp (rx line-start "end"))
+      (search-forward-regexp (rx line-start (zero-or-more (any "\t ")) "end " (or "method" "function" "procedure")))
       (end-of-line)
       (setq e (point)))
     (narrow-to-region b e)))
@@ -211,21 +211,21 @@ to that definition."
 (defun abl-occur-procs ()
   "Show occurences of FUNCTION and PROC."
   (interactive)
-  (occur (rx line-start (or "function" "proc"))))
+  (occur (rx line-start (zero-or-more (any "\t ")) (or "method" "function" "proc"))))
 
 (defun abl-forward-proc ()
   "Move the point forward to the beginning of the next function or internal procedure
 definition."
   (interactive)
   (right-char)
-  (search-forward-regexp (rx line-start (or "function" "procedure")))
+  (search-forward-regexp (rx line-start (zero-or-more (any "\t ")) (or "method" "function" "procedure")))
   (beginning-of-line))
 
 (defun abl-backward-proc ()
   "Move the point backwards to the beginning of the previous function or internal procedure
 definition."
   (interactive)
-  (search-backward-regexp (rx line-start (or "function" "procedure")))
+  (search-backward-regexp (rx line-start (zero-or-more (any "\t ")) (or "method" "function" "procedure")))
   (beginning-of-line))
 
 (defun abl-backtab ()
