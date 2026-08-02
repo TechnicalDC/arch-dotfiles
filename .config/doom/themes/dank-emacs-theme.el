@@ -161,8 +161,8 @@
 
    ;; Improved Source blocks - seamless integration
    `(org-block ((t (:background ,surface-container-low :extend t :inherit fixed-pitch))))
-   `(org-block-begin-line ((t (:background ,surface-container :foreground ,dank-teal :extend t :slant italic :inherit fixed-pitch))))
-   `(org-block-end-line ((t (:background ,surface-container :foreground ,dank-teal :extend t :slant italic :inherit fixed-pitch))))
+   `(org-block-begin-line ((t (:background ,surface-container :foreground ,dank-teal :extend t :slant italic :weight light :inherit fixed-pitch))))
+   `(org-block-end-line ((t (:background ,surface-container :foreground ,dank-teal :extend t :slant italic :weight light :inherit fixed-pitch))))
    `(org-code ((t (:background ,surface-container-low :foreground ,dank-yellow-bright :inherit fixed-pitch))))
    `(org-verbatim ((t (:background ,surface-container-low :foreground ,dank-cyan :inherit fixed-pitch))))
    `(org-meta-line ((t (:foreground ,dank-gray :slant italic))))

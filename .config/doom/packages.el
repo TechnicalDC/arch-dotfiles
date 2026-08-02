@@ -12,3 +12,5 @@
 (package! ivy-rich)
 (package! spacious-padding)
 (package! rainbow-mode)
+(package! denote)
+(package! denote-org)
