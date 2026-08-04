@@ -7,10 +7,10 @@
       custom-tab-width 3)
 
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 18)
-             doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 18))
-       (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 21)
-             doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 21)))
+       (setq doom-font (font-spec :family "Inconsolata Condensed" :size 18)
+             doom-variable-pitch-font (font-spec :family "Inconsolata Condensed" :size 18))
+       (setq doom-font (font-spec :family "Inconsolata Condensed" :size 26)
+             doom-variable-pitch-font (font-spec :family "Inconsolata Condensed" :size 26)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -19,9 +19,9 @@
 (setq doom-theme 'dank-emacs)
 
 (custom-set-faces
-      '(mode-line ((t (:family "Recursive Sans Casual Static" ))))
-      '(mode-line-active ((t (:family "Recursive Sans Casual Static" ))))
-      '(mode-line-inactive ((t (:family "Recursive Sans Casual Static" )))))
+      '(mode-line ((t (:family "Inconsolata Condensed" ))))
+      '(mode-line-active ((t (:family "Inconsolata Condensed" ))))
+      '(mode-line-inactive ((t (:family "Inconsolata Condensed" )))))
 
 (setq +dashboard-functions
       `(+dashboard-widget-banner
