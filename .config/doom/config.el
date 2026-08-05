@@ -92,19 +92,6 @@
 ;;                                  (tags . " %i %-12:c")
 ;;                                  (search . " %i %-12:c")))
 
-(setq org-roam-dailies-directory "journal/"
-      org-roam-directory "roam/")
-
-(setq org-roam-dailies-capture-templates
-      '(("d" "default" entry
-         "* %?"
-         :target (file+head "%<%Y-%m-%d>.org"
-                            "#+title: %<%d %B,%Y>\n\n"))))
-
-(setq org-roam-capture-templates
-      '(("d" "default" plain "%?" :target
-        (file+head "${slug}.org" "#+title: ${title}\n\n") :unnarrowed t)))
-
 (use-package! org-modern
   :hook
   (org-mode . org-modern-mode)
@@ -236,11 +223,12 @@
   (setq denote-known-keywords '("emacs" "development" "project" "ticket"))
   (setq denote-infer-keywords t)
   (setq denote-sort-keywords t)
-  (setq denote-prompts '(title keywords))
+  (setq denote-prompts '(title keywords subdirectory template))
   (setq denote-excluded-directories-regexp nil)
   (setq denote-keywords-to-not-infer-regexp nil)
   (setq denote-rename-confirmations '(rewrite-front-matter modify-file-name))
-
+  (setq denote-templates
+        '((journal . "* Tasks\n\n*Meeting\n\n**Other")))
   ;; Pick dates, where relevant, with Org's advanced interface:
   (setq denote-date-prompt-use-org-read-date t)
 
@@ -249,6 +237,33 @@
   ;; "[D]" followed by the file's title.  Read the docstring of
   ;; `denote-rename-buffer-format' for how to modify this.
   (denote-rename-buffer-mode 1))
+
+(use-package denote-journal
+  :ensure t
+  ;; Bind those to some key for your convenience.
+  :commands ( denote-journal-new-entry
+              denote-journal-new-or-existing-entry
+              denote-journal-link-or-create-entry )
+  :hook (calendar-mode . denote-journal-calendar-mode)
+  :config
+  ;; Use the "journal" subdirectory of the `denote-directory'.  Set this
+  ;; to nil to use the `denote-directory' instead.
+  (setq denote-journal-directory
+        (expand-file-name "journal" denote-directory))
+  ;; Default keyword for new journal entries. It can also be a list of
+  ;; strings.
+  (setq denote-journal-keyword "journal")
+  ;; Read the doc string of `denote-journal-title-format'.
+  (setq denote-journal-title-format "%B %Y"
+        denote-journal-interval 'monthly))
+
+(with-eval-after-load 'org-capture
+  (add-to-list 'org-capture-templates
+               '("j" "Journal" entry
+                 (file denote-journal-path-to-new-or-existing-entry)
+                 "* %U %?\n%i\n%a"
+                 :kill-buffer t
+                 :empty-lines 1)))
 
 (map! :leader
       (:prefix ("t" . "toggle")
