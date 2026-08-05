@@ -14,3 +14,4 @@
 (package! rainbow-mode)
 (package! denote)
 (package! denote-org)
+(package! denote-journal)

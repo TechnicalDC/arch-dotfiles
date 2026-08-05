@@ -7,10 +7,10 @@
       custom-tab-width 3)
 
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 18)
-             doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 18))
-       (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 21)
-             doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 21)))
+       (setq doom-font (font-spec :family "Iosevka Charon Mono" :size 18)
+             doom-variable-pitch-font (font-spec :family "Iosevka Charon" :size 18))
+       (setq doom-font (font-spec :family "Iosevka Charon Mono" :size 22)
+             doom-variable-pitch-font (font-spec :family "Iosevka Charon" :size 22)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -19,16 +19,14 @@
 (setq doom-theme 'dank-emacs)
 
 (custom-set-faces
-      '(mode-line ((t (:family "Recursive Sans Casual Static" ))))
-      '(mode-line-active ((t (:family "Recursive Sans Casual Static" ))))
-      '(mode-line-inactive ((t (:family "Recursive Sans Casual Static" )))))
+      '(mode-line ((t (:family "Iosevka Charon" ))))
+      '(mode-line-active ((t (:family "Iosevka Charon" ))))
+      '(mode-line-inactive ((t (:family "Iosevka Charon" )))))
 
 (setq +dashboard-functions
       `(+dashboard-widget-banner
         +dashboard-widget-shortmenu)
       doom-modeline-buffer-file-name-style 'auto)
-
-;; (doom-modeline-remove-segment 'bar)
 
 (setq fancy-splash-image (concat doom-user-dir "splashes/everforest.jpg"))
 
@@ -62,10 +60,6 @@
            (file+headline +org-capture-todo-file "Todos")
            "* TODO %?\n%i\n%a" :prepend t :empty-lines 1)
 
-           ("j" "Journal" entry
-           (file+olp+datetree +org-capture-journal-file)
-           "* %U %?\n%i\n%a" :prepend t :empty-lines 1)
-
            ("m" "Meeting")
 
            ("mo" "One-time Meeting" entry
@@ -98,7 +92,7 @@
 ;;                                  (tags . " %i %-12:c")
 ;;                                  (search . " %i %-12:c")))
 
-(setq org-roam-dailies-directory "daily/"
+(setq org-roam-dailies-directory "journal/"
       org-roam-directory "roam/")
 
 (setq org-roam-dailies-capture-templates
