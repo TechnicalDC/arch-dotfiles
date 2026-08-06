@@ -15,3 +15,4 @@
 (package! denote)
 (package! denote-org)
 (package! denote-journal)
+(package! dired-preview)

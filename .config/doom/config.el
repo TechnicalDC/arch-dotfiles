@@ -228,7 +228,7 @@
   (setq denote-keywords-to-not-infer-regexp nil)
   (setq denote-rename-confirmations '(rewrite-front-matter modify-file-name))
   (setq denote-templates
-        '((journal . "* Tasks\n\n*Meeting\n\n**Other")))
+        '((journal . "* Tasks\n\n* Meeting\n\n* Other")))
   ;; Pick dates, where relevant, with Org's advanced interface:
   (setq denote-date-prompt-use-org-read-date t)
 
@@ -237,6 +237,26 @@
   ;; "[D]" followed by the file's title.  Read the docstring of
   ;; `denote-rename-buffer-format' for how to modify this.
   (denote-rename-buffer-mode 1))
+
+(use-package denote-org
+  :ensure t
+  :commands
+  ;; I list the commands here so that you can discover them more
+  ;; easily.  You might want to bind the most frequently used ones to
+  ;; the `org-mode-map'.
+  ( denote-org-link-to-heading
+    denote-org-backlinks-for-heading
+
+    denote-org-extract-org-subtree
+
+    denote-org-convert-links-to-file-type
+    denote-org-convert-links-to-denote-type
+
+    denote-org-dblock-insert-files
+    denote-org-dblock-insert-links
+    denote-org-dblock-insert-backlinks
+    denote-org-dblock-insert-missing-links
+    denote-org-dblock-insert-files-as-headings))
 
 (use-package denote-journal
   :ensure t
@@ -260,10 +280,27 @@
 (with-eval-after-load 'org-capture
   (add-to-list 'org-capture-templates
                '("j" "Journal" entry
-                 (file denote-journal-path-to-new-or-existing-entry)
-                 "* %U %?\n%i\n%a"
+                 (file+heading denote-journal-path-to-new-or-existing-entry "Hello")
+                 "** %U %?\n%i\n%a"
                  :kill-buffer t
                  :empty-lines 1)))
+
+(use-package dired-preview
+  :ensure t
+  :config
+  (setq dired-preview-delay 0)
+  (setq dired-preview-max-size (expt 2 20))
+  (setq dired-preview-ignored-extensions-regexp
+        (concat "\\."
+                "\\(gz\\|"
+                "zst\\|"
+                "tar\\|"
+                "xz\\|"
+                "rar\\|"
+                "zip\\|"
+                "iso\\|"
+                "epub"
+                "\\)")))
 
 (map! :leader
       (:prefix ("t" . "toggle")
@@ -271,3 +308,12 @@
 
 (map! :leader
       (:desc "Treemacs" "-" #'+treemacs/toggle))
+  ;; (("C-c n n" . denote)
+  ;;  ("C-c n r" . denote-rename-file)
+  ;;  ("C-c n l" . denote-link)
+  ;;  ("C-c n b" . denote-backlinks)
+  ;;  ("C-c n d" . denote-dired)
+  ;;  ("C-c n g" . denote-grep))
+(map! :leader
+      (:prefix ("n" . "+notes")
+       :desc "Denote" "n" #'denote))
