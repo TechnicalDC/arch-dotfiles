@@ -120,8 +120,7 @@
                          (?- . "󰛲")
                          (?\s . "󰄱"))))
 
-(setq org-roam-dailies-directory "journal/"
-      org-roam-directory "roam/")
+(setq org-roam-directory (concat org-directory "roam/"))
 
 (setq org-roam-dailies-capture-templates
       '(("d" "default" entry
