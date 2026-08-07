@@ -85,7 +85,7 @@
         org-agenda-files (list org-directory (concat org-directory "roam/"))))
 ;; Ricing org agenda
 (setq org-agenda-current-time-string "<--now----------")
-(setq org-agenda-time-grid '((daily) (800 1000 1200 1400 1600 1800 2000) "......" "----------------"))
+(setq org-agenda-time-grid '((daily) (800 1000 1200 1400 1600 1800 2000 2200) "------" "----------------"))
 ;; Remove category names and scheduling type from agenda view
 ;; (setq org-agenda-prefix-format '((agenda . "  %?-2i %t ")
 ;;                                  (todo . " %i %-12:c")
@@ -119,6 +119,19 @@
    org-modern-checkbox '((?X . "󰄵")
                          (?- . "󰛲")
                          (?\s . "󰄱"))))
+
+(setq org-roam-dailies-directory "journal/"
+      org-roam-directory "roam/")
+
+(setq org-roam-dailies-capture-templates
+      '(("d" "default" entry
+         "* %?"
+         :target (file+head "%<%Y-%m-%d>.org"
+                            "#+title: %<%d %B,%Y>\n\n"))))
+
+(setq org-roam-capture-templates
+      '(("d" "default" plain "%?" :target
+        (file+head "${slug}.org" "#+title: ${title}\n\n") :unnarrowed t)))
 
 (use-package nerd-icons
   :ensure t)
@@ -207,84 +220,6 @@
         elfeed-goodies/switch-to-entry nil
         elfeed-goodies/powerline-default-separator nil))
 
-(use-package denote
-  :ensure t
-  :hook (dired-mode . denote-dired-mode)
-  :bind
-  (("C-c n n" . denote)
-   ("C-c n r" . denote-rename-file)
-   ("C-c n l" . denote-link)
-   ("C-c n b" . denote-backlinks)
-   ("C-c n d" . denote-dired)
-   ("C-c n g" . denote-grep))
-  :config
-  (setq denote-directory (expand-file-name "~/orgfiles/denote/"))
-  (setq denote-save-buffers nil)
-  (setq denote-known-keywords '("emacs" "development" "project" "ticket"))
-  (setq denote-infer-keywords t)
-  (setq denote-sort-keywords t)
-  (setq denote-prompts '(title keywords subdirectory template))
-  (setq denote-excluded-directories-regexp nil)
-  (setq denote-keywords-to-not-infer-regexp nil)
-  (setq denote-rename-confirmations '(rewrite-front-matter modify-file-name))
-  (setq denote-templates
-        '((journal . "* Tasks\n\n* Meeting\n\n* Other")))
-  ;; Pick dates, where relevant, with Org's advanced interface:
-  (setq denote-date-prompt-use-org-read-date t)
-
-  ;; Automatically rename Denote buffers when opening them so that
-  ;; instead of their long file name they have, for example, a literal
-  ;; "[D]" followed by the file's title.  Read the docstring of
-  ;; `denote-rename-buffer-format' for how to modify this.
-  (denote-rename-buffer-mode 1))
-
-(use-package denote-org
-  :ensure t
-  :commands
-  ;; I list the commands here so that you can discover them more
-  ;; easily.  You might want to bind the most frequently used ones to
-  ;; the `org-mode-map'.
-  ( denote-org-link-to-heading
-    denote-org-backlinks-for-heading
-
-    denote-org-extract-org-subtree
-
-    denote-org-convert-links-to-file-type
-    denote-org-convert-links-to-denote-type
-
-    denote-org-dblock-insert-files
-    denote-org-dblock-insert-links
-    denote-org-dblock-insert-backlinks
-    denote-org-dblock-insert-missing-links
-    denote-org-dblock-insert-files-as-headings))
-
-(use-package denote-journal
-  :ensure t
-  ;; Bind those to some key for your convenience.
-  :commands ( denote-journal-new-entry
-              denote-journal-new-or-existing-entry
-              denote-journal-link-or-create-entry )
-  :hook (calendar-mode . denote-journal-calendar-mode)
-  :config
-  ;; Use the "journal" subdirectory of the `denote-directory'.  Set this
-  ;; to nil to use the `denote-directory' instead.
-  (setq denote-journal-directory
-        (expand-file-name "journal" denote-directory))
-  ;; Default keyword for new journal entries. It can also be a list of
-  ;; strings.
-  (setq denote-journal-keyword "journal")
-  ;; Read the doc string of `denote-journal-title-format'.
-  (setq denote-journal-title-format "%B %Y"
-        denote-journal-interval 'monthly))
-
-(with-eval-after-load 'org-capture
-  (add-to-list 'org-capture-templates
-               '("j" "Journal" entry
-                 (file+heading denote-journal-path-to-new-or-existing-entry "Hello")
-                 "** %U %?\n%i\n%a"
-                 :kill-buffer t
-                 :empty-lines 1)))
-
 (use-package dired-preview
   :ensure t
   :config
@@ -308,12 +243,3 @@
 
 (map! :leader
       (:desc "Treemacs" "-" #'+treemacs/toggle))
-  ;; (("C-c n n" . denote)
-  ;;  ("C-c n r" . denote-rename-file)
-  ;;  ("C-c n l" . denote-link)
-  ;;  ("C-c n b" . denote-backlinks)
-  ;;  ("C-c n d" . denote-dired)
-  ;;  ("C-c n g" . denote-grep))
-(map! :leader
-      (:prefix ("n" . "+notes")
-       :desc "Denote" "n" #'denote))

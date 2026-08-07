@@ -12,7 +12,4 @@
 (package! ivy-rich)
 (package! spacious-padding)
 (package! rainbow-mode)
-(package! denote)
-(package! denote-org)
-(package! denote-journal)
 (package! dired-preview)
