@@ -190,6 +190,7 @@
    `(org-special-keyword ((t (:foreground ,dank-gray :slant italic))))
    `(org-tag ((t (:foreground ,dank-gray :weight normal))))
 
+   `(org-agenda-structure ((t (:foreground ,dank-blue))))
    `(org-agenda-current-time ((t (:foreground ,on-background))))
    `(org-time-grid ((t (:foreground ,on-background))))
 
@@ -283,6 +284,7 @@
    `(diredfl-exec-priv ((t (:foreground ,tertiary))))
    `(diredfl-file-name ((t (:foreground ,on-background))))
    `(diredfl-file-suffix ((t (:foreground ,on-background))))
+   `(diredfl-dir-heading ((t (:foreground ,dank-blue))))
 
    ;; Terminal colors
    `(term-color-black ((t (:foreground ,term0 :background ,term0))))

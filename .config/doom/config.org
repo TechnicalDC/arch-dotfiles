@@ -176,7 +176,6 @@ Doom exposes five (optional) variables for controlling fonts in Doom:
                          (?\s . "󰄱"))))
 #+end_src
 
-
 * Org-Roam
 
 #+begin_src emacs-lisp
