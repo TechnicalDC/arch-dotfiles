@@ -28,7 +28,7 @@
         +dashboard-widget-shortmenu)
       doom-modeline-buffer-file-name-style 'auto)
 
-(setq fancy-splash-image (concat doom-user-dir "splashes/everforest.jpg"))
+(setq fancy-splash-image (concat doom-user-dir "splashes/krishna.jpeg"))
 
 (setq evil-vsplit-window-right t
       evil-split-window-below t
@@ -131,6 +131,13 @@
 (setq org-roam-capture-templates
       '(("d" "default" plain "%?" :target
         (file+head "${slug}.org" "#+title: ${title}\n\n") :unnarrowed t)))
+
+(setq org-journal-dir (concat org-directory "journal/")
+      org-journal-file-type 'monthly
+      org-journal-file-format "%Y-%m.org"
+      org-journal-date-format "%A, %d/%m/%Y"
+      org-journal-enable-agenda-integration t
+      org-journal-file-header "#+title: %B %Y")
 
 (use-package nerd-icons
   :ensure t)

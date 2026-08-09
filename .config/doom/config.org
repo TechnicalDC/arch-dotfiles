@@ -9,6 +9,7 @@
 - [[#org-agenda][Org-Agenda]]
 - [[#org-modern][Org-Modern]]
 - [[#org-roam][Org-Roam]]
+- [[#journal][Journal]]
 - [[#icons][Icons]]
 - [[#autoloads][Autoloads]]
 - [[#in-buffer-completion][In-Buffer Completion]]
@@ -63,7 +64,7 @@ Doom exposes five (optional) variables for controlling fonts in Doom:
         +dashboard-widget-shortmenu)
       doom-modeline-buffer-file-name-style 'auto)
 
-(setq fancy-splash-image (concat doom-user-dir "splashes/everforest.jpg"))
+(setq fancy-splash-image (concat doom-user-dir "splashes/krishna.jpeg"))
 #+end_src
 
 * Evil-Mode
@@ -190,6 +191,17 @@ Doom exposes five (optional) variables for controlling fonts in Doom:
 (setq org-roam-capture-templates
       '(("d" "default" plain "%?" :target
         (file+head "${slug}.org" "#+title: ${title}\n\n") :unnarrowed t)))
+#+end_src
+
+* Journal
+
+#+begin_src emacs-lisp
+(setq org-journal-dir (concat org-directory "journal/")
+      org-journal-file-type 'monthly
+      org-journal-file-format "%Y-%m.org"
+      org-journal-date-format "%A, %d/%m/%Y"
+      org-journal-enable-agenda-integration t
+      org-journal-file-header "#+title: %B %Y")
 #+end_src
 
 * Icons
