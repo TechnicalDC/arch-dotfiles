@@ -70,6 +70,10 @@
             (file+headline "meetings.org" "Recurring Meetings")
             "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1))))
 
+(use-package! org-tempo
+  :config
+  (add-to-list 'org-structure-template-alist '("p" . "src progress")))
+
 (custom-set-faces!
   '(org-agenda-date :inherit org-level-1)
   '(org-agenda-date-today :inherit org-level-1))
