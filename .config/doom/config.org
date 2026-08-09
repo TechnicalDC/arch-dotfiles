@@ -1,4 +1,4 @@
-#+title: Config
+#+title: Doom Config
 
 * Table of Contents :toc:
 - [[#basic-settings][Basic Settings]]
@@ -10,7 +10,7 @@
 - [[#org-agenda][Org-Agenda]]
 - [[#org-modern][Org-Modern]]
 - [[#org-roam][Org-Roam]]
-- [[#journal][Journal]]
+- [[#org-journal][Org-Journal]]
 - [[#icons][Icons]]
 - [[#autoloads][Autoloads]]
 - [[#in-buffer-completion][In-Buffer Completion]]
@@ -202,7 +202,7 @@ Doom exposes five (optional) variables for controlling fonts in Doom:
         (file+head "${slug}.org" "#+title: ${title}\n\n") :unnarrowed t)))
 #+end_src
 
-* Journal
+* Org-Journal
 
 #+begin_src emacs-lisp
 (setq org-journal-dir (concat org-directory "journal/")
@@ -238,7 +238,6 @@ Doom exposes five (optional) variables for controlling fonts in Doom:
 (load! "abl-mode.el")
 (add-to-list 'auto-mode-alist '("\\.typ\\'" . typst-ts-mode))
 #+end_src
-
 
 * In-Buffer Completion
 
@@ -326,7 +325,6 @@ For now, keeping this as toggle using =M-x=
         elfeed-goodies/switch-to-entry nil
         elfeed-goodies/powerline-default-separator nil))
 #+end_src
-
 
 * Dired Preview
 
