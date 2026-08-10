@@ -8,9 +8,9 @@
 
 (if (string= system-name "archlinux")
        (setq doom-font (font-spec :family "Iosevka Charon Mono" :size 18)
-             doom-variable-pitch-font (font-spec :family "Iosevka Charon" :size 18))
+             doom-variable-pitch-font (font-spec :family "Iosevka Charon Mono" :size 18))
        (setq doom-font (font-spec :family "Iosevka Charon Mono" :size 22)
-             doom-variable-pitch-font (font-spec :family "Iosevka Charon" :size 22)))
+             doom-variable-pitch-font (font-spec :family "Iosevka Charon Mono" :size 22)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -19,9 +19,9 @@
 (setq doom-theme 'dank-emacs)
 
 (custom-set-faces
-      '(mode-line ((t (:family "Iosevka Charon" ))))
-      '(mode-line-active ((t (:family "Iosevka Charon" ))))
-      '(mode-line-inactive ((t (:family "Iosevka Charon" )))))
+      '(mode-line ((t (:family "Iosevka Charon Mono" ))))
+      '(mode-line-active ((t (:family "Iosevka Charon Mono" ))))
+      '(mode-line-inactive ((t (:family "Iosevka Charon Mono" )))))
 
 (setq +dashboard-functions
       `(+dashboard-widget-banner
