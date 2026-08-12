@@ -8,9 +8,9 @@
 
 (if (string= system-name "archlinux")
        (setq doom-font (font-spec :family "Iosevka Charon Mono" :size 18)
-             doom-variable-pitch-font (font-spec :family "Iosevka Charon Mono" :size 18))
+             doom-variable-pitch-font (font-spec :family "Iosevka Charon" :size 18))
        (setq doom-font (font-spec :family "Iosevka Charon Mono" :size 22)
-             doom-variable-pitch-font (font-spec :family "Iosevka Charon Mono" :size 22)))
+             doom-variable-pitch-font (font-spec :family "Iosevka Charon" :size 22)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -68,7 +68,8 @@
 
            ("mr" "Recurring Meeting" entry
             (file+headline "meetings.org" "Recurring Meetings")
-            "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1))))
+            "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)))
+  (add-hook! org-mode #'variable-pitch-mode))
 
 (use-package! org-tempo
   :config
@@ -81,15 +82,15 @@
 (after! org-agenda
   (setq org-agenda-span 1
         org-agenda-start-day "+0d"
+        org-agenda-show-current-time-in-grid nil
+        org-agenda-time-grid '((daily) () "" "")
+        org-agenda-use-time-grid nil
         org-agenda-skip-timestamp-if-done t
         org-agenda-skip-deadline-if-done t
         org-agenda-skip-scheduled-if-done t
         org-agenda-skip-scheduled-if-deadline-is-shown t
         org-agenda-skip-timestamp-if-deadline-is-shown t
-        org-agenda-files (list org-directory (concat org-directory "roam/"))))
-;; Ricing org agenda
-(setq org-agenda-current-time-string "<--now----------")
-(setq org-agenda-time-grid '((daily) (800 1000 1200 1400 1600 1800 2000 2200) "------" "----------------"))
+        org-agenda-files (list org-directory (concat org-directory "journal/"))))
 ;; Remove category names and scheduling type from agenda view
 ;; (setq org-agenda-prefix-format '((agenda . "  %?-2i %t ")
 ;;                                  (todo . " %i %-12:c")
