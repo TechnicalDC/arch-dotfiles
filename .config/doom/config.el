@@ -51,6 +51,9 @@
 
 (after! org
   (setq org-ellipsis " "
+        org-todo-keywords
+        '((sequence "TODO(t)" "PROJ(P)" "LOOP(r)" "PROGRESS(p)" "WAIT(w)" "HOLD(h)" "CANCELLED(c)" "TEST(T)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
+         (sequence "|" "OKAY(o)" "YES(y)" "NO(n)"))
         org-capture-templates
         '(("t" "Todo" entry
            (file+headline +org-capture-todo-file "Todos")
@@ -60,15 +63,15 @@
            (file+headline +org-capture-todo-file "Todos")
            "* TODO %?\n%i\n%a" :prepend t :empty-lines 1)
 
-           ("m" "Meeting")
+          ("m" "Meeting")
 
-           ("mo" "One-time Meeting" entry
-            (file+headline "meetings.org" "One-time Meetings")
-            "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)
+          ("mo" "One-time Meeting" entry
+           (file+headline "meetings.org" "One-time Meetings")
+           "* TODO %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)
 
-           ("mr" "Recurring Meeting" entry
-            (file+headline "meetings.org" "Recurring Meetings")
-            "* %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)))
+          ("mr" "Recurring Meeting" entry
+           (file+headline "meetings.org" "Recurring Meetings")
+           "* TODO %?\nSCHEDULED:%^t" :prepend t :empty-lines 1)))
   (add-hook! org-mode #'variable-pitch-mode))
 
 (use-package! org-tempo
@@ -196,7 +199,7 @@
            :tab-width 4
            :right-divider-width 30
            :scroll-bar-width 8
-           :fringe-width 8))
+           :fringe-width 0))
 
   (spacious-padding-mode 1))
 
@@ -254,3 +257,10 @@
 
 (map! :leader
       (:desc "Treemacs" "-" #'+treemacs/toggle))
+
+(map! :map abl-mode-map
+      :leader
+      (:desc "Previous method" "[" #'abl-backward-proc)
+      (:desc "Next method" "]" #'abl-forward-proc)
+      :localleader
+      (:desc "List all methods" "/" #'abl-occur-procs))
