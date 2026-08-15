@@ -83,7 +83,7 @@
   '(org-agenda-date-today :inherit org-level-1))
 
 (after! org-agenda
-  (setq org-agenda-span 7
+  (setq org-agenda-span 1
         org-agenda-start-day "+0d"
         org-agenda-show-current-time-in-grid nil
         org-agenda-time-grid '((daily) () "" "")
@@ -226,13 +226,13 @@
                         ("https://distrowatch.com/news/dwd.xml" distrowatch linux)))))
 
 
-(use-package elfeed-goodies
-  :init
-  (elfeed-goodies/setup)
-  :config
-  (setq elfeed-goodies/entry-pane-size 0.5
-        elfeed-goodies/switch-to-entry nil
-        elfeed-goodies/powerline-default-separator nil))
+;; (use-package elfeed-goodies
+;;   :init
+;;   (elfeed-goodies/setup)
+;;   :config
+;;   (setq elfeed-goodies/entry-pane-size 0.5
+;;         elfeed-goodies/switch-to-entry nil
+;;         elfeed-goodies/powerline-default-separator nil))
 
 (use-package dired-preview
   :ensure t
