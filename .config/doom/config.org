@@ -18,6 +18,7 @@
 - [[#spacious-padding][Spacious Padding]]
 - [[#elfeed][Elfeed]]
 - [[#dired-preview][Dired Preview]]
+- [[#gtpel][GTP.el]]
 - [[#key-bindings][Key Bindings]]
 
 * Basic Settings
@@ -352,6 +353,28 @@ For now, keeping this as toggle using =M-x=
                 "iso\\|"
                 "epub"
                 "\\)")))
+#+end_src
+
+* GTP.el
+
+gptel is a simple Large Language Model chat client for Emacs, with support for
+multiple models and backends. It works in the spirit of Emacs, available at any
+time and uniformly in any buffer.
+
+#+begin_src emacs-lisp
+(defun gptel-api-key-from-environment (&optional var)
+  (lambda ()
+    (getenv (or var                     ;provided key
+                (thread-first           ;or fall back to <TYPE>_API_KEY
+                  (type-of gptel-backend)
+                  (symbol-name)
+                  (substring 6)
+                  (upcase)
+                  (concat "_API_KEY"))))))
+
+(use-package! gptel
+  :config
+  (setq gptel-api-key (gptel-api-key-from-environment "OPENAI_API_KEY")))
 #+end_src
 
 * Key Bindings
