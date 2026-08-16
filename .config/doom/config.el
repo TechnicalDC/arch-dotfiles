@@ -54,13 +54,16 @@
         org-todo-keywords
         '((sequence "TODO(t)" "PROJ(P)" "LOOP(r)" "PROGRESS(p)" "WAIT(w)" "HOLD(h)" "CANCELLED(c)" "TEST(T)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
          (sequence "|" "OKAY(o)" "YES(y)" "NO(n)"))
+        org-capture-templates-contexts
+        '(("T" ((in-mode . "prog-mode")
+                (in-mode . "abl-mode"))))
         org-capture-templates
         '(("t" "Todo" entry
            (file+headline +org-capture-todo-file "Todos")
            "* TODO %?" :prepend t :empty-lines 1)
 
-          ("T" "Development Todo" entry
-           (file+headline +org-capture-todo-file "Todos")
+          ("T" "Development Task" entry
+           (file+headline +org-capture-todo-file "Tasks")
            "* TODO %?\n%i\n%a" :prepend t :empty-lines 1)
 
           ("m" "Meeting")
