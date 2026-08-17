@@ -254,20 +254,6 @@
                 "epub"
                 "\\)")))
 
-(defun gptel-api-key-from-environment (&optional var)
-  (lambda ()
-    (getenv (or var                     ;provided key
-                (thread-first           ;or fall back to <TYPE>_API_KEY
-                  (type-of gptel-backend)
-                  (symbol-name)
-                  (substring 6)
-                  (upcase)
-                  (concat "_API_KEY"))))))
-
-(use-package! gptel
-  :config
-  (setq gptel-api-key (gptel-api-key-from-environment "OPENAI_API_KEY")))
-
 (map! :leader
       (:prefix ("t" . "toggle")
        :desc "Vterm" "t" #'+vterm/toggle))
