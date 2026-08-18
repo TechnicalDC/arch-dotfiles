@@ -254,6 +254,8 @@
                 "epub"
                 "\\)")))
 
+(gptel-make-gh-copilot "Copilot")
+
 (map! :leader
       (:prefix ("t" . "toggle")
        :desc "Vterm" "t" #'+vterm/toggle))

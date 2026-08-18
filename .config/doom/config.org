@@ -18,6 +18,7 @@
 - [[#spacious-padding][Spacious Padding]]
 - [[#elfeed][Elfeed]]
 - [[#dired-preview][Dired Preview]]
+- [[#gptel][gptel]]
 - [[#key-bindings][Key Bindings]]
 
 * Basic Settings
@@ -352,6 +353,12 @@ For now, keeping this as toggle using =M-x=
                 "iso\\|"
                 "epub"
                 "\\)")))
+#+end_src
+
+* gptel
+
+#+begin_src emacs-lisp
+(gptel-make-gh-copilot "Copilot")
 #+end_src
 
 * Key Bindings
