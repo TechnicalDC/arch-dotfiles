@@ -13,3 +13,4 @@
 (package! spacious-padding)
 (package! rainbow-mode)
 (package! dired-preview)
+(package! kbd-mode :recipe (:host github :repo "kmonad/kbd-mode"))
