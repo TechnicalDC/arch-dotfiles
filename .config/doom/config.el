@@ -7,10 +7,10 @@
       custom-tab-width 3)
 
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "SpaceMono Nerd Font" :size 18)
-             doom-variable-pitch-font (font-spec :family "Space Grotesk" :size 18))
-       (setq doom-font (font-spec :family "SpaceMono Nerd Font" :size 22)
-             doom-variable-pitch-font (font-spec :family "Space Grotesk" :size 22)))
+       (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 18)
+             doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 18))
+       (setq doom-font (font-spec :family "Recursive Mono Casual Static" :size 22)
+             doom-variable-pitch-font (font-spec :family "Recursive Sans Casual Static" :size 22)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -18,10 +18,10 @@
 
 (setq doom-theme 'dank-emacs)
 
-;; (custom-set-faces
-;;       '(mode-line ((t (:family "Iosevka Charon Mono" ))))
-;;       '(mode-line-active ((t (:family "Iosevka Charon Mono" ))))
-;;       '(mode-line-inactive ((t (:family "Iosevka Charon Mono" )))))
+(custom-set-faces
+      '(mode-line ((t (:family "Recursive Sans Casual Static" ))))
+      '(mode-line-active ((t (:family "Recursive Sans Casual Static" ))))
+      '(mode-line-inactive ((t (:family "Recursive Sans Casual Static" )))))
 
 (setq +dashboard-functions
       `(+dashboard-widget-banner
@@ -52,7 +52,7 @@
 (after! org
   (setq org-ellipsis " "
         org-todo-keywords
-        '((sequence "TODO(t)" "PROJ(P)" "LOOP(r)" "PROGRESS(p)" "WAIT(w)" "HOLD(h)" "CANCELLED(c)" "TEST(T)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
+        '((sequence "TODO(t)" "PROJ(P)" "PROGRESS(p)" "WAIT(w)" "HOLD(h)" "TEST(T)" "|" "CANCELLED(c)" "DONE(d)")
          (sequence "|" "OKAY(o)" "YES(y)" "NO(n)"))
         org-capture-templates-contexts
         '(("T" ((in-mode . "prog-mode")
