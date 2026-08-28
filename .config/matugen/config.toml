@@ -20,3 +20,8 @@
 [templates.myemacs]
 input_path = '~/.config/matugen/templates/dank-emacs.el'
 output_path = '~/.config/doom/themes/dank-emacs-theme.el'
+
+[templates.myneovim]
+input_path = '~/.config/matugen/templates/dank-neovim.lua'
+output_path = '~/.config/nvim/colors/dank-neovim.lua'
+post_hook = 'pkill -SIGUSR1 nvim'
