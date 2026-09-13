@@ -122,15 +122,15 @@ config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"
 config.default_workspace                           = "default"
 config.term                                        = "xterm"
-config.font                                        = wezterm.font 'SpaceMono Nerd Font'
+config.font                                        = wezterm.font 'Geist Mono'
 config.line_height                                 = 1.0
-config.font_size                                   = 14
+config.font_size                                   = 12
 config.font_rules                                  = {
    {
       intensity = 'Bold',
       italic = false,
       font = wezterm.font {
-         family = 'SpaceMono Nerd Font',
+         family = 'Geist Mono',
          weight = 'Bold',
          italic = false,
       },
@@ -141,7 +141,7 @@ config.font_rules                                  = {
       intensity = 'Bold',
       italic = true,
       font = wezterm.font {
-         family = 'SpaceMono Nerd Font',
+         family = 'Geist Mono',
          weight = 'Bold',
          italic = true,
       },
@@ -152,7 +152,7 @@ config.font_rules                                  = {
       intensity = 'Normal',
       italic = true,
       font = wezterm.font {
-         family = 'SpaceMono Nerd Font',
+         family = 'Geist Mono',
          italic = true,
       },
    },
@@ -201,7 +201,7 @@ config.skip_close_confirmation_for_processes_named = {
 }
 config.command_palette_font_size = config.font_size
 config.char_select_font_size     = config.font_size
-config.window_background_opacity = 0.8
+config.window_background_opacity = 1.0
 config.win32_system_backdrop = 'Acrylic'
 config.inactive_pane_hsb         = {
    saturation = 1.0,
@@ -209,10 +209,10 @@ config.inactive_pane_hsb         = {
 }
 
 config.window_padding = {
-   left   = 10,
-   right  = 10,
-   top    = 10,
-   bottom = 10,
+   left   = 20,
+   right  = 20,
+   top    = 20,
+   bottom = 20,
 }
 config.launch_menu = launch_items
 -- config.ssh_backend = "Ssh2"

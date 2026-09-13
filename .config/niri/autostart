@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# qs -c noctalia-shell &
+noctalia &
 # dms run &
 mpd &
 hyprsunset &

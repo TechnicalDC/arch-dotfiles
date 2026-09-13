@@ -7,7 +7,7 @@
    /* font-family: Roboto, "JetBrainsMono Nerd Font Propo"; */
    font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
    font-weight: bold;
-   font-size: 20px;
+   font-size: 12px;
    border-radius: 0px;
    border: none;
 }
@@ -15,7 +15,7 @@
 window#waybar {
    background-color: @base;
    border-radius: 10px;
-   border-bottom: 1px solid @highlightHigh;
+   border: 2px solid @highlightHigh;
    /* box-shadow: 10px 10px 5px 5px @base; */
 }
 

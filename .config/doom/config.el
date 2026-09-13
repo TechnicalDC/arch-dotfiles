@@ -7,16 +7,16 @@
       custom-tab-width 3)
 
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "GeistMono Nerd Font Mono" :size 18)
-             doom-variable-pitch-font (font-spec :family "Geist" :size 18))
-       (setq doom-font (font-spec :family "GeistMono Nerd Font Mono" :size 22)
+       (setq doom-font (font-spec :family "Geist Mono" :size 16)
+             doom-variable-pitch-font (font-spec :family "Geist" :size 16))
+       (setq doom-font (font-spec :family "Geist Mono" :size 22)
              doom-variable-pitch-font (font-spec :family "Geist" :size 22)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
 
-(setq doom-theme 'dank-emacs)
+(setq doom-theme 'noctalia)
 
 ;; (custom-set-faces
 ;;       '(mode-line ((t (:family "Iosevka Charon Mono" ))))
@@ -28,7 +28,7 @@
         +dashboard-widget-shortmenu)
       doom-modeline-buffer-file-name-style 'auto)
 
-(setq fancy-splash-image (concat doom-user-dir "splashes/krishna.jpeg"))
+;; (setq fancy-splash-image (concat doom-user-dir "splashes/krishna.jpeg"))
 
 (setq evil-vsplit-window-right t
       evil-split-window-below t
