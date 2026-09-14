@@ -22,6 +22,30 @@
 ;;       '(mode-line ((t (:family "Iosevka Charon Mono" ))))
 ;;       '(mode-line-active ((t (:family "Iosevka Charon Mono" ))))
 ;;       '(mode-line-inactive ((t (:family "Iosevka Charon Mono" )))))
+(defun doom-dashboard-draw-ascii-emacs-banner-fn ()
+  (let* ((banner
+          '("      __                          __                             "
+            "     /\\ \\                        /\\ \\__                          "
+            "  ___\\ \\ \\___     ___   _____    \\ \\ ,_\\  _ __    __      ___    "
+            " /'___\\ \\  _ `\\  / __`\\/\\ '__`\\   \\ \\ \\/ /\\`'__\\/'__`\\  /' _ `\\  "
+            "/\\ \\__/\\ \\ \\ \\ \\/\\ \\L\\ \\ \\ \\L\\ \\   \\ \\ \\_\\ \\ \\//\\ \\L\\.\\_/\\ \\/\\ \\ "
+            "\\ \\____\\\\ \\_\\ \\_\\ \\____/\\ \\ ,__/    \\ \\__\\\\ \\_\\\\ \\__/.\\_\\ \\_\\ \\_\\"
+            " \\/____/ \\/_/\\/_/\\/___/  \\ \\ \\/      \\/__/ \\/_/ \\/__/\\/_/\\/_/\\/_/"
+            "                          \\ \\_\\                                  "
+            "                           \\/_/                                  "
+            "                                                                 "))
+         (longest-line (apply #'max (mapcar #'length banner))))
+    (put-text-property
+     (point)
+     (dolist (line banner (point))
+       (insert (+doom-dashboard--center
+                +doom-dashboard--width
+                (concat
+                 line (make-string (max 0 (- longest-line (length line)))
+                                   32)))
+               "\n"))
+     'face 'doom-dashboard-banner)))
+;; (setq +doom-dashboard-ascii-banner-fn #'doom-dashboard-draw-ascii-emacs-banner-fn)
 
 (setq +dashboard-functions
       `(+dashboard-widget-banner
