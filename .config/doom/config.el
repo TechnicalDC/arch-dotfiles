@@ -9,7 +9,7 @@
 (if (string= system-name "archlinux")
        (setq doom-font (font-spec :family "Geist Mono" :size 16)
              doom-variable-pitch-font (font-spec :family "Geist" :size 16))
-       (setq doom-font (font-spec :family "Geist Mono" :size 22)
+       (setq doom-font (font-spec :family "GeistMono Nerd Font Mono" :size 22)
              doom-variable-pitch-font (font-spec :family "Geist" :size 22)))
 
 (after! doom-theme
