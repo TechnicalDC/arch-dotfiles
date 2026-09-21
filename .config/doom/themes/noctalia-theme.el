@@ -73,22 +73,22 @@
       (inverse-on-surface "#e0def4")
       (inverse-primary "#ebbcba")
       (inverse-surface "#191724")
-      ;; ANSI terminal colors
-      (term0 "#26233a")
+      ;; Map terminal colors (term0-term15) to available colors
+      (term0 "#191724")
       (term1 "#eb6f92")
       (term2 "#31748f")
-      (term3 "#f6c177")
-      (term4 "#9ccfd8")
-      (term5 "#c4a7e7")
-      (term6 "#ebbcba")
+      (term3 "#9ccfd8")
+      (term4 "#ebbcba")
+      (term5 "#112f3c")
+      (term6 "#2e8493")
       (term7 "#e0def4")
-      (term8 "#6e6a86")
+      (term8 "#656278")
       (term9 "#eb6f92")
       (term10 "#31748f")
-      (term11 "#f6c177")
-      (term12 "#9ccfd8")
-      (term13 "#c4a7e7")
-      (term14 "#ebbcba")
+      (term11 "#9ccfd8")
+      (term12 "#ebbcba")
+      (term13 "#112f3c")
+      (term14 "#2e8493")
       (term15 "#e0def4"))
 
   (custom-theme-set-faces
@@ -133,11 +133,17 @@
    
    ;; Mode line - improved status bar styling
    `(mode-line ((t (:background ,surface-container-high :foreground ,on-surface :box nil))))
-   `(mode-line-inactive ((t (:background ,surface :foreground ,on-surface-variant :box nil))))
+   `(mode-line-active ((t (:background ,bg :foreground ,on-surface :box nil :overline ,primary))))
+   `(mode-line-inactive ((t (:background ,bg :foreground ,outline-variant :box nil :overline ,outline-color))))
    `(mode-line-buffer-id ((t (:foreground ,primary :weight bold))))
    `(mode-line-emphasis ((t (:foreground ,primary :weight bold))))
    `(mode-line-highlight ((t (:foreground ,primary :box nil))))
-   
+
+   '(header-line ((t (:inherit mode-line))))
+   '(header-line-active ((t (:inherit mode-line-active))))
+   '(header-line-inactive ((t (:inherit mode-line-inactive))))
+   '(header-line-highlight ((t (:inherit mode-line-highlight))))
+
    ;; Improved Source blocks - make them integrated with the theme
    `(org-block ((t (:background ,surface-container-low :extend t :inherit fixed-pitch))))
    `(org-block-begin-line ((t (:background ,surface-container-low :foreground ,primary-fixed-dim :extend t :slant italic :inherit fixed-pitch))))
@@ -161,13 +167,16 @@
    `(org-done ((t (:foreground ,success :weight bold))))
    `(org-headline-done ((t (:foreground ,on-surface-variant))))
    `(org-hide ((t (:foreground ,bg)))) ;; Hide leading asterisks
-   `(org-ellipsis ((t (:foreground ,tertiary :underline nil)))) ;; Style for folded content indicator
+   `(org-ellipsis ((t (:foreground ,outline-color :underline nil)))) ;; Style for folded content indicator
    `(org-table ((t (:foreground ,secondary-fixed :inherit fixed-pitch))))
    `(org-formula ((t (:foreground ,tertiary :inherit fixed-pitch))))
    `(org-checkbox ((t (:foreground ,primary :weight bold :inherit fixed-pitch))))
    `(org-date ((t (:foreground ,secondary-fixed :underline t))))
    `(org-special-keyword ((t (:foreground ,on-surface-variant :slant italic))))
    `(org-tag ((t (:foreground ,outline-color :weight normal))))
+
+   `(org-agenda-current-time ((t (:foreground ,on-background))))
+   `(org-time-grid ((t (:foreground ,on-background))))
    
    ;; Magit
    `(magit-section-highlight ((t (:background ,surface-container-low))))
@@ -248,8 +257,16 @@
    `(dired-flagged ((t (:foreground ,err))))
    `(dired-marked ((t (:foreground ,tertiary :weight bold))))
    `(dired-symlink ((t (:foreground ,secondary :slant italic))))
-   `(dired-header ((t (:foreground ,primary :weight bold :height 1.1))))
-   
+   ;; `(dired-header ((t (:inherit mode-line :foreground ,primary :weight bold :height 1.0))))
+   '(diredfl-no-priv ((t (:forground ,on-background))))
+   `(diredfl-dir-name ((t (:foreground ,primary :weight bold))))
+   `(diredfl-dir-priv ((t (:foreground ,primary))))
+   `(diredfl-read-priv ((t (:foreground ,secondary))))
+   `(diredfl-write-priv ((t (:foreground ,err))))
+   `(diredfl-exec-priv ((t (:foreground ,tertiary))))
+   `(diredfl-file-name ((t (:foreground ,on-background))))
+   `(diredfl-file-suffix ((t (:foreground ,on-background))))
+
    ;; Terminal colors
    `(term-color-black ((t (:foreground ,term0 :background ,term0))))
    `(term-color-red ((t (:foreground ,term1 :background ,term1))))
@@ -337,6 +354,15 @@
    `(centaur-tabs-selected-modified ((t (:background ,surface-container-high :foreground ,tertiary :weight bold))))
    `(centaur-tabs-unselected-modified ((t (:background ,surface :foreground ,tertiary))))
    `(centaur-tabs-active-bar-face ((t (:background ,primary))))
+
+   ;; Doom Modeline
+   `(doom-modeline-bar ((t (:background ,bg))))
+   `(doom-modeline-bar-inactive ((t (:background ,bg))))
+   ;; `(doom-modeline-bar ((t (:background ,primary))))
+
+   ;; Icons
+   `(treemacs-nerd-icons-file-face ((t (:foreground ,primary))))
+   `(treemacs-nerd-icons-root-face ((t (:foreground ,tertiary))))
    
    ;; Fixed-pitch faces
    `(fixed-pitch ((t (:family "monospace"))))
@@ -358,3 +384,4 @@
 
 (provide-theme 'noctalia)
 ;;; noctalia-theme.el ends here
+
