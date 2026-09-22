@@ -7,10 +7,10 @@
       custom-tab-width 3)
 
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "Geist Mono" :size 16)
-             doom-variable-pitch-font (font-spec :family "Geist" :size 16))
-       (setq doom-font (font-spec :family "Geist Mono" :size 22)
-             doom-variable-pitch-font (font-spec :family "Geist" :size 22)))
+    (setq doom-font (font-spec :family "Geist Mono" :size 16)
+          doom-variable-pitch-font (font-spec :family "Geist" :size 16))
+  (setq doom-font (font-spec :family "Geist Mono" :size 22)
+        doom-variable-pitch-font (font-spec :family "Geist" :size 22)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -22,30 +22,26 @@
 ;;       '(mode-line ((t (:family "Iosevka Charon Mono" ))))
 ;;       '(mode-line-active ((t (:family "Iosevka Charon Mono" ))))
 ;;       '(mode-line-inactive ((t (:family "Iosevka Charon Mono" )))))
-(defun doom-dashboard-draw-ascii-emacs-banner-fn ()
-  (let* ((banner
-          '("      __                          __                             "
-            "     /\\ \\                        /\\ \\__                          "
-            "  ___\\ \\ \\___     ___   _____    \\ \\ ,_\\  _ __    __      ___    "
-            " /'___\\ \\  _ `\\  / __`\\/\\ '__`\\   \\ \\ \\/ /\\`'__\\/'__`\\  /' _ `\\  "
-            "/\\ \\__/\\ \\ \\ \\ \\/\\ \\L\\ \\ \\ \\L\\ \\   \\ \\ \\_\\ \\ \\//\\ \\L\\.\\_/\\ \\/\\ \\ "
-            "\\ \\____\\\\ \\_\\ \\_\\ \\____/\\ \\ ,__/    \\ \\__\\\\ \\_\\\\ \\__/.\\_\\ \\_\\ \\_\\"
-            " \\/____/ \\/_/\\/_/\\/___/  \\ \\ \\/      \\/__/ \\/_/ \\/__/\\/_/\\/_/\\/_/"
-            "                          \\ \\_\\                                  "
-            "                           \\/_/                                  "
-            "                                                                 "))
-         (longest-line (apply #'max (mapcar #'length banner))))
-    (put-text-property
-     (point)
-     (dolist (line banner (point))
-       (insert (+doom-dashboard--center
-                +doom-dashboard--width
-                (concat
-                 line (make-string (max 0 (- longest-line (length line)))
-                                   32)))
-               "\n"))
-     'face 'doom-dashboard-banner)))
-;; (setq +doom-dashboard-ascii-banner-fn #'doom-dashboard-draw-ascii-emacs-banner-fn)
+(defun my-weebery-is-always-greater ()
+  (propertize
+   (string-join
+    '(
+      "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄"
+      "█            ▄ ▄                    █"
+      "█        ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄      █"
+      "█        █ ▄ █▄█ ▄▄▄ █ █▄█ █ █      █"
+      "█     ▄▄ █▄█▄▄▄█ █▄█▄█▄▄█▄▄█ █      █"
+      "█   ▄ █▄▄█ ▄ ▄▄ ▄█ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄   █"
+      "█   █▄▄▄▄ ▄▄▄ █ ▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄ █ ▄ █"
+      "█ ▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █ █"
+      "█ █▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █ █"
+      "█     █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█     █"
+      "█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█"
+      )
+    "\n")
+   'face 'font-lock-constant-face))
+
+(setq +dashboard-ascii-banner-fn #'my-weebery-is-always-greater)
 
 (setq +dashboard-functions
       `(+dashboard-widget-banner
