@@ -1,0 +1,3 @@
+[theme.templates.user.emacs]
+input_path = "~/.config/noctalia/templates/emacs.el"
+output_path = "~/.config/doom/themes/noctalia-theme.el"
