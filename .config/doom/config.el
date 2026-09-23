@@ -51,6 +51,9 @@
 
 ;; (setq fancy-splash-image (concat doom-user-dir "splashes/krishna.jpeg"))
 
+;; Remove segment from all modelines
+;; (doom-modeline-remove-segment 'evil-state)
+
 (setq evil-vsplit-window-right t
       evil-split-window-below t
       evil-shift-width 3

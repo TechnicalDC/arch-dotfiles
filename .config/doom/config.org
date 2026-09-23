@@ -88,6 +88,9 @@ Doom exposes five (optional) variables for controlling fonts in Doom:
       doom-modeline-buffer-file-name-style 'auto)
 
 ;; (setq fancy-splash-image (concat doom-user-dir "splashes/krishna.jpeg"))
+
+;; Remove segment from all modelines
+;; (doom-modeline-remove-segment 'evil-state)
 #+end_src
 
 * Evil-Mode
