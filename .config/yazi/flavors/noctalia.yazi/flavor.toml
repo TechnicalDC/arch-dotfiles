@@ -14,8 +14,8 @@ marker_marked = { fg = "#fd4663", bg = "#fd4663" }
 marker_selected = { fg = "#cd65c3", bg = "#cd65c3" }
 
 # Count
-count_copied = { fg = "#f3d9f0", bg = "#651b5e" }
-count_cut = { fg = "#f3d9f0", bg = "#651b5e" }
+count_copied = { fg = "#f2d9f0", bg = "#651b5e" }
+count_cut = { fg = "#f2d9f0", bg = "#651b5e" }
 count_selected = { fg = "#0b0915", bg = "#cd65c3" }
 
 # Border
@@ -51,13 +51,13 @@ perm_sep = { fg = "#1e1485" }
 [mode]
 
 normal_main = { bg = "#7367e4", fg = "#0b0915", bold = true }
-normal_alt  = { bg = "#1e194d", fg = "#afafb6" }
+normal_alt  = { bg = "#18143d", fg = "#afafb6" }
 
 select_main = { bg = "#a35cd6", fg = "#13101d", bold = true }
-select_alt  = { bg = "#1e194d", fg = "#afafb6" }
+select_alt  = { bg = "#18143d", fg = "#afafb6" }
 
 unset_main = { bg = "#cd65c3", fg = "#1a1825", bold = true }
-unset_alt  = { bg = "#1e194d", fg = "#afafb6" }
+unset_alt  = { bg = "#18143d", fg = "#afafb6" }
 
 # : ]]]
 

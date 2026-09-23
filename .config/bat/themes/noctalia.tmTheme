@@ -24,19 +24,19 @@
           <key>caret</key>
           <string>#f2f2f3</string>
           <key>lineHighlight</key>
-          <string>#1e194d</string>
+          <string>#18143d</string>
           <key>misspelling</key>
           <string>#fd4663</string>
           <key>accent</key>
           <string>#7367e4</string>
           <key>selection</key>
-          <string>#2a236c40</string>
+          <string>#211c5440</string>
           <key>activeGuide</key>
           <string>#18143d</string>
           <key>findHighlight</key>
           <string>#47166a</string>
           <key>gutterForeground</key>
-          <string>#616074</string>
+          <string>#61606f</string>
         </dict>
       </dict>
       <dict>
@@ -735,7 +735,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#f3d9f0</string>
+          <string>#f2d9f0</string>
         </dict>
       </dict>
       <dict>
@@ -757,7 +757,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#f3d9f0</string>
+          <string>#f2d9f0</string>
         </dict>
       </dict>
       <dict>
@@ -1060,7 +1060,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#f3d9f0</string>
+          <string>#f2d9f0</string>
         </dict>
       </dict>
       <dict>
@@ -1180,7 +1180,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#3e3d4a</string>
+          <string>#616074</string>
           <key>fontStyle</key>
           <string>strikethrough</string>
         </dict>
