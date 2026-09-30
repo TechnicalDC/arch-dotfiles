@@ -7,10 +7,10 @@
       custom-tab-width 3)
 
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "Geist Mono" :size 16)
-             doom-variable-pitch-font (font-spec :family "Geist" :size 16))
-       (setq doom-font (font-spec :family "GeistMono Nerd Font Mono" :size 22)
-             doom-variable-pitch-font (font-spec :family "Geist" :size 22)))
+       (setq doom-font (font-spec :family "SpaceMono Nerd Font" :size 16)
+             doom-variable-pitch-font (font-spec :family "Space Grotesk" :size 16))
+       (setq doom-font (font-spec :family "SpaceMono Nerd Font" :size 22)
+             doom-variable-pitch-font (font-spec :family "Space Grotesk" :size 22)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
