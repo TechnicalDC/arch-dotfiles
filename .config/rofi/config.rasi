@@ -1,6 +1,6 @@
 configuration{
    modi: "drun,run";
-   show-icons: true;
+   show-icons: false;
    icon-theme: "rose-pine-icons";
    drun-display-format: "{icon} {name}";
    drun-display-actions: true;
@@ -16,4 +16,4 @@ configuration{
    display-filebrowser: " File Browser ";
    sidebar-mode: false;
 }
-@theme "/home/dilip/.config/rofi/themes/style-3/default.rasi"
+/* @theme "/home/dilip/.config/rofi/themes/style-3/default.rasi" */

@@ -1,12 +1,14 @@
-@import "./themes/rose-pine.css";
+/* @import "./themes/rose-pine.css"; */
 /* @import "./rose-pine-moon.css"; */
 /* @import "./rose-pine-dawn.css"; */
 
 * {
-   font-family: "JetBrainsMono Nerd Font Propo";
+   font-family: "SpaceMono Nerd Font Propo";
    font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
    font-weight: bold;
-   font-size: 18px;
+   font-size: 14px;
+   background: #1f2335;
+   color: #a9b1d6;
 }
 
 window#waybar {
@@ -33,10 +35,10 @@ window#waybar {
 #taskbar,
 #power-profiles-daemon,
 #mpd {
-   border-radius: 15px;
-   background: alpha(@base, .8);
-   border: 4px solid @overlay;
-   color: @foreground;
+   border-radius: 0px;
+   border: 2px solid #7a88cf;
+   background: #1f2335;
+   /* color: #7a88cf; */
    padding: 6px 16px;
    margin-top: 20px;
    margin-bottom: 0px;
@@ -63,7 +65,6 @@ window#waybar {
 }
 
 #custom-notifications {
-   color: @yellow;
    padding: 6px 12px;
    padding-right: 20px;
    margin-right: 20px;
@@ -109,9 +110,9 @@ window#waybar {
    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
 }
 
-#battery.charging, #battery.plugged {
-   border: 4px solid @foam;
-}
+/* #battery.charging, #battery.plugged { */
+/*    border: 4px solid @foam; */
+/* } */
 
 #battery {
    padding-left: 15px;
