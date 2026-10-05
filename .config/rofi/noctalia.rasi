@@ -1,0 +1,61 @@
+* {
+  bg: #1b0538;
+  bg-alt: #2e0f57;
+  fg: #f2f2f3;
+  accent: #9b5af1;
+  accent-fg: #17111e;
+  border: #655e6e;
+}
+
+window {
+  background-color: @bg;
+  text-color: @fg;
+  border: 1px;
+  border-color: @border;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+mainbox {
+  background-color: transparent;
+  spacing: 8px;
+}
+
+inputbar {
+  background-color: @bg;
+}
+
+prompt, entry {
+  background-color: transparent;
+  text-color: @fg;
+}
+
+listview {
+  background-color: transparent;
+  spacing: 4px;
+  lines: 8;
+}
+
+element {
+  background-color: transparent;
+  text-color: @fg;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+element selected {
+  background-color: @accent;
+  text-color: @accent-fg;
+}
+
+element-text, element-icon {
+  background-color: transparent;
+  text-color: inherit;
+}
+
+message {
+  background-color: @bg-alt;
+  text-color: @fg;
+  border-radius: 6px;
+  padding: 8px;
+}

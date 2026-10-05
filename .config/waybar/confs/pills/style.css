@@ -2,12 +2,15 @@
 /* @import "./rose-pine-moon.css"; */
 /* @import "./rose-pine-dawn.css"; */
 
+@define-color border #9b5af1;
+@define-color bg 		#1b0538;
+
 * {
    font-family: "SpaceMono Nerd Font Propo";
    font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
    font-weight: bold;
    font-size: 14px;
-   background: #1f2335;
+   background: @bg;
    color: #a9b1d6;
 }
 
@@ -15,6 +18,7 @@ window#waybar {
    background-color: transparent;
 }
 
+#layout,
 #custom-appmenuicon,
 #custom-notifications,
 #custom-powermenuicon,
@@ -36,9 +40,7 @@ window#waybar {
 #power-profiles-daemon,
 #mpd {
    border-radius: 0px;
-   border: 2px solid #7a88cf;
-   background: #1f2335;
-   /* color: #7a88cf; */
+   border: 2px solid @border;
    padding: 6px 16px;
    margin-top: 20px;
    margin-bottom: 0px;
@@ -51,10 +53,8 @@ window#waybar {
 }
 
 #custom-appmenuicon {
-   color: @blue;
    padding: 6px 12px;
-   padding-right: 17px;
-   margin-right: 0px;
+   margin-left: 20px;
 }
 
 #custom-powermenuicon {
@@ -66,47 +66,31 @@ window#waybar {
 
 #custom-notifications {
    padding: 6px 12px;
-   padding-right: 20px;
    margin-right: 20px;
 }
 
 #workspaces{
-   background: alpha(@base, .8);
-   border: 4px solid @overlay;
-   border-radius: 15px;
    margin-top: 20px;
    margin-bottom: 0px;
    margin-left: 5px;
    margin-right: 5px;
-   color: white;
+   color: #a9b1d6;
+   border: 2px solid @border;
 }
 #workspaces button {
    border-radius: 10px;
-   padding: 0px 10px;
-   color: @text;
+   padding: 0px 5px;
 }
 
-/* #workspaces button:first-child { */
-/*    padding-left: 20px; */
-/* } */
-/**/
-/* #workspaces button:last-child { */
-/*    padding-right: 20px; */
-/* } */
-
-#workspaces button.active{
-   color: @base;
-   padding: 0px 10px;
-   background-color: @foam;
+#workspaces button.active * {
+   color: @border;
 }
 
 #workspaces button:hover {
    color: @text;
-   background-color: @muted;
 }
 
 #clock {
-   margin-left: 20px;
    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
 }
 

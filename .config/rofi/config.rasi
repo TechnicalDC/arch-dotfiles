@@ -16,4 +16,4 @@ configuration{
    display-filebrowser: " File Browser ";
    sidebar-mode: false;
 }
-/* @theme "/home/dilip/.config/rofi/themes/style-3/default.rasi" */
+@theme "/home/dilip/.config/rofi/themes/minimal.rasi"

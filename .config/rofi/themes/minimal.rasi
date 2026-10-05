@@ -1,0 +1,25 @@
+@import "~/.config/rofi/noctalia.rasi"
+
+configuration {
+	show-icons: false;
+	font: "SpaceMono Nerd Font 12";
+   display-drun:        " $";
+   display-run:         " $";
+}
+
+window {
+	border: 2px;
+	border-radius: 0px;
+	border-color: @accent;
+	padding: 20px;
+}
+
+element {
+	padding: 0px;
+	border-radius: 0px;
+}
+
+element selected {
+  text-color: @accent;
+  background-color: @bg;
+}

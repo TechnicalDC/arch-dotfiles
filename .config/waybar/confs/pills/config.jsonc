@@ -7,7 +7,9 @@
    "spacing": 0, // Gaps between modules (4px)
    "reload_style_on_change": true,
    "modules-left": [
+      "custom/appmenuicon",
       "clock",
+      "mango/layout",
       "mango/workspaces"
    ],
    "modules-center": [],
@@ -20,23 +22,34 @@
       "custom/notifications"
    ],
    // Modules configuration
-   "mango/workspaces": {
-	"format": "{icon}",
-	"format-icons": {
-		// "1": "一",
-		// "2": "二",
-		"active": "",
-		"default": "",
-		"urgent": "",
-		"empty": ""
+	"mango/workspaces": {
+		"format": "{value}",
+		"format-icons": {},
+		"on-click": "activate",
+		"on-click-right": "toggle",
+		"overview-label": "Overview",
+		"hide-empty": true
 	},
-	"on-click": "activate",
-	"on-click-right": "toggle",
-	"overview-label": ""
-},
-// Rofi Application Launcher
+	"mango/layout": {
+		"format": "[] {name}",
+		"format-S": "Scroll",
+		"format-F": "Fair",
+		"format-VF": "V Fair",
+		"format-VS": "V Scroll",
+		"format-G": "Grid",
+		"format-VG": "V Grid",
+		"format-M": "Monocle",
+		"format-K": "Deck",
+		"format-VK": "V Deck",
+		"format-T": "Tiled",
+		"format-RT": "Right Tiled",
+		"format-CT": "Center Tiled",
+		"format-VT": "V Tiled",
+		"format-DW": "Dwindle"
+	},
+	// Rofi Application Launcher
    "custom/appmenuicon": {
-      "format": "",
+      "format": "",
       "on-click": "rofi -show drun",
       "tooltip": false,
       "tooltip-format": "<span color='#abb2bf'>Open the application launcher</span>"
@@ -204,12 +217,12 @@
    },
    "network": {
        // "interface": "wlp2*", // (Optional) To force the use of this interface
-       "format-wifi": " {essid} ({signalStrength}%)",
+       "format-wifi": "{essid} ({signalStrength}%)",
        "format-ethernet": "{ipaddr}/{cidr} ",
        "tooltip": false,
        "tooltip-format": "{ifname} via {gwaddr}",
-       "format-linked": "  {ifname} (No IP)",
-       "format-disconnected": "  Disconnected",
+       "format-linked": " {ifname} (No IP)",
+       "format-disconnected": " Disconnected",
        "format-alt": "{ifname}: {ipaddr}/{cidr}"
    },
    "pulseaudio": {
@@ -221,12 +234,12 @@
        "format-source": " {volume}%",
        "format-source-muted": " ",
        "format-icons": {
-          "headphone": " ",
+          "headphone": "",
           "hands-free": "",
-          "headset": " ",
-          "phone": " ",
-          "portable": " ",
-          "car": " ",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
           "default": ["", "", ""]
        },
        "on-click": "pavucontrol"
