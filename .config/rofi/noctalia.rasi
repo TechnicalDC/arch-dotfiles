@@ -1,10 +1,10 @@
 * {
-  bg: #1b0538;
-  bg-alt: #2e0f57;
-  fg: #f2f2f3;
-  accent: #9b5af1;
-  accent-fg: #17111e;
-  border: #655e6e;
+  bg: #111111;
+  bg-alt: #121212;
+  fg: #828282;
+  accent: #aaaaaa;
+  accent-fg: #111111;
+  border: #606060;
 }
 
 window {
@@ -22,7 +22,11 @@ mainbox {
 }
 
 inputbar {
-  background-color: @bg;
+  background-color: @bg-alt;
+  text-color: @fg;
+  border-radius: 6px;
+  padding: 8px 10px;
+  spacing: 8px;
 }
 
 prompt, entry {

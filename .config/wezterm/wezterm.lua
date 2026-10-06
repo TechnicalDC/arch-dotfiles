@@ -122,15 +122,15 @@ config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"
 config.default_workspace                           = "default"
 config.term                                        = "xterm"
-config.font                                        = wezterm.font 'Geist Mono'
-config.line_height                                 = 1.0
-config.font_size                                   = 12
+config.font                                        = wezterm.font 'Iosevka Etoile'
+config.line_height                                 = 1.2
+config.font_size                                   = 14
 config.font_rules                                  = {
    {
       intensity = 'Bold',
       italic = false,
       font = wezterm.font {
-         family = 'Geist Mono',
+         family = 'Iosevka Etoile',
          weight = 'Bold',
          italic = false,
       },
@@ -141,7 +141,7 @@ config.font_rules                                  = {
       intensity = 'Bold',
       italic = true,
       font = wezterm.font {
-         family = 'Geist Mono',
+         family = 'Iosevka Etoile',
          weight = 'Bold',
          italic = true,
       },
@@ -152,7 +152,7 @@ config.font_rules                                  = {
       intensity = 'Normal',
       italic = true,
       font = wezterm.font {
-         family = 'Geist Mono',
+         family = 'Iosevka Etoile',
          italic = true,
       },
    },
@@ -165,7 +165,6 @@ config.underline_thickness                         = "200%"
 config.scrollback_lines                            = 10000
 config.detect_password_input                       = true
 config.scroll_to_bottom_on_input                   = true
-config.show_update_window                          = true
 config.quote_dropped_files                         = "WindowsAlwaysQuoted"
 config.enable_tab_bar                              = true
 config.use_fancy_tab_bar                           = false
