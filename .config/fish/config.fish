@@ -32,7 +32,7 @@ set fish_pager_color_selected_background -r
 fish_vi_key_bindings
 
 source "$HOME/.config/fish/abbreviations.fish"
-source "$HOME/.config/fish/fzf.fish"
+source "$HOME/.config/fzf/themes/noctalia.fish"
 
 # function starship_transient_prompt_func
 #   starship module character
