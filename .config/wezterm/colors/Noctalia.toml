@@ -9,7 +9,7 @@ ansi = [
     "#cccccc",
     "#828282",
 ]
-background = "#111111"
+background = "#000000"
 brights = [
     "#3c3c3c",
     "#dddddd",
@@ -23,7 +23,7 @@ brights = [
 compose_cursor = "#aaaaaa"
 cursor_bg = "#aaaaaa"
 cursor_border = "#aaaaaa"
-cursor_fg = "#111111"
+cursor_fg = "#000000"
 foreground = "#828282"
 scrollbar_thumb = "#828282"
 selection_bg = "#828282"
@@ -36,7 +36,7 @@ visual_bell = "#191919"
 17 = "#aaaaaa"
 
 [colors.tab_bar]
-background = "#111111"
+background = "#000000"
 inactive_tab_edge = "#828282"
 
 [colors.tab_bar.active_tab]
@@ -48,7 +48,7 @@ strikethrough = false
 underline = "None"
 
 [colors.tab_bar.inactive_tab]
-bg_color = "#111111"
+bg_color = "#000000"
 fg_color = "#828282"
 intensity = "Normal"
 italic = false
@@ -56,7 +56,7 @@ strikethrough = false
 underline = "None"
 
 [colors.tab_bar.inactive_tab_hover]
-bg_color = "#111111"
+bg_color = "#000000"
 fg_color = "#828282"
 intensity = "Normal"
 italic = false

@@ -161,6 +161,12 @@ layout {
     }
 }
 layer-rule {
+	match namespace="^noctalia-bar-*"
+	background-effect {
+		blur false
+	}
+}
+layer-rule {
   match namespace="^noctalia-backdrop"
   place-within-backdrop true
 }

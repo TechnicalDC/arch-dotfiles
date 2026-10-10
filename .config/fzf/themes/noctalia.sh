@@ -1,6 +1,6 @@
 fzf_theme_opts="\
---color=bg+:#121212
---color=bg:#111111
+--color=bg+:#010202
+--color=bg:#000000
 --color=spinner:#aaaaaa
 --color=hl:#dddddd
 --color=fg:#828282

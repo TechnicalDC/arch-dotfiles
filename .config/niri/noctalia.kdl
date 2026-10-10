@@ -2,13 +2,13 @@ layout {
 
     focus-ring {
         active-color   "#aaaaaa"
-        inactive-color "#111111"
+        inactive-color "#000000"
         urgent-color   "#dddddd"
     }
 
     border {
         active-color   "#aaaaaa"
-        inactive-color "#111111"
+        inactive-color "#000000"
         urgent-color   "#dddddd"
     }
 
