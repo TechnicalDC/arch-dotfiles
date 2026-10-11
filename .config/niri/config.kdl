@@ -167,6 +167,13 @@ layer-rule {
 	}
 }
 layer-rule {
+  match namespace="^noctalia-(notification|dock|panel|attached-panel|osd)$"
+  background-effect {
+    xray false
+    // blur false
+  }
+}
+layer-rule {
   match namespace="^noctalia-backdrop"
   place-within-backdrop true
 }
@@ -175,6 +182,15 @@ overview {
         off
     }
 }
+
+blur {
+    // off
+    passes 5
+    offset 3.0
+    noise 0.2
+    saturation 1.5
+}
+
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -240,13 +256,13 @@ window-rule {
 }
 
 window-rule {
-   opacity 1.0
+   opacity 0.8
 	geometry-corner-radius 12
 	clip-to-geometry true
 	tiled-state true
 	draw-border-with-background false
    background-effect {
-      blur false
+      blur true
    }
 }
 debug {
