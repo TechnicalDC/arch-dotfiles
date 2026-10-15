@@ -256,13 +256,13 @@ window-rule {
 }
 
 window-rule {
-   opacity 0.8
-	geometry-corner-radius 12
+   opacity 1.0
+	geometry-corner-radius 0
 	clip-to-geometry true
 	tiled-state true
 	draw-border-with-background false
    background-effect {
-      blur true
+      blur false
    }
 }
 debug {
