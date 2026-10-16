@@ -292,6 +292,7 @@ binds {
     // Core Noctalia binds
     Mod+Shift+Q hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg panel-toggle session"; }
     Mod+D { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Shift+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
 	 Mod+W hotkey-overlay-title="Browse Wallpapers" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
     // Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
@@ -313,7 +314,6 @@ binds {
     Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
     Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
     Mod+Shift+W hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
-    Mod+V hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
     Print hotkey-overlay-title="Capture Region" { spawn-sh "noctalia msg screenshot-region"; }
     XF86AudioMicMute allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "micmute"; }
     XF86AudioNext allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "next"; }
@@ -425,4 +425,6 @@ binds {
     Mod+Shift+Slash { spawn-sh "noctalia msg panel-toggle kenn/keybind-cheatsheet:cheatsheet"; }
 }
 
+// include "animations/glitch_01.kdl"
+include "animations/tv_crt.kdl"
 include "noctalia.kdl"
