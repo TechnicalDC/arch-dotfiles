@@ -163,7 +163,7 @@ layout {
 layer-rule {
 	match namespace="^noctalia-bar-*"
 	background-effect {
-		blur false
+		blur true
 	}
 }
 layer-rule {
@@ -174,13 +174,14 @@ layer-rule {
   }
 }
 layer-rule {
-  match namespace="^noctalia-backdrop"
+  match namespace="^noctalia-wallpaper"
+  // match namespace="^noctalia-backdrop"
   place-within-backdrop true
 }
 overview {
-    workspace-shadow {
-        off
-    }
+	workspace-shadow {
+		off
+	}
 }
 
 blur {
@@ -256,13 +257,13 @@ window-rule {
 }
 
 window-rule {
-   opacity 1.0
-	geometry-corner-radius 0
+   opacity 0.75
+	geometry-corner-radius 10
 	clip-to-geometry true
 	tiled-state true
 	draw-border-with-background false
    background-effect {
-      blur false
+      blur true
    }
 }
 debug {
