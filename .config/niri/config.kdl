@@ -185,7 +185,7 @@ overview {
 }
 
 blur {
-    // off
+    off
     passes 5
     offset 3.0
     noise 0.1
@@ -257,7 +257,7 @@ window-rule {
 }
 
 window-rule {
-   opacity 0.75
+   opacity 1.0
 	geometry-corner-radius 10
 	clip-to-geometry true
 	tiled-state true
