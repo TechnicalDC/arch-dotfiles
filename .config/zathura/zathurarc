@@ -1,6 +1,6 @@
-include /home/dilip/.config/zathura/noctaliarc
+include noctaliarc
 
-set font "DM Sans 12"
+set font "Iosevka Charon 14"
 
 # settings
 set window-height         700
