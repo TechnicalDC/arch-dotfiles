@@ -7,10 +7,10 @@
       custom-tab-width 3)
 
 (if (string= system-name "archlinux")
-       (setq doom-font (font-spec :family "Iosevka Extended" :size 18)
-             doom-variable-pitch-font (font-spec :family "Iosevka Aile" :size 18))
-       (setq doom-font (font-spec :family "Iosevka" :size 22)
-             doom-variable-pitch-font (font-spec :family "Iosevka Aile" :size 22)))
+       (setq doom-font (font-spec :family "Iosevka Charon Mono" :size 20)
+             doom-variable-pitch-font (font-spec :family "Iosevka Charon" :size 20))
+       (setq doom-font (font-spec :family "Iosevka Charon Mono" :size 22)
+             doom-variable-pitch-font (font-spec :family "Iosevka Charon" :size 22)))
 
 (after! doom-theme
   (setq doom-themes-enable-bold t

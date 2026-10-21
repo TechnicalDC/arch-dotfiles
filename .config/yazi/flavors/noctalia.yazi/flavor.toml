@@ -8,14 +8,14 @@ find_keyword = { fg = "#ffb4ab", bold = true, italic = true, underline = true }
 find_position = { fg = "#ffb4ab", bold = true, italic = true }
 
 # Marker
-marker_copied = { fg = "#374c2d", bg = "#374c2d" }
-marker_cut = { fg = "#374c2d", bg = "#374c2d" }
+marker_copied = { fg = "#588739", bg = "#588739" }
+marker_cut = { fg = "#588739", bg = "#588739" }
 marker_marked = { fg = "#ffb4ab", bg = "#ffb4ab" }
 marker_selected = { fg = "#b5cea4", bg = "#b5cea4" }
 
 # Count
-count_copied = { fg = "#d0eabf", bg = "#374c2d" }
-count_cut = { fg = "#d0eabf", bg = "#374c2d" }
+count_copied = { fg = "#0b1107", bg = "#588739" }
+count_cut = { fg = "#0b1107", bg = "#588739" }
 count_selected = { fg = "#432c00", bg = "#b5cea4" }
 
 # Border
@@ -40,8 +40,8 @@ progress_error = { fg = "#ffb4ab", bg = "#17130b" }
 perm_type = { fg = "#dbc3a1" }
 perm_write = { fg = "#b5cea4" }
 perm_exec = { fg = "#ffb4ab" }
-perm_read = { fg = "#374c2d" }
-perm_sep = { fg = "#5f4100" }
+perm_read = { fg = "#588739" }
+perm_sep = { fg = "#9d670e" }
 
 # : ]]]
 
@@ -51,13 +51,13 @@ perm_sep = { fg = "#5f4100" }
 [mode]
 
 normal_main = { bg = "#f0bf6d", fg = "#432c00", bold = true }
-normal_alt  = { bg = "#4e4539", fg = "#d2c5b4" }
+normal_alt  = { bg = "#241f17", fg = "#d2c5b4" }
 
 select_main = { bg = "#dbc3a1", fg = "#3d2e16", bold = true }
-select_alt  = { bg = "#4e4539", fg = "#d2c5b4" }
+select_alt  = { bg = "#241f17", fg = "#d2c5b4" }
 
 unset_main = { bg = "#b5cea4", fg = "#213618", bold = true }
-unset_alt  = { bg = "#4e4539", fg = "#d2c5b4" }
+unset_alt  = { bg = "#241f17", fg = "#d2c5b4" }
 
 # : ]]]
 
@@ -96,7 +96,7 @@ border = { fg = "#f0bf6d", bg = "#432c00" }
 [tasks]
 border = { fg = "#f0bf6d" }
 title = {}
-hovered = { fg = "#374c2d", underline = true }
+hovered = { fg = "#588739", underline = true }
 
 # : ]]]
 
@@ -152,10 +152,10 @@ title_error = { fg = "#ffb4ab" }
 
 rules = [
     # Images
-    { mime = "image/*", fg = "#f0bf6d" },
+    { mime = "image/*", fg = "#f3cc8b" },
 
     # Media
-    { mime = "{audio,video}/*", fg = "#b5cea4" },
+    { mime = "{audio,video}/*", fg = "#b7e996" },
 
     # Archives
     { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#dbc3a1" },
@@ -164,7 +164,7 @@ rules = [
     { mime = "application/{pdf,doc,rtf}", fg = "#b5cea4" },
 
     # Special files
-    { mime = "*", is = "orphan", fg = "#ffdad6", bg = "#93000a" },
+    { mime = "*", is = "orphan", fg = "#280908", bg = "#f71b00" },
     { mime = "application/*exec*", fg = "#ffb4ab" },
 
     # Fallback
