@@ -1,5 +1,5 @@
 fzf_theme_opts="\
---color=bg+:#45464f
+--color=bg+:#1e1f25
 --color=bg:#121318
 --color=spinner:#e3e2e9
 --color=hl:#ffb4ab
