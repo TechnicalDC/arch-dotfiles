@@ -170,7 +170,7 @@ layer-rule {
 layer-rule {
 	match namespace="^noctalia-(notification|dock|panel|attached-panel|osd)$"
 	background-effect {
-		xray false
+		// xray false
 		// blur false
 	}
 }
@@ -426,10 +426,11 @@ binds {
 }
 
 include "animations/tv_crt.kdl"
-include "noctalia.kdl"
+// include "noctalia.kdl"
 
 include "dms-theme-sync.kdl"
 include "dms/layout.kdl"
 include "dms/binds.kdl"
 include "dms/input.kdl"
 include "dms/windowrules.kdl"
+include "dms/colors.kdl"
