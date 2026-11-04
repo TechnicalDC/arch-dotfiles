@@ -115,6 +115,7 @@ input {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
+	gaps 4
 	background-color "transparent"
 	center-focused-column "never"
 	always-center-single-column
@@ -292,34 +293,7 @@ include "dms/outputs.kdl"
 include "dms/cursor.kdl"
 
 binds {
-	// Core Noctalia binds
-	Mod+Shift+Q hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg panel-toggle session"; }
-	Mod+D { spawn-sh "noctalia msg panel-toggle launcher"; }
-	Mod+Shift+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
-	Mod+W hotkey-overlay-title="Browse Wallpapers" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
-	// Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
-	Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
-	// Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
-	// Niri has a built-in window switcher you might want to try it to see which one you prefer.
 
-	// Audio & Brightness
-	XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
-	XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
-	XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
-	XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
-	XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
-
-	Ctrl+Shift+R hotkey-overlay-title="Rename Workspace" { spawn "dms" "ipc" "call" "workspace-rename" "open"; }
-	Ctrl+XF86AudioLowerVolume allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "decrement" "3"; }
-	Ctrl+XF86AudioRaiseVolume allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "increment" "3"; }
-	Mod+Alt+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
-	// Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
-	Print hotkey-overlay-title="Capture Region" { spawn-sh "noctalia msg screenshot-region"; }
-	// XF86AudioMicMute allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "micmute"; }
-	// XF86AudioNext allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "next"; }
-	// XF86AudioPause allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "playPause"; }
-	// XF86AudioPlay allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "playPause"; }
-	// XF86AudioPrev allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "previous"; }
 	Mod+1 { focus-workspace 1; }
 	Mod+2 { focus-workspace 2; }
 	Mod+3 { focus-workspace 3; }
@@ -422,15 +396,12 @@ binds {
 	Mod+Shift+Return hotkey-overlay-title="Open Browser" { spawn "zen-browser"; }
 	Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 	Mod+O repeat=false { toggle-overview; }
-	Mod+Shift+Slash { spawn-sh "noctalia msg panel-toggle kenn/keybind-cheatsheet:cheatsheet"; }
 }
 
 include "animations/tv_crt.kdl"
-// include "noctalia.kdl"
 
-include "dms-theme-sync.kdl"
-include "dms/layout.kdl"
-include "dms/binds.kdl"
-include "dms/input.kdl"
-include "dms/windowrules.kdl"
-include "dms/colors.kdl"
+// include "dms/binds.kdl"
+// include "dms/colors.kdl"
+
+include "noctalia/binds.kdl"
+include "noctalia.kdl"

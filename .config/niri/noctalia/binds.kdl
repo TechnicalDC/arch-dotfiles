@@ -1,0 +1,17 @@
+binds {
+	// Core Noctalia binds
+	Mod+Shift+Q hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg panel-toggle session"; }
+	Mod+D { spawn-sh "noctalia msg panel-toggle launcher"; }
+	Mod+Shift+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
+	Mod+W hotkey-overlay-title="Browse Wallpapers" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+	Print hotkey-overlay-title="Capture Region" { spawn-sh "noctalia msg screenshot-region"; }
+	Mod+Shift+Slash { spawn-sh "noctalia msg panel-toggle kenn/keybind-cheatsheet:cheatsheet"; }
+	Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
+
+	// Audio & Brightness
+	XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+	XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+	XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+	XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+	XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+}
