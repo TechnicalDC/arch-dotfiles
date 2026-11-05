@@ -288,10 +288,6 @@ recent-windows {
 	}
 }
 
-// Include dms files
-include "dms/outputs.kdl"
-include "dms/cursor.kdl"
-
 binds {
 
 	Mod+1 { focus-workspace 1; }
