@@ -13,7 +13,14 @@
 # Optional split configuration
 # https://docs.noctalia.dev/umbriel/configuration/#include
 [include]
-files = ["noctalia.toml"]
+files = [
+	"noctalia.toml",
+	# "/usr/share/umbriel/effects/animation/workspace_wipe/effect.toml",
+	# "/usr/share/umbriel/effects/animation/squash/effect.toml",
+	"/usr/share/umbriel/effects/cursor/trail/effect.toml",
+	"/usr/share/umbriel/effects/cursor/glow/effect.toml",
+	# "/usr/share/umbriel/effects/screen/vignette/effect.toml",
+]
 
 [include.optional]
 files = []
@@ -25,6 +32,7 @@ files = []
 #
 [general]
 autostart = ["noctalia"]
+show_cheatsheet = false
 # xwayland = false
 # Sharp X11 apps and games on scaled outputs; they see physical resolutions.
 # xwayland_native_resolution = true
@@ -72,6 +80,7 @@ scale = 1.25
 # mode = "2560x1440@144"
 # position = [0, 0]
 scale = 1.25
+focus_at_startup = true
 # vrr = "fullscreen"
 # hdr = "auto"
 # sdr_transfer = "gamma22" # Or "srgb" for piecewise SDR decoding in HDR.
@@ -84,13 +93,16 @@ scale = 1.25
 [appearance.blur]
 radius = 3
 
+[appearance.shadow]
+enabled = false
+
 # Optional title bar with modifier-free dragging and floating frame resizing.
-# [appearance.title_bar]
+[appearance.title_bar]
 # mode = "on" # Follow client decoration preferences.
 # Use "negotiated" to hide bars on Wayland windows that do not negotiate decorations.
 # Use "forced" to always show bars, or "off" to hide them. Window rules can override this.
 # height = 28
-# font = "sans 10"
+font = "Geist 10"
 # button_position = "right" # or "left"
 # buttons = ["minimize", "maximize", "close"] # From the title outward; leave one out to hide it.
 # button_corner_radius = -1 # Follow the window's corner_radius; 0 makes square buttons.
@@ -141,8 +153,9 @@ radius = 3
 # "Mod+Ctrl+E" = "effect-border-toggle"
 # "Mod+Alt+E" = "effect-border-reset"
 #
-# [effects]
-# border = "pulse"
+[effects]
+# cursor = "trail"
+# screen = "vignette"
 # Draw the border on every decorated, non-urgent, non-fullscreen window, not
 # just the focused one (overview cards included).
 # border_unfocused = true
@@ -189,6 +202,7 @@ numlock_toggle = true
 # "Mod+Escape" = "session-quit"
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
 "Mod+Shift+Slash" = { action = "cheatsheet-toggle" }
+"Mod+Comma" = "spawn noctalia msg settings-toggle"
 
 # Media, volume and brightness keys from any input device, routed through the
 # Noctalia shell so its OSDs show. Safe while the session is locked.
@@ -230,8 +244,8 @@ numlock_toggle = true
 "Mod+Equal" = "window-modify-primary-extent +0.02"
 "Mod+Ctrl+Minus" = "window-modify-secondary-extent -0.02"
 "Mod+Ctrl+Equal" = "window-modify-secondary-extent +0.02"
-"Mod+Comma" = "window-consume-left"
-"Mod+Period" = "window-consume-right"
+# "Mod+Comma" = "window-consume-left"
+# "Mod+Period" = "window-consume-right"
 "Mod+Ctrl+Comma" = "window-consume-from-left"
 "Mod+Ctrl+Period" = "window-consume-from-right"
 # Needs layout.mode = "dwindle".
@@ -349,6 +363,10 @@ default_position = { x = 0, y = 0, anchor = "bottom_right" }
 default_focused = false
 default_pinned = true
 
+# [[window_rule]]
+# match.app_id = "^"
+# default_maximize = true
+
 # Keep game menus inside their window; a focus or workspace keybind releases the pointer.
 # [[window_rule]]
 # match.app_id = "^steam_app_.*$"
@@ -463,3 +481,5 @@ action = "overview-open"
 # Shade over a window while a modal dialog is attached to it.
 # [animation.dialogs]
 # dim = 0.3
+# [animation.windows_in]
+# effect = "squash"

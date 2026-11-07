@@ -8,6 +8,11 @@ abbr v 'nvim'
 abbr n "nvim"
 abbr lg "lazygit"
 
+abbr update "sudo pacman -Syu"
+abbr search "sudo pacman -Ss"
+abbr install "sudo pacman -S"
+abbr remove "sudo pacman -R"
+
 abbr mv 'mv -i'
 abbr rm 'rm -i'
 abbr cp 'cp -i'
