@@ -12,9 +12,10 @@ backdrop = "#26233aFF"
 [colors.border]
 focused = "#ebbcbaFF"
 unfocused = "#26233aFF"
-# scratchpad_focused = "#31748fFF"
-# scratchpad_unfocused = "#112f3cFF"
 outer = "#191724FF"
+
+[colors.tab_bar]
+active = "#7AA3FFFF"
 
 [colors.overview]
 background_tint = "#19172488"

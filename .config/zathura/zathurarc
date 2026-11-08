@@ -1,6 +1,6 @@
 include noctaliarc
 
-set font "Iosevka Charon 14"
+set font "Geist 12"
 
 # settings
 set window-height         700
