@@ -19,11 +19,10 @@ files = [
 	"/usr/share/umbriel/effects/cursor/trail/effect.toml",
 	"/usr/share/umbriel/effects/cursor/glow/effect.toml",
 	# "/usr/share/umbriel/effects/screen/vignette/effect.toml",
-	"noctalia.toml",
-]
+	]
 
 [include.optional]
-files = []
+files = ["noctalia.toml"]
 
 # ==============================================================================
 # General
@@ -242,11 +241,10 @@ numlock_toggle = true
 "Mod+S" = { action = "window-toggle-floating", repeat = false }
 "Mod+Shift+S" = { action = "window-focus-switch-floating", repeat = false }
 "Mod+P" = { action = "window-toggle-pinned", repeat = false }
-"Mod+M" = { action = "window-toggle-maximize-to-edges", repeat = false }
-"Mod+F" = { action = "window-toggle-fullscreen", repeat = false }
-"Mod+Ctrl+F" = { action = "window-toggle-maximize", repeat = false }
+"Mod+F" = { action = "window-toggle-maximize", repeat = false }
+"Mod+Shift+F" = { action = "window-toggle-fullscreen", repeat = false }
 "Mod+R" = "window-cycle-primary-extent"
-"Mod+Shift+R" = "window-cycle-primary-extent-back"
+"Mod+Shift+R" = "window-cycle-secondary-extent"
 "Mod+Minus" = "window-modify-primary-extent -0.02"
 "Mod+Equal" = "window-modify-primary-extent +0.02"
 "Mod+Ctrl+Minus" = "window-modify-secondary-extent -0.02"
@@ -368,36 +366,16 @@ default_position = { x = 0, y = 0, anchor = "bottom_right" }
 default_focused = false
 default_pinned = true
 
-# [[window_rule]]
-# match.app_id = "^"
-# default_maximize = true
-
-# Keep game menus inside their window; a focus or workspace keybind releases the pointer.
-# [[window_rule]]
-# match.app_id = "^steam_app_.*$"
-# confine_pointer = true
-
-# Keep compositor shortcuts available while a virtual machine window is focused.
-# [[window_rule]]
-# match.app_id = "^virt-manager$"
-# allow_shortcuts_inhibit = false
-
-# Keep an application drawing while it is hidden on another workspace, for programs whose other work stalls without it.
-# [[window_rule]]
-# match.app_id = "^obs$"
-# background_render = true
-
-# Keep matching windows visible locally but absent from screenshots and recordings.
-# See docs/user/window-rules.md#capture-protection.
-# [[window_rule]]
-# match.app_id = "^private-app$"
-# block_capture = true
+[[window_rule]]
+match.app_id = "brave-browser"
+default_maximize = true
 
 # Keep one application's modal dialogs as ordinary windows.
-# [[window_rule]]
-# match.app_id = "^gimp"
-# match.is_dialog = true
-# attach_to_parent = false
+[[window_rule]]
+match.app_id = "^gimp"
+match.is_dialog = true
+attach_to_parent = false
+default_maximize = true
 
 # Named scratchpads can launch an application when toggled while empty.
 # [[scratchpad]]
@@ -406,33 +384,11 @@ default_pinned = true
 # Preserve each window's current size proportions when moving between monitors.
 # proportional_size = true
 
-# [[window_rule]]
-# match.app_id = "^spotify$"
-# default_scratchpad = "music"
-
 # Give scratchpad windows their own border colors.
 # [[window_rule]]
 # match.is_scratchpad = true
 # border_color_focused = "#E5C07BFF"
 # border_color_unfocused = "#5C4A2AFF"
-
-# Hide enabled title bars only while a window is maximized to edges.
-# [[window_rule]]
-# match.is_maximized_to_edges = true
-# title_bar = "off"
-
-# Frame the window being screencast; viewers never see the frame.
-# [[window_rule]]
-# match.is_cast_target = true
-# border_color_focused = "#40C057FF"
-# border_color_unfocused = "#40C057FF"
-
-# Leave an application that draws its own corners and shadow undecorated.
-# [[window_rule]]
-# match.app_id = "^org[.]gnome[.]TextEditor$"
-# border_width = 0
-# corner_radius = 0
-# shadow = false
 
 # ==============================================================================
 # Layer rules
