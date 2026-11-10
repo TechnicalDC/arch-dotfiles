@@ -41,4 +41,4 @@ minimize = "#9ccfd8FF"
 [[window_rule]]
 match.is_scratchpad = true
 border_color_focused = "#31748fFF"
-border_color_unfocused = "#112f3cFF"
+border_color_unfocused = "#203244FF"
