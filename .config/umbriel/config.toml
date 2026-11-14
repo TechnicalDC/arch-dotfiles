@@ -25,10 +25,15 @@ files = [
 files = ["noctalia.toml"]
 
 # ==============================================================================
+# Environment
+# https://docs.noctalia.dev/umbriel/configuration/#environment
+[environment]
+MOZ_ENABLE_WAYLAND = "0"
+
+# ==============================================================================
 # General
 # Optional session examples. XWayland support is enabled by default.
 # https://docs.noctalia.dev/umbriel/configuration/#general
-#
 [general]
 autostart = ["noctalia"]
 show_cheatsheet = false
@@ -201,10 +206,12 @@ numlock_toggle = true
 
 # Applications and session
 "Mod+Return" = { action = "spawn kitty", repeat = false }
+"Mod+Shift+Return" = { action = "spawn zen-browser", repeat = false }
 "Mod+D" = "spawn noctalia msg panel-toggle launcher"
 "Mod+Q" = { action = "window-close", repeat = false }
 "Mod+Shift+Q" = "spawn noctalia msg panel-toggle session"
 "Mod+W" = "spawn noctalia msg panel-toggle wallpaper"
+"Mod+Shift+W" = "spawn noctalia msg panel-toggle noctalia/wallhaven:browser"
 # "Mod+Escape" = "session-quit"
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
 "Mod+Shift+Slash" = { action = "cheatsheet-toggle" }
@@ -240,7 +247,7 @@ numlock_toggle = true
 # Window state and layout
 "Mod+S" = { action = "window-toggle-floating", repeat = false }
 "Mod+Shift+S" = { action = "window-focus-switch-floating", repeat = false }
-"Mod+P" = { action = "window-toggle-pinned", repeat = false }
+"Mod+Shift+P" = { action = "window-toggle-pinned", repeat = false }
 "Mod+F" = { action = "window-toggle-maximize", repeat = false }
 "Mod+Shift+F" = { action = "window-toggle-fullscreen", repeat = false }
 "Mod+R" = "window-cycle-primary-extent"
@@ -251,8 +258,6 @@ numlock_toggle = true
 "Mod+Ctrl+Equal" = "window-modify-secondary-extent +0.02"
 "Mod+Ctrl+Comma" = "window-consume-or-expel-left"
 "Mod+Ctrl+Period" = "window-consume-or-expel-right"
-# Needs layout.mode = "dwindle".
-# "Mod+Alt+T" = "layout-toggle-split"
 "Mod+T" = { action = "column-toggle-tabbed", repeat = false }
 "Mod+Alt+Right" = "column-focus-tab-next"
 "Mod+Alt+Left" = "column-focus-tab-previous"
@@ -283,6 +288,8 @@ numlock_toggle = true
 "Mod+Shift+7" = "window-move-to-workspace 7"
 "Mod+Shift+8" = "window-move-to-workspace 8"
 "Mod+Shift+9" = "window-move-to-workspace 9"
+"Mod+N" = "workspace-next"
+"Mod+P" = "workspace-previous"
 
 # Scratchpad
 "Mod+Shift+Space" = { action = "window-move-to-scratchpad", repeat = false }
@@ -367,7 +374,7 @@ default_focused = false
 default_pinned = true
 
 [[window_rule]]
-match.app_id = "brave-browser"
+match.app_id = "zen"
 default_maximize = true
 
 # Keep one application's modal dialogs as ordinary windows.

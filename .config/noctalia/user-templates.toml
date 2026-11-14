@@ -6,3 +6,8 @@ post_hook = 'pkill -SIGUSR1 nvim'
 [templates.emacs]
 input_path = "~/.config/noctalia/templates/emacs.el"
 output_path = "~/.config/doom/themes/noctalia-theme.el"
+
+
+[templates.yazi]
+input_path = "~/.config/noctalia/templates/yazi.toml"
+output_path = "~/.config/yazi/flavors/noctalia.yazi/flavor.toml"

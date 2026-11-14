@@ -1,4 +1,4 @@
----@diagnostic disable: unused-local
+---@diagnostic disable: unused-local, unused-function
 -- DEFINITIONS {{{
 local wezterm = require 'wezterm'
 local action = wezterm.action
@@ -40,72 +40,42 @@ local function is_vim(pane)
    return pane:get_user_vars().IS_NVIM == 'true'
 end
 
-wezterm.on('gui-startup', function()
-   local tab, pane, window = mux.spawn_window({})
-   -- window:gui_window():maximize()
-end)
+-- wezterm.on('gui-startup', function()
+--    local tab, pane, window = mux.spawn_window({})
+--    -- window:gui_window():maximize()
+-- end)
 
 -- This function returns the suggested title for a tab.
 -- It prefers the title that was set via `tab:set_title()`
 -- or `wezterm cli set-tab-title`, but falls back to the
 -- title of the active pane in that tab.
-local function tab_title(tab_info)
-   local title = tab_info.tab_title
-   -- if the tab title is explicitly set, take that
-   if title and #title > 0 then
-      title = title:gsub( "\\", " ")
-      return title
-   end
-   -- Otherwise, use the title from the active pane
-   -- in that tab
-   title = tab_info.active_pane.title
-   title = title:gsub( "\\", " ")
-   title = title:gsub( ".exe", "")
-   return title
-end
-
-wezterm.on( 'format-tab-title', function(tab, tabs, panes, config, hover, max_width)
-   local title_name = tab_title(tab)
-   local idx = tab.tab_index + 1
-
-   for i in string.gmatch(title_name, "%S+") do
-      title_name = i
-      break
-   end
-
-   return ' ' .. idx .. '.' ..  title_name .. ' '
-end)
+-- local function tab_title(tab_info)
+--    local title = tab_info.tab_title
+--    -- if the tab title is explicitly set, take that
+--    if title and #title > 0 then
+--       title = title:gsub( "\\", " ")
+--       return title
+--    end
+--    -- Otherwise, use the title from the active pane
+--    -- in that tab
+--    title = tab_info.active_pane.title
+--    title = title:gsub( "\\", " ")
+--    title = title:gsub( ".exe", "")
+--    return title
+-- end
+--
+-- wezterm.on( 'format-tab-title', function(tab, tabs, panes, config, hover, max_width)
+--    local title_name = tab_title(tab)
+--    local idx = tab.tab_index + 1
+--
+--    for i in string.gmatch(title_name, "%S+") do
+--       title_name = i
+--       break
+--    end
+--
+--    return ' ' .. idx .. '.' ..  title_name .. ' '
+-- end)
 -- }}}
-
-wezterm.on('update-right-status', function(window, pane)
-  local mode = "NORMAL"
-  local main_palette = {
-     base = '#191724',
-     overlay = '#26233a',
-     muted = '#6e6a86',
-     text = '#e0def4',
-     love = '#eb6f92',
-     gold = '#f6c177',
-     rose = '#ebbcba',
-     pine = '#31748f',
-     foam = '#9ccfd8',
-     iris = '#c4a7e7',
-     highlight_high = '#524f67',
-  }
-  local modeBg =  main_palette.rose
-
-  if window:leader_is_active() then
-     modeBg = main_palette.love
-     mode = "LEADER"
-  end
-
-  -- Make it italic and underlined
-  window:set_right_status(wezterm.format {
-    { Background = { Color = modeBg } } ,
-    { Foreground = { Color = main_palette.base } } ,
-    { Text = ' ' .. mode .. ' ' },
-  })
-end)
 
 -- CONFIG {{{
 local config = {}
@@ -123,7 +93,7 @@ config.default_domain                              = "local"
 config.default_workspace                           = "default"
 config.term                                        = "xterm"
 config.font                                        = wezterm.font 'Geist Mono'
-config.line_height                                 = 1.2
+config.line_height                                 = 1.25
 config.font_size                                   = 12
 config.font_rules                                  = {
    {
@@ -178,7 +148,7 @@ config.adjust_window_size_when_changing_font_size  = false
 config.force_reverse_video_cursor                  = false
 config.hide_mouse_cursor_when_typing               = true
 config.window_close_confirmation                   = 'NeverPrompt'
-config.window_decorations                          = "RESIZE"
+config.window_decorations                          = "NONE"
 config.warn_about_missing_glyphs 					   = false
 config.show_tab_index_in_tab_bar                   = true
 config.tab_and_split_indices_are_zero_based        = false

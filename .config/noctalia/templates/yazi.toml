@@ -19,22 +19,15 @@ count_cut = { fg = "{{colors.on_tertiary_container.default.hex}}", bg = "{{color
 count_selected = { fg = "{{colors.on_primary.default.hex}}", bg = "{{colors.tertiary.default.hex}}" }
 
 # Border
-border_style  = { fg = "{{colors.outline.default.hex}}" }
+border_style  = { fg = "{{colors.primary.default.hex}}" }
 
 # : ]]]
 
-# : Indicator [[[
-[indicator]
-padding = { open = "▐", close = "▌"}
-preview = { bg = "{{colors.surface_container.default.hex}}", fg = "{{colors.on_surface.default.hex}}" }
-current = { bg = "{{colors.surface_container.default.hex}}", fg = "{{colors.on_surface.default.hex}}" }
-parent = { bg = "{{colors.surface_container.default.hex}}", fg = "{{colors.on_surface.default.hex}}" }
-# : ]]]
 
 # : Status [[[
 
 [status]
-overall = { fg = "{{colors.outline.default.hex}}", bg = "{{colors.surface_container.default.hex}}" }
+overall = { fg = "{{colors.primary.default.hex}}" }
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
@@ -57,14 +50,14 @@ perm_sep = { fg = "{{colors.primary_container.default.hex}}" }
 
 [mode]
 
-normal_main = { bg = "{{colors.error.default.hex}}", fg = "{{colors.surface.default.hex}}", bold = true }
-normal_alt  = { bg = "{{colors.surface_variant.default.hex}}", fg = "{{colors.outline.default.hex}}" }
+normal_main = { bg = "{{colors.primary.default.hex}}", fg = "{{colors.on_primary.default.hex}}", bold = true }
+normal_alt  = { bg = "{{colors.surface_variant.default.hex}}", fg = "{{colors.on_surface_variant.default.hex}}" }
 
-select_main = { bg = "{{colors.error.default.hex}}", fg = "{{colors.surface.default.hex}}", bold = true }
-select_alt  = { bg = "{{colors.surface_variant.default.hex}}", fg = "{{colors.outline.default.hex}}" }
+select_main = { bg = "{{colors.secondary.default.hex}}", fg = "{{colors.on_secondary.default.hex}}", bold = true }
+select_alt  = { bg = "{{colors.surface_variant.default.hex}}", fg = "{{colors.on_surface_variant.default.hex}}" }
 
-unset_main = { bg = "{{colors.error.default.hex}}", fg = "{{colors.surface.default.hex}}", bold = true }
-unset_alt  = { bg = "{{colors.surface_variant.default.hex}}", fg = "{{colors.outline.default.hex}}" }
+unset_main = { bg = "{{colors.tertiary.default.hex}}", fg = "{{colors.on_tertiary.default.hex}}", bold = true }
+unset_alt  = { bg = "{{colors.surface_variant.default.hex}}", fg = "{{colors.on_surface_variant.default.hex}}" }
 
 # : ]]]
 
@@ -159,16 +152,16 @@ title_error = { fg = "{{colors.error.default.hex}}" }
 
 rules = [
     # Images
-    { mime = "image/*", fg = "#94e2d5" },
+    { mime = "image/*", fg = "{{colors.primary_fixed_dim.default.hex}}" },
 
     # Media
-    { mime = "{audio,video}/*", fg = "#f9e2af" },
+    { mime = "{audio,video}/*", fg = "{{colors.tertiary_fixed_dim.default.hex}}" },
 
     # Archives
-    { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#f5c2e7" },
+    { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "{{colors.secondary.default.hex}}" },
 
     # Documents
-    { mime = "application/{pdf,doc,rtf}", fg = "#a6e3a1" },
+    { mime = "application/{pdf,doc,rtf}", fg = "{{colors.tertiary.default.hex}}" },
 
     # Special files
     { mime = "*", is = "orphan", fg = "{{colors.on_error_container.default.hex}}", bg = "{{colors.error_container.default.hex}}" },
