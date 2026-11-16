@@ -1,6 +1,6 @@
 include noctaliarc
 
-set font "Geist 12"
+set font "Space Grotesk 12"
 
 # settings
 set window-height         700
