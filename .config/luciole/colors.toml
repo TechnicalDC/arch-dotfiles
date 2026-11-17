@@ -1,0 +1,39 @@
+# Luciole colors, rendered by a Noctalia template.
+#
+# Add to ~/.config/noctalia/config.toml:
+#
+#   [theme.templates.user.luciole]
+#   input_path  = "/usr/share/luciole/templates/colors.toml"   # <prefix>/share/... for local builds
+#   output_path = "$XDG_CONFIG_HOME/luciole/colors.toml"
+#
+# Luciole reloads the rendered file as soon as it is written.
+
+[colors]
+primary = "#a9b665"
+on_primary = "#32302f"
+primary_container = "#55583f"
+on_primary_container = "#c4d280"
+secondary = "#e78a4e"
+on_secondary = "#32302f"
+secondary_container = "#684b38"
+on_secondary_container = "#ffb283"
+tertiary = "#89b482"
+on_tertiary = "#32302f"
+tertiary_container = "#4c5747"
+on_tertiary_container = "#a6d39f"
+error = "#ea6962"
+on_error = "#32302f"
+error_container = "#69413e"
+on_error_container = "#ffa39a"
+surface = "#32302f"
+on_surface = "#ddc7a1"
+on_surface_variant = "#d4be98"
+surface_container_low = "#373432"
+surface_container = "#3c3836"
+surface_container_high = "#474240"
+surface_container_highest = "#514c49"
+outline_variant = "#504945"
+shadow = "#282828"
+scrim = "#000000"
+hover = "#7daea3"
+on_hover = "#32302f"

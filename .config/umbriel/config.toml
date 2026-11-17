@@ -216,6 +216,7 @@ numlock_toggle = true
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
 "Mod+Shift+Slash" = { action = "cheatsheet-toggle" }
 "Mod+Comma" = "spawn noctalia msg settings-toggle"
+"Mod+Period" = "spawn luciole"
 
 # Media, volume and brightness keys from any input device, routed through the
 # Noctalia shell so its OSDs show. Safe while the session is locked.
