@@ -1,0 +1,2 @@
+[hooks]
+wallpaper_changed = "notify-send 'noctalia-hooks' 'Wallpaper on $NOCTALIA_WALLPAPER_CONNECTOR: $NOCTALIA_WALLPAPER_PATH'"
