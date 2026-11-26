@@ -1,6 +1,6 @@
 include noctaliarc
 
-set font "Geist 12"
+set font "GoogleSans Nerd Font Propo Text 13"
 
 # settings
 set window-height         700
