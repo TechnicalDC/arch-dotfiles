@@ -1,6 +1,6 @@
 set -l fzf_theme_opts "\
---color=bg+:#171717
---color=bg:#000000
+--color=bg+:#262626
+--color=bg:#161616
 --color=spinner:#f2f4f8
 --color=hl:#ee5396
 --color=fg:#f2f4f8
